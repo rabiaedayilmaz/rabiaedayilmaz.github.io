@@ -3,7 +3,39 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+
+defaults:  # The defaults key will be applied to all chapters and sub-sections
+  titlesonly: True
+
+options:  # The options key will be applied to all chapters, but not sub-sections
+  numbered: True
+
+- caption: DEEP LEARNING FUNDAMENTALS
+  chapters:
+  - file: markdown
+  - file: notebooks
+  - file: markdown-notebooks
+
+- caption: LANGUAGE MODELING
+  chapters:
+  - file: markdown
+  - file: notebooks
+  - file: markdown-notebooks
+
+- caption: COMPUTER VISION
+  chapters:
+  - file: markdown
+  - file: notebooks
+  - file: markdown-notebooks
+
+- caption: BOOKS <3
+  chapters:
+  - file: markdown
+  - file: notebooks
+  - file: markdown-notebooks
+
+- caption: ART
+  chapters:
+  - file: markdown
+  - file: notebooks
+  - file: markdown-notebooks
