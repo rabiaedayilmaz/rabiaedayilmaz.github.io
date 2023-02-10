@@ -5,20 +5,20 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: DEEP LEARNING FUNDAMENTALS
-    chapters:
+#  - caption: DEEP LEARNING FUNDAMENTALS
+#    chapters:
 
 
-  - caption: LANGUAGE MODELING
-    chapters:
+#  - caption: LANGUAGE MODELING
+#    chapters:
 
 
-  - caption: COMPUTER VISION
-    chapters:
+#  - caption: COMPUTER VISION
+#    chapters:
 
 
-  - caption: BOOKS <3
-    chapters:
+# - caption: BOOKS <3
+#    chapters:
 
 
   - caption: ART
