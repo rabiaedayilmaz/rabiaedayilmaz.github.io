@@ -4,12 +4,6 @@
 format: jb-book
 root: intro
 
-defaults:  # The defaults key will be applied to all chapters and sub-sections
-  titlesonly: True
-
-options:  # The options key will be applied to all chapters, but not sub-sections
-  numbered: True
-
 - caption: DEEP LEARNING FUNDAMENTALS
   chapters:
   - file: markdown
