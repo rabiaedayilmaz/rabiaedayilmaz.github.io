@@ -25,4 +25,3 @@ parts:
 - caption: ART
   chapters:
     - file: nbs/art/art.md
-    - title: Arts
