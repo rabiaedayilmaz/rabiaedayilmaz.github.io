@@ -3,7 +3,7 @@
 
 title: rey's log
 author: Rabia Eda Yilmaz
-logo: ../assets/logom.png
+logo: logom.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

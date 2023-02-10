@@ -3,7 +3,7 @@
 height: 512px
 name: directive-fig
 ---
-Art 01. Summer Mood
+Summer Mood
 ```
 
 ```{figure} ../../assets/dragon.png
@@ -11,7 +11,7 @@ Art 01. Summer Mood
 height: 512px
 name: directive-fig
 ---
-Art 02. Guide Your Own Way
+Guide Your Own Way
 ```
 
 ```{figure} ../../assets/last.png
@@ -19,7 +19,7 @@ Art 02. Guide Your Own Way
 height: 512px
 name: directive-fig
 ---
-Art 03. Love Bird
+Love Bird
 ```
 
 ```{figure} ../../assets/renkliel.png
@@ -27,7 +27,7 @@ Art 03. Love Bird
 height: 512px
 name: directive-fig
 ---
-Art 04. Reaching to You
+Reaching to You
 ```
 
 ```{figure} ../../assets/flowergirl2.png
@@ -35,7 +35,7 @@ Art 04. Reaching to You
 height: 512px
 name: directive-fig
 ---
-Art 05. Night Struggle
+Night Struggle
 ```
 
 ```{figure} ../../assets/rengokulastbutveryveryvery.png
@@ -43,7 +43,7 @@ Art 05. Night Struggle
 height: 512px
 name: directive-fig
 ---
-Art 06. Blaze Your Heart
+Blaze Your Heart
 ```
 
 ```{figure} ../../assets/habibi.png
@@ -51,7 +51,7 @@ Art 06. Blaze Your Heart
 height: 512px
 name: directive-fig
 ---
-Art 07. Tamino
+Tamino
 ```
 
 ```{figure} ../../assets/pychann.png
@@ -59,7 +59,7 @@ Art 07. Tamino
 height: 512px
 name: directive-fig
 ---
-Art 08. Python-chan
+Python-chan
 ```
 
 ```{figure} ../../assets/bmo.png
@@ -67,7 +67,7 @@ Art 08. Python-chan
 height: 512px
 name: directive-fig
 ---
-Art 09. Time of Adventure
+Time of Adventure
 ```
 
 ```{figure} ../../assets/pythonchan2.png
@@ -75,7 +75,7 @@ Art 09. Time of Adventure
 height: 512px
 name: directive-fig
 ---
-Art 10. Desert of Python-chan
+Desert of Python-chan
 ```
 
 ```{figure} ../../assets/dgkosenpai.png
@@ -83,5 +83,5 @@ Art 10. Desert of Python-chan
 height: 512px
 name: directive-fig
 ---
-Art 10. Twinkle Twinkle
+Twinkle Twinkle
 ```
