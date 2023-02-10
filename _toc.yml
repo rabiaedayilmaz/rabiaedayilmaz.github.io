@@ -1,9 +1,10 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 
+root: intro
 format: jb-book
-root: index
-
+defaults:
+  numbered: true
 parts:
 #  - caption: DEEP LEARNING FUNDAMENTALS
 #    chapters:
