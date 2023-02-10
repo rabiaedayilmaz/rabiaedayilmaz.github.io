@@ -22,5 +22,6 @@ parts:
 
 
   - caption: ART
-    - file: ../../art/art.md
-    - title: Arts
+    chapters:
+      - file: ../../art/art.md
+      - title: Arts
