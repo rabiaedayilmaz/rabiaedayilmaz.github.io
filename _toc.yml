@@ -6,30 +6,20 @@ root: intro
 
 - caption: DEEP LEARNING FUNDAMENTALS
   chapters:
-  - file: markdown
-  - file: notebooks
-  - file: markdown-notebooks
+
 
 - caption: LANGUAGE MODELING
   chapters:
-  - file: markdown
-  - file: notebooks
-  - file: markdown-notebooks
+
 
 - caption: COMPUTER VISION
   chapters:
-  - file: markdown
-  - file: notebooks
-  - file: markdown-notebooks
+
 
 - caption: BOOKS <3
   chapters:
-  - file: markdown
-  - file: notebooks
-  - file: markdown-notebooks
+
 
 - caption: ART
-  chapters:
-  - file: markdown
-  - file: notebooks
-  - file: markdown-notebooks
+  - file: ../../art/art.md
+  - title: Arts
