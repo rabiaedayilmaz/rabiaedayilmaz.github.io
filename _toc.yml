@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: index
 
 parts:
 #  - caption: DEEP LEARNING FUNDAMENTALS
@@ -23,5 +23,5 @@ parts:
 
 - caption: ART
   chapters:
-    - file: nbs/art/art
+    - file: nbs/art/art.md
     - title: Arts
