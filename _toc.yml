@@ -21,7 +21,7 @@ parts:
 #    chapters:
 
 
-  - caption: ART
-    chapters:
-      - file: ../nbs/art/art.md
-      - title: Arts
+- caption: ART
+  chapters:
+    - file: nbs/art/art.md
+    - title: Arts
