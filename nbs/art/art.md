@@ -1,6 +1,6 @@
 # rey's Art
 
-```{figure} ../../assets/anyalast.png
+```{%figure%} ../../assets/anyalast.png
 ---
 height: 512px
 name: directive-fig
@@ -8,7 +8,7 @@ name: directive-fig
 Summer Mood
 ```
 
-```{figure} ../../assets/dragon.png
+```{%figure%} ../../assets/dragon.png
 ---
 height: 512px
 name: directive-fig
@@ -16,7 +16,7 @@ name: directive-fig
 Guide Your Own Way
 ```
 
-```{figure} ../../assets/last.png
+```{%figure%} ../../assets/last.png
 ---
 height: 512px
 name: directive-fig
@@ -24,7 +24,7 @@ name: directive-fig
 Love Bird
 ```
 
-```{figure} ../../assets/renkliel.png
+```{%figure%} ../../assets/renkliel.png
 ---
 height: 512px
 name: directive-fig
@@ -32,7 +32,7 @@ name: directive-fig
 Reaching to You
 ```
 
-```{figure} ../../assets/flowergirl2.png
+```{%figure%} ../../assets/flowergirl2.png
 ---
 height: 512px
 name: directive-fig
@@ -40,7 +40,7 @@ name: directive-fig
 Night Struggle
 ```
 
-```{figure} ../../assets/rengokulastbutveryveryvery.png
+```{%figure%} ../../assets/rengokulastbutveryveryvery.png
 ---
 height: 512px
 name: directive-fig
@@ -48,7 +48,7 @@ name: directive-fig
 Blaze Your Heart
 ```
 
-```{figure} ../../assets/habibi.png
+```{%figure%} ../../assets/habibi.png
 ---
 height: 512px
 name: directive-fig
@@ -56,7 +56,7 @@ name: directive-fig
 Tamino
 ```
 
-```{figure} ../../assets/pychann.png
+```{%figure%} ../../assets/pychann.png
 ---
 height: 512px
 name: directive-fig
@@ -64,7 +64,7 @@ name: directive-fig
 Python-chan
 ```
 
-```{figure} ../../assets/bmo.png
+```{%figure%} ../../assets/bmo.png
 ---
 height: 512px
 name: directive-fig
@@ -72,7 +72,7 @@ name: directive-fig
 Time of Adventure
 ```
 
-```{figure} ../../assets/pythonchan2.png
+```{%figure%} ../../assets/pythonchan2.png
 ---
 height: 512px
 name: directive-fig
@@ -80,7 +80,7 @@ name: directive-fig
 Desert of Python-chan
 ```
 
-```{figure} ../../assets/dgkosenpai.png
+```{%figure%} ../../assets/dgkosenpai.png
 ---
 height: 512px
 name: directive-fig
