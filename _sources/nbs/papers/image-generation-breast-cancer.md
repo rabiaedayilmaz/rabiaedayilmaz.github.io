@@ -2,6 +2,13 @@
 
 ## BCI: Breast Cancer Immunohistochemical Image Generation through Pyramid Pix2pix
 
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/2204.11425)
+:::
+
 ```{figure} ../../assets/papers/bci-1.png
 ---
 name: directive-fig
@@ -63,3 +70,74 @@ name: directive-fig
 HER2 Visualizations
 ```
 The accuracy of the outcomes of the model is evaluated by pathologists and achieved 37.5% and 40.0% accuracy performance. Briefly, this is a challenging task and there is a need for more effective model.
+
+---
+
+## Breaking the Dilemma of Medical Image-to-image Translation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/2110.06465)
+:::
+
+Supervised Pix2Pix and unsupervised Cycle-consistency are two models dominates the field of medical image-to-image translation. But both of them are not ideal. Moreover, it requires paired and well-pixel aligned images that makes it really challengable especially in medical field and not always feasible due to respiratory motion or anatomical changes between times of acquired paired images. Cycle-consistency works well on unpaired or misaligned images. However, accuracy performance is not optimal and may produce multiple solutions. To break this dilemma, in this paper, RegGAN is proposed for medical image-to-image translation. It is based on theory of "loss-correction". Misaligned target images are considered as noisy labels and generator is trained with an additional registration network. The main goal is to search for a common solution both for image-to-image translation and registration tasks. In this paper, it is demonstrated that RegGAN can be easily combined with these models and improve their performance. The key outcome of this paper is that they demonstrated using registrations improves significantly the performance of image-to-iamge translation because of adaptively eliminating the noise.
+
+```{figure} ../../assets/papers/reggan-1.png
+---
+name: directive-fig
+---
+Comparison of Models
+```
+
+```{figure} ../../assets/papers/reggan-2.png
+---
+name: directive-fig
+---
+Correction Loss
+```
+
+```{figure} ../../assets/papers/reggan-3.png
+---
+name: directive-fig
+---
+Comparison of Results
+```
+
+## Diagnostic Strategies for Breast Cancer Detection: From Image Generation to Classification Strategies Using Artificial Intelligence Algorithms
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9322973/)
+:::
+
+Breast cancer is the leading death of women worldwide and according to World Health Organization (WHO) approximately 16% of diagnosed as malignant is the reason of that. Thus, early stage detection is important to have highest chance for survival. Breast cancer develops when any lump begins an angiogenesis process that causes the development of new blood vessels and capillaries from the existent vasculature. 
+Its mortality rate is 69% in emergent countries. In emergent countries, late diagnosis increases this rate.
+
+There are several technologies used to obtain breast tissue:
+
+### Mammograpgy
+It is used to screen breast tissue to detect abnormalities indicate cancer or another related diseases. It is recommend since it has 85% sensibility. Mammography uses low-doses of X-ray to form a picture of the internal breast tissue. To achieve this, breast is compressed by two platelets to mitigate the dispersion of the rays and obtain better picture without using high-doses of X-ray. Specialists look for the different zones like shape, size, contrast, edges, bright spots. The most common symptoms are calcifications and masses. Recently, Breast Tomosynthesis (BT) that allows 3D reconstruction and Contrast-Enhanced Mammography (CEM) that improves image resolution by injecting a contrast agent have been proposed. 
+### Ultrasound
+It is non-invasive and non-irradiating technique and useswaves to create images from breast. In order to create images, a transducer sends high-frequency sound waves (>=20kHz) and measures the reflected ones. The image is constructed by reflected wave sound from the internal tissues. Ultrasound has three purposes: i) assessing and determining the abnormality condition like solid or fluid-filled, ii) as an auxiliary scree tool when patient has dense breasts and mammography is not reliable enough, and iii) a guide to develop a biopsy in the suspected abnormality. 
+To analyze ultrasound images several computer-aided diagnose (CAD) systems are proposed and their common objective is to improve resolution of the image. Another proposed method is micro-bubbles that are injected into the abnormalities detected at first sight.
+Elastography is the technique to measure the tumor displacement when compressedusing a spatial transducer.
+### Magnetic Resonance Imaging (MRI)
+Breast MRI (BMRI) uses a magnetic field and radio waves to create a detailed image. Generally, 1.5T magnet with a contrast (usually gadolinium) is used. When the magnet is turned on, the magnetic field temporarily realigns the water molecules, so when radio waves are applied the emitted radiation is captured using specific-designed coils that are located at breast positions. These coils transform the captured radiation into electrical signals. The main goal is to get images of breast symmetry and the possible changes in the parenchymal tissue (reflection of the proportion of glandular tissue to fatty tissue). One of the problems of BMRI is that false-positive (specifity) rate, since this technique can detect low-size masses that are benign. To mitigate tihs issue, nanomaterials have been developed to stick to the cancer masses but not the benign ones as well as contrast agents.
+
+There are other approaches such as microwave radiation, CT, PET etc.
+
+Additionally, there is a recent image generation technique: Infrared Thermography (IRT). Temperature is an indicator of health. In breast cancer, when tumor exists it makes use of nutrients for its growth (angiogenesis) that results in increase of metabolism thus the temperature around the tumor. 
+
+## Ea-GANs: Edge-Aware Generative Adversarial Networks for CrossModality MR Image Synthesis
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://ieeexplore.ieee.org/document/8629301)
+:::
+
