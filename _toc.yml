@@ -21,7 +21,9 @@ parts:
 # - caption: BOOKS <3
 #    chapters:
 
-
+- caption: PAPERS
+  chapters:
+    - file: nbs/papers/image-generation-breast-cancer
 - caption: ART
   chapters:
     - file: nbs/art/art
