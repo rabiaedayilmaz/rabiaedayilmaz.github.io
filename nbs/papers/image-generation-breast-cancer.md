@@ -141,3 +141,121 @@ Additionally, there is a recent image generation technique: Infrared Thermograph
 [Paper](https://ieeexplore.ieee.org/document/8629301)
 :::
 
+Medical image synthesis is important topic. It maps from given source-modality image to unknown target-modality. There is wide range area of usage: virtual dataset creation, missing image imputation, image super-resolution etc. Currently there are two approaches: atlas-based methods that calculates atlas-to-image transformation in paired images (mostly healthy patient atlas data is available) and learning-based methods.
+
+Magnetic resonance imaging (MRI) is widely used protocol and each MR modality (T1-w, T2-w, FLAIR etc.) reveals unique visual characteristics. To benefit from complementary information from multiple imaging modalities, *cross-modality MR synthesis* has gained attention. But most existing methods onyl focus on minimizing pixel/voxel-wise intensity difference but ignore textural details of the image content structure that affects the quality of synthesized image. So, in this paper a cross-modality MR image synthesis method is proposed. It is edge-aware generative adversarial network (EA-GAN). There, the edge information that represents textural structure and depicts the boundaries of different objects is integrated. Two learning strategies are proposed: gEA-GAN (generator-induced) and dEA-GAN (discriminator-induced). gEA-GAN integrates the edge information via its generator and dEA-GAN does same via both generator and discriminator, so that edge similarity is also learned adversarialy. Proposed EA-GANs are 3D based and utilize hierarchical features to capture contextual information. dEA-GAN outperforms and SOTA method for cross-modality MR image synthesis (07/2019) and it is generalizable. 
+
+The edge maps are computed by using Sobel operator since it is simple and derivative can easily be computed.
+
+```{figure} ../../assets/papers/eagan-1.png
+---
+name: directive-fig
+---
+Sobel Filter and Edges
+```
+
+```{figure} ../../assets/papers/eagan-2.png
+---
+name: directive-fig
+---
+Objective of Generator in gEA-GAN
+```
+
+```{figure} ../../assets/papers/eagan-3.png
+---
+name: directive-fig
+---
+Objective of Discriminator in gEA-GAN
+```
+
+```{figure} ../../assets/papers/eagan-4.png
+---
+name: directive-fig
+---
+Final Objective Function of gEA-GAN
+```
+
+```{figure} ../../assets/papers/eagan-5.png
+---
+name: directive-fig
+---
+Objective of Generator in dEA-GAN
+```
+
+```{figure} ../../assets/papers/eagan-6.png
+---
+name: directive-fig
+---
+Objective of Discriminator in dEA-GAN
+```
+Similarly, the final objective function is summation of generator and discriminator objectives.
+Architecture consists of three modules: generator, discriminator and edge detector.
+```{figure} ../../assets/papers/eagan-7.png
+---
+name: directive-fig
+---
+Architecture of EA-GANs
+```
+
+```{figure} ../../assets/papers/eagan-8.png
+---
+name: directive-fig
+---
+Architecture fo Generator
+```
+
+```{figure} ../../assets/papers/eagan-10.png
+---
+name: directive-fig
+---
+Results on BRATS2015 Dataset
+```
+
+```{figure} ../../assets/papers/eagan-11.png
+---
+name: directive-fig
+---
+Comparison with Pix2Pix on Different 2D Datasets
+```
+
+## Generative Adversarial Networks An Overview
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8253599)
+:::
+
+GANs provide a way to learn deep representations without extensively annotated data. They can be used in various tasks: image synthesis, semantic image editing, style transfer, image superresolution, and classfication. It is an emerging technique for both semisupervised and supervised learning. They achieve this by implicitly modeling high-dimensional distributions of the data. And can be used for various down-stream tasks such as semantic iamge editing, data augmentation, style transfer, image retrival etc. There are several GANs  architectures:
+
+### Fully Connected GANs 
+The first GAN architecture that used fully connected neural networks for both generator and discriminator.
+### Convolutional GANs
+DCGANs (deep convolutional gans) are dominant in this group. They make use of strided and fractionally stridede convolutions that allows spatial downsampling and upsampling.
+### Conditional GANs
+The conditional setting is both generator and discriminator networks are class-conditional. They have more advantage for multimodal data generation.
+### GANs with Inference Models
+The generator consists of two networks: the encoder(inference network) and the decoder. Both of them jointly trained to fool discriminator. The discriminator receives pairs of (x, z) vectors has to determine which pair constitute genuine tuple consisting of real image sample and its encoding or fake image sample and corresponding latent-space input to the generator.
+In encoding-decoding model output is called as reconstruction.
+### Adversarial Autoencoders
+Autoencoders are composed from encoder and decoder. They learn nonlinear mappings in both directions.
+
+There a couple of symptomps that GANs might suffer from:
+* difficulties in getting the pair to converge
+* the generative model collapsing to generator very similar samples for different inputs
+* the discriminator loss converging quickly to zero so no reliable path for gradient updates to the generator
+
+However, there are several training tricks: batch normalization, to minimize the number of fully connected layers, leaky ReLU between intermediate layers rather than ReLU, feature matching, minibatch discrimination, heuristic averaging, one-sided label smoothing.
+For image-to-image translation models are pix2pix and cyclegan.
+
+## Image-to-Image Translation with Conditional Adversarial Networks
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/1611.07004.pdf)
+:::
+
+In this paper, a general solution for image-to-image translation by using conditional adversarial networks is investigated and pix2pix model is proposed. Moreover, not only learning the mapping from input image to target image but also learning a loss function to train this mapping. This paper shows that there is no-need no longer for hand-engineer own mappings.
