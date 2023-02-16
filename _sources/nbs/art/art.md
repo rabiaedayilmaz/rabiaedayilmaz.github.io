@@ -29,7 +29,7 @@ Love Bird
 height: 512px
 name: directive-fig
 ---
-Reaching to You
+To Preach To Reach
 ```
 
 ```{figure} ../../assets/flowergirl2.png
@@ -37,7 +37,15 @@ Reaching to You
 height: 512px
 name: directive-fig
 ---
-Night Struggle
+Wanderer of Night
+```
+
+```{figure} ../../assets/runforrestrun_colored.png
+---
+height: 512px
+name: directive-fig
+---
+Run Docctor Run
 ```
 
 ```{figure} ../../assets/rengokulastbutveryveryvery.png
@@ -45,7 +53,7 @@ Night Struggle
 height: 512px
 name: directive-fig
 ---
-Blaze Your Heart
+Ablaze Your Heart
 ```
 
 ```{figure} ../../assets/habibi.png
