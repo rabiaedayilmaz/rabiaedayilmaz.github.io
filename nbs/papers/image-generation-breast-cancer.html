@@ -90,11 +90,6 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="../../_static/logom.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">rey's log</h1>
@@ -387,6 +382,120 @@ title="Print to PDF"
    1.6. Image-to-Image Translation with Conditional Adversarial Networks
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unpaired-image-to-image-translation-using-cycle-consistent-adversarial-networks">
+   1.7. Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#freeze-the-discriminator-a-simple-baseline-for-fine-tuning-gans">
+   1.8. Freeze the Discriminator: a Simple Baseline for Fine-Tuning GANs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gans-for-medical-image-analysis">
+   1.9. GANs for medical image analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dcgan">
+     1.9.1. DCGAN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cgan">
+     1.9.2. cGAN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cyclegan">
+     1.9.3. CycleGAN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ac-gan">
+     1.9.4. AC-GAN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wgan">
+     1.9.5. WGAN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lsgan">
+     1.9.6. LSGAN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gans-for-medical-image-synthesis-an-empirical-study">
+   1.10. GANs for Medical Image Synthesis: An Empirical Study
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-resolution-image-synthesis-and-semantic-manipulation-with-conditional-gans">
+   1.11. High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#synthetic-medical-images-from-dual-generative-adversarial-networks">
+   1.12. Synthetic Medical Images from Dual Generative Adversarial Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-resolution-medical-image-synthesis-using-progressively-grown-generative-adversarial-networks">
+   1.13. High-resolution medical image synthesis using progressively grown generative adversarial networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-synthesis-with-adversarial-networks-a-comprehensive-survey-and-case-studies">
+   1.14. Image synthesis with adversarial networks: A comprehensive survey and case studies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#synthetic-image-generation-methods">
+     1.14.1. Synthetic image generation methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medical-image-synthesis-for-data-augmentation-and-anonymization-using-generative-adversarial-networks">
+   1.15. Medical Image Synthesis for Data Augmentation and Anonymization Using Generative Adversarial Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medical-image-synthesis-with-generative-adversarial-networks-for-tissue-recognition">
+   1.16. Medical Image Synthesis with Generative Adversarial Networks for Tissue Recognition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multimodal-unsupervised-image-to-image-translation">
+   1.17. Multimodal Unsupervised Image-to-Image Translation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resvit-residual-vision-transformers-for-multi-modal-medical-image-synthesis">
+   1.18. ResViT: Residual vision transformers for multi-modal medical image synthesis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stargan-v2-diverse-image-synthesis-for-multiple-domains">
+   1.19. StarGAN v2: Diverse Image Synthesis for Multiple Domains
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unsupervised-multi-modal-medical-image-registration-via-discriminator-free-image-to-image-translation">
+   1.20. Unsupervised Multi-Modal Medical Image Registration via Discriminator-Free Image-to-Image Translation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-why-and-which-pretrained-gans-are-useful">
+   1.21. WHEN, WHY, AND WHICH PRETRAINED GANS ARE USEFUL?
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -478,6 +587,120 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#image-to-image-translation-with-conditional-adversarial-networks">
    1.6. Image-to-Image Translation with Conditional Adversarial Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unpaired-image-to-image-translation-using-cycle-consistent-adversarial-networks">
+   1.7. Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#freeze-the-discriminator-a-simple-baseline-for-fine-tuning-gans">
+   1.8. Freeze the Discriminator: a Simple Baseline for Fine-Tuning GANs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gans-for-medical-image-analysis">
+   1.9. GANs for medical image analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dcgan">
+     1.9.1. DCGAN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cgan">
+     1.9.2. cGAN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cyclegan">
+     1.9.3. CycleGAN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ac-gan">
+     1.9.4. AC-GAN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wgan">
+     1.9.5. WGAN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lsgan">
+     1.9.6. LSGAN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gans-for-medical-image-synthesis-an-empirical-study">
+   1.10. GANs for Medical Image Synthesis: An Empirical Study
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-resolution-image-synthesis-and-semantic-manipulation-with-conditional-gans">
+   1.11. High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#synthetic-medical-images-from-dual-generative-adversarial-networks">
+   1.12. Synthetic Medical Images from Dual Generative Adversarial Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#high-resolution-medical-image-synthesis-using-progressively-grown-generative-adversarial-networks">
+   1.13. High-resolution medical image synthesis using progressively grown generative adversarial networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-synthesis-with-adversarial-networks-a-comprehensive-survey-and-case-studies">
+   1.14. Image synthesis with adversarial networks: A comprehensive survey and case studies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#synthetic-image-generation-methods">
+     1.14.1. Synthetic image generation methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medical-image-synthesis-for-data-augmentation-and-anonymization-using-generative-adversarial-networks">
+   1.15. Medical Image Synthesis for Data Augmentation and Anonymization Using Generative Adversarial Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medical-image-synthesis-with-generative-adversarial-networks-for-tissue-recognition">
+   1.16. Medical Image Synthesis with Generative Adversarial Networks for Tissue Recognition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multimodal-unsupervised-image-to-image-translation">
+   1.17. Multimodal Unsupervised Image-to-Image Translation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resvit-residual-vision-transformers-for-multi-modal-medical-image-synthesis">
+   1.18. ResViT: Residual vision transformers for multi-modal medical image synthesis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stargan-v2-diverse-image-synthesis-for-multiple-domains">
+   1.19. StarGAN v2: Diverse Image Synthesis for Multiple Domains
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unsupervised-multi-modal-medical-image-registration-via-discriminator-free-image-to-image-translation">
+   1.20. Unsupervised Multi-Modal Medical Image Registration via Discriminator-Free Image-to-Image Translation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-why-and-which-pretrained-gans-are-useful">
+   1.21. WHEN, WHY, AND WHICH PRETRAINED GANS ARE USEFUL?
   </a>
  </li>
 </ul>
@@ -590,6 +813,7 @@ To Read</div>
 <p><span class="caption-number">Fig. 1.10 </span><span class="caption-text">Comparison of Results</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<hr class="docutils" />
 </div>
 </div>
 </section>
@@ -610,6 +834,7 @@ Elastography is the technique to measure the tumor displacement when compressedu
 <p>Breast MRI (BMRI) uses a magnetic field and radio waves to create a detailed image. Generally, 1.5T magnet with a contrast (usually gadolinium) is used. When the magnet is turned on, the magnetic field temporarily realigns the water molecules, so when radio waves are applied the emitted radiation is captured using specific-designed coils that are located at breast positions. These coils transform the captured radiation into electrical signals. The main goal is to get images of breast symmetry and the possible changes in the parenchymal tissue (reflection of the proportion of glandular tissue to fatty tissue). One of the problems of BMRI is that false-positive (specifity) rate, since this technique can detect low-size masses that are benign. To mitigate tihs issue, nanomaterials have been developed to stick to the cancer masses but not the benign ones as well as contrast agents.</p>
 <p>There are other approaches such as microwave radiation, CT, PET etc.</p>
 <p>Additionally, there is a recent image generation technique: Infrared Thermography (IRT). Temperature is an indicator of health. In breast cancer, when tumor exists it makes use of nutrients for its growth (angiogenesis) that results in increase of metabolism thus the temperature around the tumor.</p>
+<hr class="docutils" />
 </section>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
@@ -706,6 +931,7 @@ Architecture consists of three modules: generator, discriminator and edge detect
 <p><span class="caption-number">Fig. 1.20 </span><span class="caption-text">Comparison with Pix2Pix on Different 2D Datasets</span><a class="headerlink" href="#id19" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<hr class="docutils" />
 </div>
 </div>
 </section>
@@ -739,6 +965,7 @@ In encoding-decoding model output is called as reconstruction.</p>
 </ul>
 <p>However, there are several training tricks: batch normalization, to minimize the number of fully connected layers, leaky ReLU between intermediate layers rather than ReLU, feature matching, minibatch discrimination, heuristic averaging, one-sided label smoothing.
 For image-to-image translation models are pix2pix and cyclegan.</p>
+<hr class="docutils" />
 </section>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
@@ -768,7 +995,449 @@ To Read</div>
 </div>
 </div>
 </div>
-<p>In this paper, a general solution for image-to-image translation by using conditional adversarial networks is investigated and pix2pix model is proposed. Moreover, not only learning the mapping from input image to target image but also learning a loss function to train this mapping. This paper shows that there is no-need no longer for hand-engineer own mappings.</p>
+<p>In this paper, a general solution for image-to-image translation by using conditional adversarial networks is investigated and pix2pix model is proposed. Moreover, not only learning the mapping from input image to target image but also learning a loss function to train this mapping. This paper shows that there is no-need no longer for hand-engineer own mappings. CNNs learn to minimize a loss function despite a lot of effort goese into designing effective losses. Briefly, we still need to teel CNN what wish to minimize. If a naive approach, like Euclidean distance, is taken then it will tend to produce blurry results. The reason is because Euclidean distance is minimized by averaging all the outputs that causes blurring. Notably, coming up with loss functions that force the CNN to do what we really want, like output sharp, realistic images etc., is an open problem and requires expert knowledge.</p>
+<p><em>Structured losses for image modeling</em> Image2image translations are usually considered as per pixel classification or regression. These formulations treat output space as unstructured. And condiitonal GANs learn unstructured loss. Structured losses penalize the joint configuration of the output. In the literature, there so many methods that considers this problem: conditional random fields, the SSIM metric, feature matching, nonparametric losses, the convolutional pseudo-prior and losses based on matching covariance statistics.</p>
+<p>pix2pix uses a U-Net  based architecture for generator and convolutional PatchGAN classfier for discriminator.</p>
+<p>PatchGAN is also called as markovian discriminator. L2 and L1 produce generate blurry results so they will encourage low-level frequencies. To model high-frequencies, restricting attention on local patches is enough. This is how PatchGAN is proposed. Because it penalizes structure at the scale of the patches. Such a discriminator effectively models the image as a Markov random field by assuming independence between pixels seperated more than patch diameter. Lastly, PatchGAN can be considered as a form of texture/style loss.</p>
+<figure class="align-default" id="id20">
+<img alt="../../_images/pix2pix-1.png" src="../../_images/pix2pix-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.21 </span><span class="caption-text">Final Objective Function</span><a class="headerlink" href="#id20" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="unpaired-image-to-image-translation-using-cycle-consistent-adversarial-networks">
+<h2><span class="section-number">1.7. </span>Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks<a class="headerlink" href="#unpaired-image-to-image-translation-using-cycle-consistent-adversarial-networks" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/1703.10593.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>This method is for learning to translate an image from a source X domain to target image domain Y without using paired images. It has adversarial loss and cycle consistency loss. For the discriminator part, PatchGAN is used.</p>
+</div>
+</div>
+</section>
+<section id="freeze-the-discriminator-a-simple-baseline-for-fine-tuning-gans">
+<h2><span class="section-number">1.8. </span>Freeze the Discriminator: a Simple Baseline for Fine-Tuning GANs<a class="headerlink" href="#freeze-the-discriminator-a-simple-baseline-for-fine-tuning-gans" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2002.10964.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>GANs are awesome but often requires numerous training data and heavy computational resources. To overcome this issue several transfer learning approaches are proposed in GANs. However, they are prone to overfitting or limited learning small distribution shifts. In this paper, it is demonstrated that simple fine-tuning of GANs with frozen lower layers of the discriminator performs well.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="gans-for-medical-image-analysis">
+<h2><span class="section-number">1.9. </span>GANs for medical image analysis<a class="headerlink" href="#gans-for-medical-image-analysis" title="Permalink to this headline">#</a></h2>
+<section id="dcgan">
+<h3><span class="section-number">1.9.1. </span>DCGAN<a class="headerlink" href="#dcgan" title="Permalink to this headline">#</a></h3>
+<p>It adresses instability of GAN architecture and increases the resolution. In this model, both generator and discriminator follow a deep convolutional network by exploiting spatial kernels and hierarchical features. Batch-normalization and leaky-ReLU are included. But mode-collapse issue could not resolved completely.</p>
+</section>
+<section id="cgan">
+<h3><span class="section-number">1.9.2. </span>cGAN<a class="headerlink" href="#cgan" title="Permalink to this headline">#</a></h3>
+<p>In the original GAN paper, there was no explicitcontrol on the actual data. To address this issue, conditional GANs are proposed, thus they will incorporate additional information like class labels. In the cGAN, the generator is presented with random noise z jointly with some prior information c.</p>
+<figure class="align-default" id="id21">
+<img alt="../../_images/medganrev-1.png" src="../../_images/medganrev-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.22 </span><span class="caption-text">cGAN Framework</span><a class="headerlink" href="#id21" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Another conditional GAN framework is Markovian GAN (MGAN). It is proposed for fast and high-quality style transfer in images. Highly takes advantage of VGG19 for feature extraction.</p>
+<p>Another successful variation of conditional GAN is pix2pix. The generator utilizes U-Net while discriminator uses a fully convolutional neural network similar to MGAN. It is showed that in the U-Net, the <em>skip connections</em> are beneficial for global coherence. Unlike original GAN, it requires image pairs. This allows the usage of L1 loss to stabilize training.</p>
+</section>
+<section id="cyclegan">
+<h3><span class="section-number">1.9.3. </span>CycleGAN<a class="headerlink" href="#cyclegan" title="Permalink to this headline">#</a></h3>
+<p>For image transformation between two domains, the model should extract characteristic features of both domains and discover underlying. To provide these criterias CycleGAN is proposed. The two GANs are chained together and a cyclic loss function forces them to reduce the space between their possible mapping functions.</p>
+</section>
+<section id="ac-gan">
+<h3><span class="section-number">1.9.4. </span>AC-GAN<a class="headerlink" href="#ac-gan" title="Permalink to this headline">#</a></h3>
+<p>Auxiliary classifier GAN (AC-GAN) is proposed. Unlike the cGAN, they do not provide prior information. Instead the discriminator can be additionally tasked with respectively classifying its input. More precisely, discriminator is edited such that after a few layers it splits into a standard discriminator and auxiliary network that aims to classify samples into different categories. According to the authors, this partially allows to use pre-trained discriminators and appears to stabilize the model.</p>
+</section>
+<section id="wgan">
+<h3><span class="section-number">1.9.5. </span>WGAN<a class="headerlink" href="#wgan" title="Permalink to this headline">#</a></h3>
+<p>In the previous frameworks, the distributions of generated and real data are matched by means of the Jensen-Shannon (JS) divergence. This divergence measure causes vanishing gradients and makes the saddle-point optimization non-feasible that are underlying failures of GAN models.</p>
+<p>In Wasserstein-GAN (WGAN) that uses the Earth Mover (ME) or Wasserstein-1 distance as a more optimal divergence measure to avoid vanishing gradients.The downside of WGAN is slow optimization.</p>
+<figure class="align-default" id="id22">
+<img alt="../../_images/medganrev-2.png" src="../../_images/medganrev-2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.23 </span><span class="caption-text">Cycle and AC GANs</span><a class="headerlink" href="#id22" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="lsgan">
+<h3><span class="section-number">1.9.6. </span>LSGAN<a class="headerlink" href="#lsgan" title="Permalink to this headline">#</a></h3>
+<p>Least-squares GANs tried to tackle with the training instability. Similar to WGAN, the loss function is modified to avoid vanishing gradients.</p>
+<hr class="docutils" />
+</section>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/1809.06222.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>This is a review paper about GANs that are used in medical image field. This paper categorized into seven parts: synthesis, segmentation, reconstruction, detection, de-noising,registration, and classification.</p>
+<p>There are several GANs: DCGAN, Markovian GAN, conditional GAN, CycleGAN, auxiliary classifier GAN, Wasserstein GAN, least squares GAN.</p>
+</div>
+</div>
+</section>
+<section id="gans-for-medical-image-synthesis-an-empirical-study">
+<h2><span class="section-number">1.10. </span>GANs for Medical Image Synthesis: An Empirical Study<a class="headerlink" href="#gans-for-medical-image-synthesis-an-empirical-study" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2105.05318.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>In this paper, various GAN-architectures are tested from DCGAN to style-based GANs on three medical imaging modalities and organs: cardiac cine-MRI, liver CT and RGB retina images. Generating realistic-looking medical images by FID (Fréchet Inception Distance score) standards passed the Truing test, however segmentation results were not much satisfying.</p>
+<figure class="align-default" id="id23">
+<img alt="../../_images/emprical-1.png" src="../../_images/emprical-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.24 </span><span class="caption-text">Used GANs</span><a class="headerlink" href="#id23" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>There are three main issues about GANs: convergence, vanishing gradients and mode collapse.
+There are several GANs: DCGAN, LSGAN, WGAN and WGAN-GP, HingeGAN, SPADE GAN(improvement of pix2pix, SOTA 2021) and StyleGAN.
+There are several evaluation metrics for GANs: Peak Signal to Noise Ratio (PSNR), Structural Similarity Index Measure (SSIM), Learned Perceptual Image Patch Similarity (LPIPS), Inception Score (IS), Frechet Inception Distance (FID but can not detect if GAN just memorizes the training set and suffers from high bias). GANs are highly sensitive to hyperparameters but hyperparameter space research takes 500 GPU-days. So, regarding to earlier studies parameters are chosen. SPADE GAN and StyleGAN did most, respectively.</p>
+<figure class="align-default" id="id24">
+<img alt="../../_images/emprical-2.png" src="../../_images/emprical-2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.25 </span><span class="caption-text">Selected Hyperparameters</span><a class="headerlink" href="#id24" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="high-resolution-image-synthesis-and-semantic-manipulation-with-conditional-gans">
+<h2><span class="section-number">1.11. </span>High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs<a class="headerlink" href="#high-resolution-image-synthesis-and-semantic-manipulation-with-conditional-gans" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/1711.11585.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>In this paper, a new method is presented that synthesizes high-resolution photo realistic images from semantic label maps  using cGANs. Generally results of cGANs are limited to low-resolution and far from realistic. However, in this paper 2048x1024 results are generated with a novel adversarial loss, new multi-scale generator and discrimiantor architectures. And, two interactive frameworks are represented: object instance segmentation information is enabled to remove/add objects or changing the category and a method to generate diverse results given the same input. pix2pix model is used as baseline. It is improved by using a coarse-to-fine generator, a multi-scale discriminator and a robust adversarial network objective function.</p>
+<p>The coarse-to-fine generator has two parts: G1 (global generator) and G2 (local enhancer).</p>
+<figure class="align-default" id="id25">
+<img alt="../../_images/high-res-1.png" src="../../_images/high-res-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.26 </span><span class="caption-text">Generator Architecture</span><a class="headerlink" href="#id25" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The full objective function is combination of GAN loss and feature matching loss (related to perceptual loss). Lambda controls the importance of each loss.</p>
+<figure class="align-default" id="id26">
+<img alt="../../_images/high-res-2.png" src="../../_images/high-res-2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.27 </span><span class="caption-text">Objective Function</span><a class="headerlink" href="#id26" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Existing image synthesis methods utilizes semantic label maps, despite this fact, in this paper instance label maps are used. It improved performance. Mapping from semantic map is one-to-many problem. But authors proposed low-dimensional feature channels as the input to the generator. To generate low dimensional features, an encoder network E to find low-dimensional feature vectors. To ensure that features are consistent within in each instance, an instance-wise average pooling layer to the output of the encoder to compute average feature for object instances. After training the encoder, it runned on all instances in the training images and record the obtained features. Then, k-clustering is performed for each semantic category. These features are used as input to the generator.</p>
+<figure class="align-default" id="id27">
+<img alt="../../_images/high-res-3.png" src="../../_images/high-res-3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.28 </span><span class="caption-text">Overall Network</span><a class="headerlink" href="#id27" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="synthetic-medical-images-from-dual-generative-adversarial-networks">
+<h2><span class="section-number">1.12. </span>Synthetic Medical Images from Dual Generative Adversarial Networks<a class="headerlink" href="#synthetic-medical-images-from-dual-generative-adversarial-networks" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/1709.01872.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>In this paper, a novel two-stage pipeline generating synthethic medical images from a pair of generative adversarial networksmethod is proposed that is called SynthMed. Tests are conducted on retinal fundi images. Also a hierarchical generation process to divide complex image generation task into two parts is proposed: geometry and photorealism.</p>
+<p>Stage-1 GAN: Produces segmentation masks that represent the variable <em>geometries</em> of the dataset. It is based on DCGAN. Cross-entropy loss is used.
+Stage-2 GAN: Translate the masks produced in Stage 1 into <em>photorealistic</em> images. It is based on cGAN.</p>
+<p>Stacking GANs is effective since inhibits unstable nature of GANs. The lack of detail is unacceptable in medical image generation.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="high-resolution-medical-image-synthesis-using-progressively-grown-generative-adversarial-networks">
+<h2><span class="section-number">1.13. </span>High-resolution medical image synthesis using progressively grown generative adversarial networks<a class="headerlink" href="#high-resolution-medical-image-synthesis-using-progressively-grown-generative-adversarial-networks" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/1805.03144.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>In this paper, GANs are applied to medical images and generated synthetic data: fundus and multi-modal MR glioma. PGGANs are explored in medical images and showed that it is successful in being realistic and diverse.</p>
+<figure class="align-default" id="id28">
+<img alt="../../_images/ggan-1.png" src="../../_images/ggan-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.29 </span><span class="caption-text">PGGAN Architecture</span><a class="headerlink" href="#id28" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>PGGAN trains the network in a step-wise style.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="image-synthesis-with-adversarial-networks-a-comprehensive-survey-and-case-studies">
+<h2><span class="section-number">1.14. </span>Image synthesis with adversarial networks: A comprehensive survey and case studies<a class="headerlink" href="#image-synthesis-with-adversarial-networks-a-comprehensive-survey-and-case-studies" title="Permalink to this headline">#</a></h2>
+<section id="synthetic-image-generation-methods">
+<h3><span class="section-number">1.14.1. </span>Synthetic image generation methods<a class="headerlink" href="#synthetic-image-generation-methods" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><strong>Single Stage Methods:</strong> These type of GANs follow a generator G and a discriminator D architecture. They have simple architecture and no additional connections. DCGAN, ControlGAN, ClusterGAN.</p></li>
+<li><p><strong>Multi Stage Methods:</strong> They use multiple generators and discriminators. Generators are in charge of different tasks. The idea behind this approach is to distinct an image into different portions, like foreground-background, style-structure. There, generators work in sequential or parallel. StructureGAN, CR-GAN, StarGAN, StarGAN-VC, StackGAN, AttenGAN, MC-GAN.</p></li>
+</ul>
+<figure class="align-default" id="id32">
+<img alt="../../_images/gan-rev-4.png" src="../../_images/gan-rev-4.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.30 </span><span class="caption-text">Various GANs</span><a class="headerlink" href="#id32" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+</section>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2012.13736.pdf">Paper</a>
+<a class="reference external" href="https://github.com/pshams55/GAN-Case-Study">Extensive Collection of Reviewed Papers</a></p>
+</div>
+</div>
+</div>
+<p>This is a comprehensive review paper that summarizes synthetic image generation methods and discuss the categories (image-to-image translation, fusion image generation, label-to-image mapping).</p>
+<figure class="align-default" id="id29">
+<img alt="../../_images/gan-rev-1.png" src="../../_images/gan-rev-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.31 </span><span class="caption-text">GAN Architectures Chronology</span><a class="headerlink" href="#id29" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Here, GAN types will be reviewed.</p>
+<ul class="simple">
+<li><p><strong>Convolutional GANs:</strong> Moving from FC to CNN is appropriate for image data. However, experiments showed that training with CNNs is hard because of: non-convergence, diminished gradient, unbalance between discriminator&amp;generator, model collapse, and hyperparameter selections. One solution is using Laplacian pyramids adversarial networks where a real image is converted into a multi scale pyramid image and convolutional GAN is trained to produce multi scale and multi level feature maps where final map is combination of all. The Laplacian pyramid is a linear invertible image demonstration containing band-pass images and a low-frequency residual.</p></li>
+</ul>
+<figure class="align-default" id="id30">
+<img alt="../../_images/gan-rev-2.png" src="../../_images/gan-rev-2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.32 </span><span class="caption-text">Laplacian Pyramid</span><a class="headerlink" href="#id30" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Conditional GANs:</strong> Proposed for image-to-image translation problem. It just not learns the mapping from input image to output image but also adopts a loss function to train this mapping. This provides opportunity to apply same generic method to problems that need complex loss formulations. There proposed InfoGAN (uses mutual info. so semantically meaningful), BAGAN (class conditioning in hidden space, similar to infogan but has two outputs) and ACGAN (similar infogan but no c conditional var. and added external classifier and optimized loss func.).</p></li>
+<li><p><strong>Autoencoder GANs:</strong> Autoencoders learn a deterministic mapping via the encoder and decoder. They are generally for learning non-linear mappings in both directions. Images generated by autoencoder gans are blurry but accurate and efficient.</p></li>
+</ul>
+<figure class="align-default" id="id31">
+<img alt="../../_images/gan-rev-3.png" src="../../_images/gan-rev-3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.33 </span><span class="caption-text">Autoencoder GAN Loss</span><a class="headerlink" href="#id31" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>There is also BiGAN, AGE, BEGAN etc.</p>
+<ul class="simple">
+<li><p><strong>Progressive and Classifier GAN:</strong> Idea came from progressive neural nets. It has high performance as it can receive additional leverage via lateral connections to earlier learned features. This architecture is widely used to extracy complex features and is stable. They have significant performance in tasks such as img2img translation, text2img synthesis.</p></li>
+<li><p><strong>Adversarial Domain Adaption:</strong> ADDA, CycleGAN, CyCADA, DiscoGAN, AugGAN, DualGAN.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="medical-image-synthesis-for-data-augmentation-and-anonymization-using-generative-adversarial-networks">
+<h2><span class="section-number">1.15. </span>Medical Image Synthesis for Data Augmentation and Anonymization Using Generative Adversarial Networks<a class="headerlink" href="#medical-image-synthesis-for-data-augmentation-and-anonymization-using-generative-adversarial-networks" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://link.springer.com/chapter/10.1007/978-3-030-00536-8_1">Paper</a></p>
+</div>
+</div>
+</div>
+<p>In  this paper, 3D GANs are used for data augmentation and then, the augmented data used on brain tumors dataset. It is observed that the performance got better. pix2pix is used and adopted to translate label-to-MRI (synthetic image generation) and MRI-to-label(image segmentation).</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="medical-image-synthesis-with-generative-adversarial-networks-for-tissue-recognition">
+<h2><span class="section-number">1.16. </span>Medical Image Synthesis with Generative Adversarial Networks for Tissue Recognition<a class="headerlink" href="#medical-image-synthesis-with-generative-adversarial-networks-for-tissue-recognition" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://ieeexplore.ieee.org/document/8419363">Paper</a></p>
+</div>
+</div>
+</div>
+<p>DCGAN, WGAN and BEGAN are applied and compared on thyroid images. WGANs and BEGANs outperformed.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="multimodal-unsupervised-image-to-image-translation">
+<h2><span class="section-number">1.17. </span>Multimodal Unsupervised Image-to-Image Translation<a class="headerlink" href="#multimodal-unsupervised-image-to-image-translation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Xun_Huang_Multimodal_Unsupervised_Image-to-image_ECCV_2018_paper.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>In computer vision unsupervised image-to-image translation is important. But they fail to generate diverse outputs from a given source domain image. To address this issue, Multimodal Unsupervised Image-to-Image Translation (MUNIT) framework is proposed. They assumed that the image representation can be decomposed into a content code that is domain invariant, and a style code that captures domain-specific properties. To translate an image to another domain, they recombined its content code with a random style code sampled from the style space of the target.</p>
+<figure class="align-default" id="id33">
+<img alt="../../_images/gan-rev-5.png" src="../../_images/gan-rev-5.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.34 </span><span class="caption-text">Proposed Framework</span><a class="headerlink" href="#id33" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="resvit-residual-vision-transformers-for-multi-modal-medical-image-synthesis">
+<h2><span class="section-number">1.18. </span>ResViT: Residual vision transformers for multi-modal medical image synthesis<a class="headerlink" href="#resvit-residual-vision-transformers-for-multi-modal-medical-image-synthesis" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2106.16031.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>CNNs are desgined to perform local processing with compact filters and this inductive bias compromises learning of contextual features. In this paper, ResVit method is proposed that leverages the contextual sensitivity of vision transformers. ResVit’s generator employs a central bottleneck comprising novel aggregated residual transformer (ART) blocks that synergistically combine residual convolutional and transformer modules. Residual connections in ART blocks promote diversity in captured representations, while a channel compression module distills task-relevant information. A weight sharing strategy is used among ART to relief computational burden. A unified implementation is introduced to avoid the need to rebuild separate synthesis models for varying source-target modality configurations. Experiments are conducted for synthesis of multi contrasted MRI and CT from MRI images.</p>
+<p>Medical imaging has a crucial role in healtcare since it enables in vivo examination of pathology. In many scenarios it is desirable to have multi modal protocols from multiple scanners(MRI, CT etc.) or multiple acquisitons from a single scanner(multi-contrast MRI). Complementary information empower physicians as causing high confidence and accuracy. But numerous factors such as uncooperative patient and excessive scan times prohibit ubiquitous multi modal imaging. Therefore, there is an increasing need for synthesizing unacquired images in multi modal protocols from the subset of available images, bypassing costs related to additional scans.</p>
+<p>Vision transformers are highly promising since attention operators that learn contextual features can improve sensitivity for long-range interactions and focus on critical image regions for improved generalization to atypical anatomy such as lesions. But adopting vanilla transformers in this pixel level outputs is challenging because of the computational burden and limited localization. Thus, recent studies consider hybrid architectures or computation-efficient attention operators to adopt transformers in medical imaging tasks.</p>
+<p>ResVit combines the sensitivity of vision transformers to global context, the localization power of CNNs, and the realism of adversarial learning. ResVit’s generator follows an encoder-decoder architecture with a central bottleneck to distill task-critical information. The encoder and decoder contain CNN blocks to leverage local precision of convolution operators. The bottleneck comprises novel aggregated residual transformer (ART) blocks to preserve local and gloabal context, with a weight sharing strategy to minimize model complexity.</p>
+<figure class="align-default" id="id34">
+<img alt="../../_images/resvit-1.png" src="../../_images/resvit-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.35 </span><span class="caption-text">ResVit Model</span><a class="headerlink" href="#id34" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="stargan-v2-diverse-image-synthesis-for-multiple-domains">
+<h2><span class="section-number">1.19. </span>StarGAN v2: Diverse Image Synthesis for Multiple Domains<a class="headerlink" href="#stargan-v2-diverse-image-synthesis-for-multiple-domains" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/abs/1912.01865.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>A good image model should learn i) diversit of generated images and ii) scalability over multiple domains. StarGAN deals with both.</p>
+<figure class="align-default" id="id35">
+<img alt="../../_images/stargan-1.png" src="../../_images/stargan-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.36 </span><span class="caption-text">Four Modules of StarGAN</span><a class="headerlink" href="#id35" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="unsupervised-multi-modal-medical-image-registration-via-discriminator-free-image-to-image-translation">
+<h2><span class="section-number">1.20. </span>Unsupervised Multi-Modal Medical Image Registration via Discriminator-Free Image-to-Image Translation<a class="headerlink" href="#unsupervised-multi-modal-medical-image-registration-via-discriminator-free-image-to-image-translation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/abs/2204.13656.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>In this paper, a novel translation-based unsupervised deformable image registration approach to convert the multi-modal registration problem to mono-model one is proposed. Concretely, this approach incorporates a discriminator-free translation network to facilitate the training of the registration network and a patchwise contrastive loss  to encourage the translation network to preserve object shapres. Thus, main idea is to reduce the inconsistency and artifacts of the translation by removing discriminator. Moreover, replacing adversarial loss with novel two losses (local alignment and global alignment) is proposed so that an unsupervised method requiring no ground truth deformation or pairs of aligned images for training. Local alignment loss is for capturing detailed local texture information and global alignment loss is for focusing on the overall shape. Four variants of the approach evaluated on a public dataset. According to experiment results, it achieved SOTA performance (04/2022).</p>
+<figure class="align-default" id="id36">
+<img alt="../../_images/multi-1.png" src="../../_images/multi-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.37 </span><span class="caption-text">Overview of Method</span><a class="headerlink" href="#id36" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id37">
+<img alt="../../_images/multi-2.png" src="../../_images/multi-2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.38 </span><span class="caption-text">More Detailed Overview of Method</span><a class="headerlink" href="#id37" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="when-why-and-which-pretrained-gans-are-useful">
+<h2><span class="section-number">1.21. </span>WHEN, WHY, AND WHICH PRETRAINED GANS ARE USEFUL?<a class="headerlink" href="#when-why-and-which-pretrained-gans-are-useful" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/abs/2202.08937.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>The goal of this work is to scrutinize the process of GAN finetuning. There are three points of this work: i) pretrained checkpoint affects model’s coverage, ii) pretrained generators and discriminators are important and iii) a simple recipe to select an appropriate GAN checkpoint that is most suitable for finetuning is described.</p>
+<p>For iii., it is considered that a starting checkpoint optimal if it provides the lowest FID score or its FID score differs from the lowest by most 5%.</p>
 </div>
 </div>
 </section>
