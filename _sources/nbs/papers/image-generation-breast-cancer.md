@@ -653,3 +653,132 @@ More Detailed Overview of Method
 The goal of this work is to scrutinize the process of GAN finetuning. There are three points of this work: i) pretrained checkpoint affects model's coverage, ii) pretrained generators and discriminators are important and iii) a simple recipe to select an appropriate GAN checkpoint that is most suitable for finetuning is described.
 
 For iii., it is considered that a starting checkpoint optimal if it provides the lowest FID score or its FID score differs from the lowest by most 5%.
+
+## BACH: Grand challenge on breast cancer histology images
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/1808.04277.pdf)
+:::
+
+---
+
+## Breast cancer histopathological image classification using attention high-order deep network
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://ieeexplore.ieee.org/document/7727519)
+:::
+
+This paper introduces a novel attention high-order deep network (AHoNet) to capture more discriminant deep features for breast cancer pathological images by simultaneously embedding attention mechanism and high-order statistical representation into a residual convolutional network. AHoNet gains the optimal patient-level
+classification accuracies of 99.29% and 85% on the BreakHis and BACH database, respectively.
+
+AHoNet ->  efficient channel attention module with non-dimensionality reduction + local cross-channel
+interaction to achieve local salient deep features + matrix power normalization (more robust global feature presentation)
+
+```{figure} ../../assets/papers/ahonet-1.png
+---
+name: directive-fig
+---
+AHoNet Architecture
+```
+
+---
+
+## Breast Cancer Histopathological Image Classification using Deep Learning
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://ieeexplore.ieee.org/document/8965027)
+:::
+
+The paper employs deep learning to classify breast cancer histopathological image into benign and malignant categories. The Inception v1 convolutional neural network is mainly adopted. Spatial Pyramid Pooling and special global average pooling are added to the network to ensure that images can be imported in the original aspect ratio format. The experimental results show that the convolutional neural network performs well in breast cancer image classification, and the Global Average Pooling effect is slightly better than the Spatial Pyramid Pooling.
+
+---
+
+## Deep transfer with minority data augmentation for imbalanced breast cancer dataset
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://www.sciencedirect.com/science/article/pii/S1568494620306979)
+:::
+
+The imbalanced class distribution results in the degradation of performance. A novel learning strategy that involves a deep transfer network has been proposed in this paper. DCGAN is used in the
+initial phase for data augmentation of the minority class (benign) only. The dataset, with the class distribution now balanced, is applied as input to the deep transfer network. 
+
+## Experimental Assessment of Color Deconvolution and Color Normalization for Automated Classification of Histology Images Stained with Hematoxylin and Eosin
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://pubmed.ncbi.nlm.nih.gov/33187299/)
+:::
+
+Here, it is investigated whether color preprocessing—specifically color deconvolution
+and color normalization—could be used to correct such variability and improve the performance of
+automated classification procedures and found that doing no color preprocessing was the best option in
+most cases.
+
+## Fusing of Deep Learning, Transfer Learning and GAN for Breast Cancer Histopathological Image Classification
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://link.springer.com/chapter/10.1007/978-3-030-38364-0_23)
+:::
+
+Biomedical image classification often deals with limited training sample due to the cost of labeling data. In this paper, they propose to combine deep learning, transfer learning and generative adversarial network (stylegan and pix2pix) to improve the classification performance. GANs made images noisy. :(
+
+## GAN-based synthetic medical image augmentation for increased CNN performance in liver lesion classification
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://www.sciencedirect.com/science/article/pii/S0925231218310749)
+:::
+
+Obtaining large datasets in the medical domain remains a challenge. They present methods for generating synthetic medical images using recently presented deep learning Generative Adversarial Networks (GANs). Furthermore, they show that generated medical images can be used for synthetic data augmentation, and improve the performance of CNN for medical image classification.
+
+## Multiclass classifcation of breast cancer histopathology images using multilevel features of deep convolutional neural network
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://www.nature.com/articles/s41598-022-19278-2)
+:::
+
+They utilized six intermediate layers of the pre-trained Xception model to extract salient features from input images. They first optimized the proposed architecture on the unnormalized dataset, and then evaluated its performance on normalized datasets resulting from Reinhard, Ruifrok, Macenko, and Vahadane stain normalization procedures. Overall, it is concluded that the proposed approach provides a generalized state-of-the-art classifcation performance towards the original and normalized datasets. Also, it can be deduced that even though the aforementioned stain normalization methods offered competitive results, they did not outperform the results of the original dataset.
+
+## SYNTHETIC DATA AUGMENTATION USING GAN FOR IMPROVED LIVER LESION CLASSIFICATION
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/1801.02385)
+:::
+
+In this paper, they present a data augmentation method that generates synthetic medical images using Generative Adversarial Networks (GANs). We propose a training scheme that first uses classical data augmentation to enlarge the training set and then further enlarges the data size and its diversity by applying GAN techniques for synthetic data augmentation. And achieved a significant improvement of 7% using synthetic augmentation over the classic augmentation.
+
+## Two-Stage Convolutional Neural Network for Breast Cancer Histology Image Classification
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://link.springer.com/chapter/10.1007/978-3-319-93000-8_81)
+:::
+
+Due to the large size of each image in the training dataset, we propose a patch-based technique which consists of two consecutive convolutional neural networks. The first “patch-wise” network acts as  an auto-encoder that extracts the most salient features of image patches while the second “imagewise” network performs classification of the whole image. The main contribution of this work is presenting a pipeline which is able to process large scale images using minimal hardware.
