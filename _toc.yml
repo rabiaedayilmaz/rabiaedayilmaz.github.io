@@ -18,8 +18,9 @@ parts:
 #    chapters:
 
 
-# - caption: BOOKS <3
-#    chapters:
+- caption: BOOKS <3
+  chapters:
+    - file: nbs/books/cognitive-neuroscience
 
 - caption: PAPERS
   chapters:

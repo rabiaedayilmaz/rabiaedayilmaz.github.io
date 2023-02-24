@@ -16,6 +16,14 @@ name: directive-fig
 Guide Your Own Way
 ```
 
+```{figure} ../../assets/boy.png
+---
+height: 512px
+name: directive-fig
+---
+It is not You, It is Just How You Feel.
+```
+
 ```{figure} ../../assets/last.png
 ---
 height: 512px
