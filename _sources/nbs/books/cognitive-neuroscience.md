@@ -80,7 +80,37 @@ Changes in electrical impulses, fluctuations in blood flow, and shifts in utiliz
 * Magnetic Resonance Imaging: anatomical images
 * Functional Magnetic Resonance Imaging: detailed images of the body with physiology related to brain function, and it is sensitive.
 
+`````{admonition} Think About It
+:class: tip
+1. Can we study how the mind works without studying the brain?
+- We can since mind does not leave a trace in terms of just physiologically but also behavirol and cognitive psychology that focus on how people think, learn and behave. But further investigation understanding the brain's structure and functions maintain its importance.
+2. Will modern brain-imaging experiments become the new phrenology?
+- No because phrenology is a pseudo-scientific practice and claims to be able to determine the character, personality and mental abilities based on the shape and size of the skull. It is not based on science and evidence. In contrast, modern brain imaging techniques use such as fMRI and PET that visualize and measure brain activity. They investigate specific cognitive processes and neural mechanisms to understand behavior and mental states by being statistically robust and reliable.
+3. How do you think the brain might be studied in the future?
+- I think that future will enable us to experiment brain not just in vivo but also in silico with the improvements of artifical intelligence. On the other hand, there are four major topics that are expected to be developed over the time largely. They are brain imaging, brain-machine interfaces, artifical intelligence, optogenetics(controlling neuron and brain activity by using light) and brain simulation.
+4. Why do good ideas and theories occasionally get lost over the passage of time? How do they often get rediscovered?
+- It happens often to ignore the outcomes or rediscovering them. Because at that time, the importance of the outcome may not well understood or could not be concluded in a such way to unlock more unknown. The key reasons are lack of documentation, lack of interest, lack of accessability etc.
+`````
+
 ### Structure and Function of Nervous System
+Nervous system has two core cell types: neurons and glial cells. Neurons are basic signaling units and transmit information throughout nervous system. They vary due to their function. Glial cells provide structural support and electrical insulation to neurons and modulating neuronal activity. There are three major types of glial cells: astrocytes, microglial cells, and oligodendrocytes. 
+
+Astrocytes are large, surrounding neurons and close contact with brain's vasculature. They create a barrier, blood-brain barrier. It restricts the diffusion of microscopic objects (such as bacteria, pathogen, chemical compounds) and large hydrophilic molecules in the blood from entering the neural tissue. They respond to and release neurotransmitters. 
+
+Glial cells have fatty substance called myelin. In the central nervous system oligodendrocytes form myelin and in the peripheral nervous system Schwann cells form myelin. They wrap the axon and creates myelin that is good electric insulator and prevents electrical loss(increase in speed and distance). 
+
+Microglial cells are small and irregular shaped. They are phagocytes devour and remove damaged cells. They can proliferate even in the adults.
+
+Nodes of Ranvier are where myelin has gaps and voltage gated Na+ and K+.
+
+Soma (Greek - body) is the cell body and it contains nucleus, endoplasmic reticulum, cytoskeleton, mitochondria, Golgi apparatus etc. They are in the cytoplasm that is salty fluid containing ions of potassium, sodium, chloride, and calcium and molecules like protein. Neurons have two structure: dendrites (branching extensions) and axons (output side). Synapse is where two neurons contact.
+
+Presynaptic neuron is when their axon's output synapses make connections onto another neuron.
+Postsynaptic neuron is when other neurons make a connection at input synapses.
+
+The process of signaling has several stages. First, energy is needed to generate the signals. Second, this energy is in the form of an electrical potential across the neuronal membrane (difference in voltage). Third, these two voltages are depended on the concentrations of potassium, sodium and chloride ions. Fourth, when a neuron is in resting state, the inside of the neuron is charged more negatively (about 70 mV-resting potential). The neuronal membrane has ion channels and pumps. Ion channels are passive (always open) or gated (stimulation needed electrical, chemical, physical etc.)
+ Action potentials are all or none due to the threshold. Postsynaptic potentials lead to action potentials and can be measured with EEG etc.
+
 ### Methods of Cognitive Neuroscience
 
 ## Core Processes

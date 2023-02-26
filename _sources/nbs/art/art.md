@@ -103,3 +103,11 @@ name: directive-fig
 ---
 Twinkle Twinkle
 ```
+
+```{figure} ../../assets/combee.png
+---
+height: 512px
+name: directive-fig
+---
+Manner of Speaking is Honey
+```
