@@ -83,13 +83,13 @@ Changes in electrical impulses, fluctuations in blood flow, and shifts in utiliz
 `````{admonition} Think About It
 :class: tip
 1. Can we study how the mind works without studying the brain?
-- We can since mind does not leave a trace in terms of just physiologically but also behavirol and cognitive psychology that focus on how people think, learn and behave. But further investigation understanding the brain's structure and functions maintain its importance.
++ We can since mind does not leave a trace in terms of just physiologically but also behavirol and cognitive psychology that focus on how people think, learn and behave. But further investigation understanding the brain's structure and functions maintain its importance.
 2. Will modern brain-imaging experiments become the new phrenology?
-- No because phrenology is a pseudo-scientific practice and claims to be able to determine the character, personality and mental abilities based on the shape and size of the skull. It is not based on science and evidence. In contrast, modern brain imaging techniques use such as fMRI and PET that visualize and measure brain activity. They investigate specific cognitive processes and neural mechanisms to understand behavior and mental states by being statistically robust and reliable.
++ No because phrenology is a pseudo-scientific practice and claims to be able to determine the character, personality and mental abilities based on the shape and size of the skull. It is not based on science and evidence. In contrast, modern brain imaging techniques use such as fMRI and PET that visualize and measure brain activity. They investigate specific cognitive processes and neural mechanisms to understand behavior and mental states by being statistically robust and reliable.
 3. How do you think the brain might be studied in the future?
-- I think that future will enable us to experiment brain not just in vivo but also in silico with the improvements of artifical intelligence. On the other hand, there are four major topics that are expected to be developed over the time largely. They are brain imaging, brain-machine interfaces, artifical intelligence, optogenetics(controlling neuron and brain activity by using light) and brain simulation.
++ I think that future will enable us to experiment brain not just in vivo but also in silico with the improvements of artifical intelligence. On the other hand, there are four major topics that are expected to be developed over the time largely. They are brain imaging, brain-machine interfaces, artifical intelligence, optogenetics(controlling neuron and brain activity by using light) and brain simulation.
 4. Why do good ideas and theories occasionally get lost over the passage of time? How do they often get rediscovered?
-- It happens often to ignore the outcomes or rediscovering them. Because at that time, the importance of the outcome may not well understood or could not be concluded in a such way to unlock more unknown. The key reasons are lack of documentation, lack of interest, lack of accessability etc.
++ It happens often to ignore the outcomes or rediscovering them. Because at that time, the importance of the outcome may not well understood or could not be concluded in a such way to unlock more unknown. The key reasons are lack of documentation, lack of interest, lack of accessability etc.
 `````
 
 ### Structure and Function of Nervous System
