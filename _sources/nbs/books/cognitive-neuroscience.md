@@ -82,13 +82,13 @@ Changes in electrical impulses, fluctuations in blood flow, and shifts in utiliz
 
 `````{admonition} Think About It
 :class: tip
-1. Can we study how the mind works without studying the brain?
+a) Can we study how the mind works without studying the brain?
 + We can since mind does not leave a trace in terms of just physiologically but also behavirol and cognitive psychology that focus on how people think, learn and behave. But further investigation understanding the brain's structure and functions maintain its importance.
-2. Will modern brain-imaging experiments become the new phrenology?
+b) Will modern brain-imaging experiments become the new phrenology?
 + No because phrenology is a pseudo-scientific practice and claims to be able to determine the character, personality and mental abilities based on the shape and size of the skull. It is not based on science and evidence. In contrast, modern brain imaging techniques use such as fMRI and PET that visualize and measure brain activity. They investigate specific cognitive processes and neural mechanisms to understand behavior and mental states by being statistically robust and reliable.
-3. How do you think the brain might be studied in the future?
+c) How do you think the brain might be studied in the future?
 + I think that future will enable us to experiment brain not just in vivo but also in silico with the improvements of artifical intelligence. On the other hand, there are four major topics that are expected to be developed over the time largely. They are brain imaging, brain-machine interfaces, artifical intelligence, optogenetics(controlling neuron and brain activity by using light) and brain simulation.
-4. Why do good ideas and theories occasionally get lost over the passage of time? How do they often get rediscovered?
+d) Why do good ideas and theories occasionally get lost over the passage of time? How do they often get rediscovered?
 + It happens often to ignore the outcomes or rediscovering them. Because at that time, the importance of the outcome may not well understood or could not be concluded in a such way to unlock more unknown. The key reasons are lack of documentation, lack of interest, lack of accessability etc.
 `````
 
@@ -109,7 +109,64 @@ Presynaptic neuron is when their axon's output synapses make connections onto an
 Postsynaptic neuron is when other neurons make a connection at input synapses.
 
 The process of signaling has several stages. First, energy is needed to generate the signals. Second, this energy is in the form of an electrical potential across the neuronal membrane (difference in voltage). Third, these two voltages are depended on the concentrations of potassium, sodium and chloride ions. Fourth, when a neuron is in resting state, the inside of the neuron is charged more negatively (about 70 mV-resting potential). The neuronal membrane has ion channels and pumps. Ion channels are passive (always open) or gated (stimulation needed electrical, chemical, physical etc.)
- Action potentials are all or none due to the threshold. Postsynaptic potentials lead to action potentials and can be measured with EEG etc.
+Action potentials are all or none due to the threshold. Postsynaptic potentials lead to action potentials and can be measured with EEG etc.
+
+Neurotransmitters are synthesized by and localized within the presynaptic neuron, and stored in the presynaptic
+terminal before release. It is releasedby the presynaptic neuron when action potentials depolarize with Ca+2. Some neurotransmitters are amino acids (aspartate, gamma amynobutyric acid (GABA), glutamate and glycine), biogenic amines (dopamine, norepinephrine and epinephrine [three of them aka catecholamines], serotonin (5-hydroxytryptamine) and histamine), asethylcholine (ACh), neuropeptides(large molecules, strings of amino acids). Neuropeptides are tachykinins (brain-gut peptides), neurohypophyseal hormones (oxytocin, vazopressin), hypothalamic releasing hormones (corticotropine hormones like somatostatin/stress, gonadotropin/growth inhibitor), opioid peptides (like drug, yes, endorphins and enkaphalins) and others(insulin, secretin etc.).
+
+Chemical transmission results in release of neurotransmitters from the presynaptic neuron and binding of those neurotransmitters on the postsynaptic neuron. After binding neurotransmitters must be removed from the receptor. This can be achieved by reuptake back into the presynaptic terminal, enzymatic breakdown or diffusion.
+
+Electrical synapses are different from chemical synapses. Because they operate by passing current directly from one neuron (presynaptic) to another neuron (postsynaptic) via specialized channels.
+
+Two main division of nervous system: centralnervous system (CNS, brain+spinal cord) and peripheral nervous system (PNS, nerves+ganglia). PNS deliverssensory information to CNS. This is achieved by two subsystems: somatic motor system (voluntary muscles) and autonomic motor system (automated visceral functions).
+
+Autonomic motor system has two branches: sympathetic (norepinephrine, fight or flight) and parasympathetic (acetylcholine, uwu peace).
+
+CNS formed by brain and spinal cord. Each is covered with protection membranes that is called meninges. Meninges has three layers: dura mater (outer), arachnoid mater (middle) and pia mater (inner). Between arachnoid and pia mater, it is filled with a fluid that is called cerebrospinal fluid (CSF). The brain actually floats in CSF (for pressure and damage).
+
+The brain needs energy and oxygen (from blood). Approximately 20% of blood flow of the heart is supplied to brain.
+
+Guide to navigate to brain:
+            dorsal
+rostral (eye)       (nape) caudal
+            ventral
+
+The brainstem = medulla(vital functions), pons(REM sleep, eye movements) and midbrain. Cerebellum.
+The diencephalon = thalamus and hypothalamus. Pituiary gland, amygdala.
+Telencephalon = cerebrum.
+
+Limbic system = hypothalamus, thalammus, amygdala and hypocampus. Behavioural and emotional responses.
+
+Basal ganglia = caudate nucleus, putamen/striatum, globus pallidus, subthalamic nucleus, and substantia nigra. Motivation and learning. Reward-based learning and goal-oriented behavior. Timing and task-switching.
+
+Dividing cortex by function: frontal lobe (motor cortex), parietal lobe (somatosensory area), occipital lobe (visual processing areas), temporal lobe (auditory processsing area).
+
+The wrinkled/folded structure of the brain = gyri (bumps) and sulci (groove).
+
+Evolution of the brain: minimizing connection lengths and a small number of long connections.
+
+New neurons form through the life in certain brain regions. (neurogenesis)
+
+`````{admonition} Think About It
+:class: tip
+a) If action potentials are all or none, how does the nervous system code differences in sensory stimulus amplitudes?
++ Amplitudes of the sensory stimuli vary due to frequency and total number of action potentials.
+b) What property (or properties) of ion channels makes them selective to only one ion, such as K+, and not another, such as Na+? Is it the size of the channel, other factors, or a combination?
++ The selectivity of the ion channels are determined by the size, shape and charge distribution of the channel pore.
+c) Given that synaptic currents produce electrotonic potentials that are decremental, how do inputs located distantly on a neuron’s dendrites have any influence on the firing of the cell?
++ Neurons are not passive cables, so neuron's soma can still have influence on the firing cell.
+d) What would be the consequence for the activity of a postsynaptic neuron if reuptake or degradation systems for neurotransmitters were damaged?
++ Then, neurotransmitters could not be removed, it can affect the activity of the postsynaptic neuron and long term neural circuit. And it may lead some consequences: increased excitability, neurotransmitter depletion, altered synaptic plasticity,neurological disorders.
+e) What are glial cells, and what functions do they perform?
++ They are non neural cell that are responsible for transmitting electrical and chemical signals in the nervous system. They have propoerties such as blood brain barrier (astrocytes), myelin&Schawann cells (oligodendricytes), immune by removing damaged cells (microglia) etc.
+f) Which region of the cerebral cortex has increased in size the most across species during evolution? What function does this brain region carry out in humans that is absent or reduced in animals?
++ It is prefrontal cortex. Its tasks include working memory, decision making, planning, attention, social behavior. In humans it is essential as it enables us to carry out complex tasks. In animals it is less developed.
+g) How do the factors of brain size, neuron number, and connectivity contribute to human cognitive capacity ?
++ Brain size may be coralated with increased cognitive capacity since it enables to have larger space to more cortical areas. Neuron number is the key determinant of cognitive capacity because it provides to achieve more complex tasks. Complexity and density of connectivity contributes a lot to cognitive capacity.
+h) What brain areas have been associated with the creation of new neurons, and what functions are they
+thought to perform?
++ This process is called neurogenesis. The regions of brain that have neurogenesis are: hyppocampus (learning, memory, spatial navigation), subventricular zone (migrates to olfactory bulb, odor perception), olfactory bulb.
+`````
 
 ### Methods of Cognitive Neuroscience
 

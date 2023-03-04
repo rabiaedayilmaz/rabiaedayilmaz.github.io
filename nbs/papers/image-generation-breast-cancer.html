@@ -558,6 +558,26 @@ title="Print to PDF"
    2.31. Two-Stage Convolutional Neural Network for Breast Cancer Histology Image Classification
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gan-augmentation-augmenting-training-data-using-generative-adversarial-networks">
+   2.32. GAN Augmentation: Augmenting Training Data using Generative Adversarial Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#self-ensembling-with-gan-based-data-augmentation-for-domain-adaptation-in-semantic-segmentation">
+   2.33. Self-Ensembling With GAN-Based Data Augmentation for Domain Adaptation in Semantic Segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classmix-segmentation-based-data-augmentation-for-semi-supervised-learning">
+   2.34. ClassMix: Segmentation-Based Data Augmentation for Semi-Supervised Learning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-copy-paste-is-a-strong-data-augmentation-method-for-instance-segmentation">
+   2.35. Simple Copy-Paste Is a Strong Data Augmentation Method for Instance Segmentation
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -813,6 +833,26 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#two-stage-convolutional-neural-network-for-breast-cancer-histology-image-classification">
    2.31. Two-Stage Convolutional Neural Network for Breast Cancer Histology Image Classification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gan-augmentation-augmenting-training-data-using-generative-adversarial-networks">
+   2.32. GAN Augmentation: Augmenting Training Data using Generative Adversarial Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#self-ensembling-with-gan-based-data-augmentation-for-domain-adaptation-in-semantic-segmentation">
+   2.33. Self-Ensembling With GAN-Based Data Augmentation for Domain Adaptation in Semantic Segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classmix-segmentation-based-data-augmentation-for-semi-supervised-learning">
+   2.34. ClassMix: Segmentation-Based Data Augmentation for Semi-Supervised Learning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-copy-paste-is-a-strong-data-augmentation-method-for-instance-segmentation">
+   2.35. Simple Copy-Paste Is a Strong Data Augmentation Method for Instance Segmentation
   </a>
  </li>
 </ul>
@@ -1630,6 +1670,7 @@ To Read</div>
 </div>
 <p>The imbalanced class distribution results in the degradation of performance. A novel learning strategy that involves a deep transfer network has been proposed in this paper. DCGAN is used in the
 initial phase for data augmentation of the minority class (benign) only. The dataset, with the class distribution now balanced, is applied as input to the deep transfer network.</p>
+<hr class="docutils" />
 </div>
 </div>
 </section>
@@ -1650,6 +1691,7 @@ To Read</div>
 and color normalization—could be used to correct such variability and improve the performance of
 automated classification procedures and found that doing no color preprocessing was the best option in
 most cases.</p>
+<hr class="docutils" />
 </div>
 </div>
 </section>
@@ -1667,6 +1709,7 @@ To Read</div>
 </div>
 </div>
 <p>Biomedical image classification often deals with limited training sample due to the cost of labeling data. In this paper, they propose to combine deep learning, transfer learning and generative adversarial network (stylegan and pix2pix) to improve the classification performance. GANs made images noisy. :(</p>
+<hr class="docutils" />
 </div>
 </div>
 </section>
@@ -1684,6 +1727,7 @@ To Read</div>
 </div>
 </div>
 <p>Obtaining large datasets in the medical domain remains a challenge. They present methods for generating synthetic medical images using recently presented deep learning Generative Adversarial Networks (GANs). Furthermore, they show that generated medical images can be used for synthetic data augmentation, and improve the performance of CNN for medical image classification.</p>
+<hr class="docutils" />
 </div>
 </div>
 </section>
@@ -1701,6 +1745,7 @@ To Read</div>
 </div>
 </div>
 <p>They utilized six intermediate layers of the pre-trained Xception model to extract salient features from input images. They first optimized the proposed architecture on the unnormalized dataset, and then evaluated its performance on normalized datasets resulting from Reinhard, Ruifrok, Macenko, and Vahadane stain normalization procedures. Overall, it is concluded that the proposed approach provides a generalized state-of-the-art classifcation performance towards the original and normalized datasets. Also, it can be deduced that even though the aforementioned stain normalization methods offered competitive results, they did not outperform the results of the original dataset.</p>
+<hr class="docutils" />
 </div>
 </div>
 </section>
@@ -1718,6 +1763,7 @@ To Read</div>
 </div>
 </div>
 <p>In this paper, they present a data augmentation method that generates synthetic medical images using Generative Adversarial Networks (GANs). We propose a training scheme that first uses classical data augmentation to enlarge the training set and then further enlarges the data size and its diversity by applying GAN techniques for synthetic data augmentation. And achieved a significant improvement of 7% using synthetic augmentation over the classic augmentation.</p>
+<hr class="docutils" />
 </div>
 </div>
 </section>
@@ -1735,6 +1781,86 @@ To Read</div>
 </div>
 </div>
 <p>Due to the large size of each image in the training dataset, we propose a patch-based technique which consists of two consecutive convolutional neural networks. The first “patch-wise” network acts as  an auto-encoder that extracts the most salient features of image patches while the second “imagewise” network performs classification of the whole image. The main contribution of this work is presenting a pipeline which is able to process large scale images using minimal hardware.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="gan-augmentation-augmenting-training-data-using-generative-adversarial-networks">
+<h2><span class="section-number">2.32. </span>GAN Augmentation: Augmenting Training Data using Generative Adversarial Networks<a class="headerlink" href="#gan-augmentation-augmenting-training-data-using-generative-adversarial-networks" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/1810.10863.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Especially usage of machine learning in medical imaging has a major obstacle: lack of data (and results in overfitting) and experts to annotate. GANs are a possible remedy (observed between 1 and 5 percentage uplift). Synthetic data can reduce overfitting significantly. Boost up accuracy and generalizability.</p>
+<p>Progressive Growing of GANs (PGGAN) are used to generate synthetic data. From a paper[14th reference], it is suggested that different GAN architectures produce results which are, on average, not significantly different from each other.</p>
+<p>One major advantage that traditional augmentation has over GAN augmentation is the ability to extrapolate. GANs can provide an effective way to fill in
+gaps in the discrete training data distribution and augment sources of variance
+which are difficult to augment in other ways, but will not extend the distribution beyond the extremes of the training data.</p>
+<p>Extrapolate -&gt; traidional augmentation, Intrapolate -&gt; GANs</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="self-ensembling-with-gan-based-data-augmentation-for-domain-adaptation-in-semantic-segmentation">
+<h2><span class="section-number">2.33. </span>Self-Ensembling With GAN-Based Data Augmentation for Domain Adaptation in Semantic Segmentation<a class="headerlink" href="#self-ensembling-with-gan-based-data-augmentation-for-domain-adaptation-in-semantic-segmentation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://openaccess.thecvf.com/content_ICCV_2019/html/Choi_Self-Ensembling_With_GAN-Based_Data_Augmentation_for_Domain_Adaptation_in_Semantic_ICCV_2019_paper.html">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Semantic segmentation suffers from insufficient data. Possible solution: unsupervised domain adaptation. In this paper, a self-ensembling technique that is generally used for classification is proposed. However, heavily-tuned manual data augmentation used in self-ensembling is not useful. To overcome this limitation, proposed a novel framework: data augmentation via GANs + self-ensembling.</p>
+<p>For lack of data, ther is a technique: data synthesis but it has domain shift (different distribution) problem so does not perform well. Unsupervised domain adaptation handles domain shift by transferring knowledge from the labeled dataset in the source domain to the unlabeled dataset in the target domain.</p>
+<p>Proposed framework is called as Target-Guided and Cycle-Free Data Augmentation (TGCF-DA). The first method is to generate labeled augmented data. And then, two segmentation networks as the teacher and the student in order to implement the self-ensembling algorithm.</p>
+<p>Self-ensembling is composed of a teacher and a student network. Student is compelled to produce consistent predictions provided by the teacher on the target data. Teacher is an ensembled model that averages students’ weights. Predictions from the teacher on target data can be thought as the pseudo labels for the students. Self-ensembling proved its efficiency in classification and requires heavily-tuned manual-data augmentation. However, such data augmentation + geometric transformations are great for classification task, it is not suited to minimize the domain shift in semantic segmentation. But, two different geometric transformations on each input can cause spatial misalignment between the student and the teacher predictions. No worries! Here, a novel data augmentation framework is proposed.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="classmix-segmentation-based-data-augmentation-for-semi-supervised-learning">
+<h2><span class="section-number">2.34. </span>ClassMix: Segmentation-Based Data Augmentation for Semi-Supervised Learning<a class="headerlink" href="#classmix-segmentation-based-data-augmentation-for-semi-supervised-learning" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://openaccess.thecvf.com/content/WACV2021/html/Olsson_ClassMix_Segmentation-Based_Data_Augmentation_for_Semi-Supervised_Learning_WACV_2021_paper.html">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Uh, lack of data is a big problem, again. To resolve this issue, semi supervised methods are utilized. Here, a novel data augmentation mechanism, ClassMix, is proposed. It generates augmentations by mixing unlabelled samples. However, augmentation techniques proved their inefficiency in semi superviesd learning. Recent approaches try to overcome this issue by applying: i) adding perturbations on an encoded state of the network instead of the input, ii) using augmentation technique CutMix to enforce consistent predictions over mixed samples.</p>
+<p>ClassMix is a segmentation based data augmentation strategy and describe how it can be used for semi supervised semantic segmentation. Entropy minimization + pseudo labelling. It creates augmented images and artificial labels.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="simple-copy-paste-is-a-strong-data-augmentation-method-for-instance-segmentation">
+<h2><span class="section-number">2.35. </span>Simple Copy-Paste Is a Strong Data Augmentation Method for Instance Segmentation<a class="headerlink" href="#simple-copy-paste-is-a-strong-data-augmentation-method-for-instance-segmentation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://openaccess.thecvf.com/content/CVPR2021/html/Ghiasi_Simple_Copy-Paste_Is_a_Strong_Data_Augmentation_Method_for_Instance_CVPR_2021_paper.html?ref=https://githubhelp.com">Paper</a></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
