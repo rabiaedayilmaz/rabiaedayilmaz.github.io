@@ -1,4 +1,4 @@
-# Image Generation - Breast Cancer - Papers
+# Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
 
 ## BCI: Breast Cancer Immunohistochemical Image Generation through Pyramid Pix2pix
 
@@ -860,3 +860,99 @@ ClassMix is a segmentation based data augmentation strategy and describe how it 
 :::{grid-item-card} To Read
 [Paper](https://openaccess.thecvf.com/content/CVPR2021/html/Ghiasi_Simple_Copy-Paste_Is_a_Strong_Data_Augmentation_Method_for_Instance_CVPR_2021_paper.html?ref=https://githubhelp.com)
 :::
+
+In this paper, copy-paste augmentation (randomly paste objects in various scales onto image) is performed. Annatotating large datasets for instance segmentation is reaaaally expensive and time consuming. Copy-paste is similar to mixup  and cutmix but only copying the exact pixels corresponding to an object as opposed to all pixels in the object's bounding box. They do not use geometric transformations, Gaussian blurring.
+Copy and paste approach is also used for weakly supervised instance segmentation.
+
+Copy paste is a strong data augmentation technique: robustness to backbone initialization, robustness to training schedules, additive to large scale jittering augmentation and works well across backbones + image sizes. Large Scale Jittering (LSJ) + copy paste works freaking awesome, better than LSJ+[mixup](https://paperswithcode.com/method/mixup). Also, copy paste does not increase the training cost or inference time!!
+
+---
+
+## Improving Data Augmentation for Medical Image Segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://openreview.net/pdf?id=rkBBChjiG)
+:::
+
+Here, mixup augmentation technique and its performance on medical images is investigated. It boosts up the performance. In mixup, images from training set are such linearly combined that it is a linear combination of two training data. Also, they proposed mixmatch method that is like mixup but not totatlly random and its motivation is medical data is highly imbalanced. It seems okay technique but mixup is better.
+
+---
+
+## Equalization Loss v2: A New Gradient Balance Approach for Long-tailed Object Detection
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/2012.08548.pdf)
+:::
+
+There, they found the problem with EQL that is imbalanced gradients between positives and negatives. New version is gradient guided reweighing mechanism that rebalances the training process for each category indepedently and equally. Aaand EQLv2 >> EQL. EQL makes imrpovements on long-tailed dataset although end to end and decoupled training approaches work still better.
+
+---
+
+## Seesaw Loss for Long-Tailed Instance Segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Seesaw_Loss_for_Long-Tailed_Instance_Segmentation_CVPR_2021_paper.html)
+:::
+
+Seesaw loss is SOTA(2021). It improves performance of long tailed dataset as it is dynamic, ditribution-agnostic and self-calibrated. 
+
+---
+
+## ResNeSt: Split-Attention Networks
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/2004.08955v2.pdf)
+:::
+
+For visual recognition, featuremap attention and multi-path representation are important that utilize cross feature interactions and learning diverse representations. ResNeSt >> EffcientNet. Better speed accuracy trade off. Instance Segmentation part: this backbone is better.
+
+---
+
+## YOLACT: Real-Time Instance Segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://openaccess.thecvf.com/content_ICCV_2019/html/Bolya_YOLACT_Real-Time_Instance_Segmentation_ICCV_2019_paper.html)
+:::
+
+Training on only one GPU and achieves better accuracy, woho. They achieved this by breaking instance segmentation into two parallel subtasks: i) generating prototype masks and ii) predicting per instance mask coefficients. Then masks are produced by linearly combining the prototypes with the mask coefficients. Sicne this process does not depend on repooling, it produces very high quality masks and exhibits temporal stability. Finally, fast NMS is proposed. First real-time instance segmentation algorithm with competitive results. Design of network closely follow RetinaNet but... faster sonic boom. In fast nms, already removed detections supress other detections. But results in a little performance loss so added semantic loss additionally.
+
+---
+
+## Instance Segmentation of Indoor Scenes using a Coverage Loss
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://people.csail.mit.edu/dsontag/papers/SilSonFer_ECCV14.pdf)
+:::
+
+It is noted that the major limitation of semantic segmentation is that not being able to distinguish different objects in the same class. Here, a model is introduced that utilizes both semantic and instance segmentation simultaneously. Also ,a new higher-order loss function. However, searching over semantic and instance seg. space is computationally infeasible. So segmentation tree is used.
+
+---
+
+## blob loss: instance imbalance aware loss functions for semantic segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/2205.08209.pdf)
+:::
+
+Sørensen–Dice coefficient can tackle class imbalance however not aware of instance imbalance. Here, a novel family of loss functions is proposed by primarily aimed at maximizing instance level detection metrics. This func. is investigated mainly on medical datasets. 

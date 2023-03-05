@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Image Generation - Breast Cancer - Papers &#8212; rey&#39;s log</title>
+    <title>2. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers &#8212; rey&#39;s log</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -133,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Image Generation - Breast Cancer - Papers
+   2. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
   </a>
  </li>
 </ul>
@@ -595,6 +595,41 @@ title="Print to PDF"
    2.35. Simple Copy-Paste Is a Strong Data Augmentation Method for Instance Segmentation
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improving-data-augmentation-for-medical-image-segmentation">
+   2.36. Improving Data Augmentation for Medical Image Segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equalization-loss-v2-a-new-gradient-balance-approach-for-long-tailed-object-detection">
+   2.37. Equalization Loss v2: A New Gradient Balance Approach for Long-tailed Object Detection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seesaw-loss-for-long-tailed-instance-segmentation">
+   2.38. Seesaw Loss for Long-Tailed Instance Segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resnest-split-attention-networks">
+   2.39. ResNeSt: Split-Attention Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yolact-real-time-instance-segmentation">
+   2.40. YOLACT: Real-Time Instance Segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instance-segmentation-of-indoor-scenes-using-a-coverage-loss">
+   2.41. Instance Segmentation of Indoor Scenes using a Coverage Loss
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#blob-loss-instance-imbalance-aware-loss-functions-for-semantic-segmentation">
+   2.42. blob loss: instance imbalance aware loss functions for semantic segmentation
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -604,7 +639,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Image Generation - Breast Cancer - Papers</h1>
+                <h1>Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -872,6 +907,41 @@ title="Print to PDF"
    2.35. Simple Copy-Paste Is a Strong Data Augmentation Method for Instance Segmentation
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improving-data-augmentation-for-medical-image-segmentation">
+   2.36. Improving Data Augmentation for Medical Image Segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equalization-loss-v2-a-new-gradient-balance-approach-for-long-tailed-object-detection">
+   2.37. Equalization Loss v2: A New Gradient Balance Approach for Long-tailed Object Detection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seesaw-loss-for-long-tailed-instance-segmentation">
+   2.38. Seesaw Loss for Long-Tailed Instance Segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resnest-split-attention-networks">
+   2.39. ResNeSt: Split-Attention Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#yolact-real-time-instance-segmentation">
+   2.40. YOLACT: Real-Time Instance Segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instance-segmentation-of-indoor-scenes-using-a-coverage-loss">
+   2.41. Instance Segmentation of Indoor Scenes using a Coverage Loss
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#blob-loss-instance-imbalance-aware-loss-functions-for-semantic-segmentation">
+   2.42. blob loss: instance imbalance aware loss functions for semantic segmentation
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -882,8 +952,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="image-generation-breast-cancer-papers">
-<h1><span class="section-number">2. </span>Image Generation - Breast Cancer - Papers<a class="headerlink" href="#image-generation-breast-cancer-papers" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="image-generation-gans-instance-segmentation-breast-cancer-mostly-papers">
+<h1><span class="section-number">2. </span>Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers<a class="headerlink" href="#image-generation-gans-instance-segmentation-breast-cancer-mostly-papers" title="Permalink to this headline">#</a></h1>
 <section id="bci-breast-cancer-immunohistochemical-image-generation-through-pyramid-pix2pix">
 <h2><span class="section-number">2.1. </span>BCI: Breast Cancer Immunohistochemical Image Generation through Pyramid Pix2pix<a class="headerlink" href="#bci-breast-cancer-immunohistochemical-image-generation-through-pyramid-pix2pix" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
@@ -1878,6 +1948,135 @@ To Read</div>
 </div>
 </div>
 </div>
+<p>In this paper, copy-paste augmentation (randomly paste objects in various scales onto image) is performed. Annatotating large datasets for instance segmentation is reaaaally expensive and time consuming. Copy-paste is similar to mixup  and cutmix but only copying the exact pixels corresponding to an object as opposed to all pixels in the object’s bounding box. They do not use geometric transformations, Gaussian blurring.
+Copy and paste approach is also used for weakly supervised instance segmentation.</p>
+<p>Copy paste is a strong data augmentation technique: robustness to backbone initialization, robustness to training schedules, additive to large scale jittering augmentation and works well across backbones + image sizes. Large Scale Jittering (LSJ) + copy paste works freaking awesome, better than LSJ+<a class="reference external" href="https://paperswithcode.com/method/mixup">mixup</a>. Also, copy paste does not increase the training cost or inference time!!</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="improving-data-augmentation-for-medical-image-segmentation">
+<h2><span class="section-number">2.36. </span>Improving Data Augmentation for Medical Image Segmentation<a class="headerlink" href="#improving-data-augmentation-for-medical-image-segmentation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://openreview.net/pdf?id=rkBBChjiG">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Here, mixup augmentation technique and its performance on medical images is investigated. It boosts up the performance. In mixup, images from training set are such linearly combined that it is a linear combination of two training data. Also, they proposed mixmatch method that is like mixup but not totatlly random and its motivation is medical data is highly imbalanced. It seems okay technique but mixup is better.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="equalization-loss-v2-a-new-gradient-balance-approach-for-long-tailed-object-detection">
+<h2><span class="section-number">2.37. </span>Equalization Loss v2: A New Gradient Balance Approach for Long-tailed Object Detection<a class="headerlink" href="#equalization-loss-v2-a-new-gradient-balance-approach-for-long-tailed-object-detection" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2012.08548.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>There, they found the problem with EQL that is imbalanced gradients between positives and negatives. New version is gradient guided reweighing mechanism that rebalances the training process for each category indepedently and equally. Aaand EQLv2 &gt;&gt; EQL. EQL makes imrpovements on long-tailed dataset although end to end and decoupled training approaches work still better.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="seesaw-loss-for-long-tailed-instance-segmentation">
+<h2><span class="section-number">2.38. </span>Seesaw Loss for Long-Tailed Instance Segmentation<a class="headerlink" href="#seesaw-loss-for-long-tailed-instance-segmentation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Seesaw_Loss_for_Long-Tailed_Instance_Segmentation_CVPR_2021_paper.html">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Seesaw loss is SOTA(2021). It improves performance of long tailed dataset as it is dynamic, ditribution-agnostic and self-calibrated.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="resnest-split-attention-networks">
+<h2><span class="section-number">2.39. </span>ResNeSt: Split-Attention Networks<a class="headerlink" href="#resnest-split-attention-networks" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2004.08955v2.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>For visual recognition, featuremap attention and multi-path representation are important that utilize cross feature interactions and learning diverse representations. ResNeSt &gt;&gt; EffcientNet. Better speed accuracy trade off. Instance Segmentation part: this backbone is better.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="yolact-real-time-instance-segmentation">
+<h2><span class="section-number">2.40. </span>YOLACT: Real-Time Instance Segmentation<a class="headerlink" href="#yolact-real-time-instance-segmentation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://openaccess.thecvf.com/content_ICCV_2019/html/Bolya_YOLACT_Real-Time_Instance_Segmentation_ICCV_2019_paper.html">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Training on only one GPU and achieves better accuracy, woho. They achieved this by breaking instance segmentation into two parallel subtasks: i) generating prototype masks and ii) predicting per instance mask coefficients. Then masks are produced by linearly combining the prototypes with the mask coefficients. Sicne this process does not depend on repooling, it produces very high quality masks and exhibits temporal stability. Finally, fast NMS is proposed. First real-time instance segmentation algorithm with competitive results. Design of network closely follow RetinaNet but… faster sonic boom. In fast nms, already removed detections supress other detections. But results in a little performance loss so added semantic loss additionally.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="instance-segmentation-of-indoor-scenes-using-a-coverage-loss">
+<h2><span class="section-number">2.41. </span>Instance Segmentation of Indoor Scenes using a Coverage Loss<a class="headerlink" href="#instance-segmentation-of-indoor-scenes-using-a-coverage-loss" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://people.csail.mit.edu/dsontag/papers/SilSonFer_ECCV14.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>It is noted that the major limitation of semantic segmentation is that not being able to distinguish different objects in the same class. Here, a model is introduced that utilizes both semantic and instance segmentation simultaneously. Also ,a new higher-order loss function. However, searching over semantic and instance seg. space is computationally infeasible. So segmentation tree is used.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="blob-loss-instance-imbalance-aware-loss-functions-for-semantic-segmentation">
+<h2><span class="section-number">2.42. </span>blob loss: instance imbalance aware loss functions for semantic segmentation<a class="headerlink" href="#blob-loss-instance-imbalance-aware-loss-functions-for-semantic-segmentation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2205.08209.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Sørensen–Dice coefficient can tackle class imbalance however not aware of instance imbalance. Here, a novel family of loss functions is proposed by primarily aimed at maximizing instance level detection metrics. This func. is investigated mainly on medical datasets.</p>
 </div>
 </div>
 </section>
