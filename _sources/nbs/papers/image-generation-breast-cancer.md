@@ -956,3 +956,99 @@ It is noted that the major limitation of semantic segmentation is that not being
 :::
 
 Sørensen–Dice coefficient can tackle class imbalance however not aware of instance imbalance. Here, a novel family of loss functions is proposed by primarily aimed at maximizing instance level detection metrics. This func. is investigated mainly on medical datasets. 
+
+---
+ 
+## Efficient end-to-end learning for cell segmentation with machine generated weak annotations
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://www.nature.com/articles/s42003-023-04608-5#data-availability)
+:::
+
+A new model architecture for end to-end training using such incomplete annotations and machine-generated annotations are used. Model is LACSS (Location assisted cell segmentation system).
+
+Often, amount of annotated data is inversely correlated with model performance in weakly and self supervised learning. Here, they focused on a specific subtype of  weak annotations and designed anew model architectue for end-to-end training using such incomplete annotations. Results are competitive and sometimes surpass sota, so it is promising.
+
+---
+
+## A full data augmentation pipeline for small object detection based on generative adversarial networks
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://www.sciencedirect.com/science/article/pii/S0031320322004782)
+:::
+
+Proposed a full pipeline to generate data with GANs for small obejct detection. It generates new population of objects on an image.
+
+---
+
+## A survey of semi‑ and weakly supervised semantic segmentation of images
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://link.springer.com/article/10.1007/s10462-019-09792-7)
+:::
+
+Semisupervised and weakly supervised learning are gradually replacing fully supervised learning because good results with a lower cost. 
+
+---
+
+## Unsupervised Instance Segmentation in Microscopy Images via Panoptic Domain Adaptation and Task Re-weighting
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/2005.02066)
+:::
+
+Unsupervised domain adaptation is important. Cycle Consistency Panoptic Domain Adaptive Mask R-CNN
+(CyC-PDAM) architecture is proposed for unsupervised nuclei segmentation in histopathology images. Also, a reweighting mechanism to dynamically add trade off weights for the task specific loss functions.
+
+---
+
+## Self-Supervised Visual Feature Learning With Deep Neural Networks: A Survey
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/1902.06162)
+:::
+
+Nice survey, just read it :)
+
+---
+
+## Cut and Learn for Unsupervised Object Detection and Instance Segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/2301.11320)
+:::
+
+Cut-and-LEaRn (CutLER) that is a simple approach for training unsupervised object detection and segmentation (instance seg. desene abicim) models. It leverages for self-supervised models to discover objects without supervision and amplify it to train a sota localization model WITHOUT ANY HUMAN LABELS. CutLER first uses MaskCut to generate coarse masks for multiple objects in an image. And then, learns detector on these masks using their loss function. It can be applied to wide range of applications (data agnostic). CutLER >> ViT because good at multiple objects(salient) not just focusing prominent object. SOTA methods are (01/2023) FreeSOLO and MaskDistil but they need in domain unlabeled data. However, CutLER does not. Moreover, contains zero-shot detector. CutLER is solely trained on ImageNet. CutLER = Vit + MaskCut + Detector.
+
+---
+
+## FreeSOLO: Learning to Segment Objects without Annotations
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/2202.12181.pdf)
+:::
+
+Self-supervised instance segmentation method so without annotations. It generates class agnostic masks.
+
+---
