@@ -1,9 +1,9 @@
 # Diary Log Entries
 
-## What?
-Here is my daily log about what I have done in that day (probably in bullet points). So that anytime when I self-sabotage, I can compare myself with yesterday and then say "You try hell a lot girl keep going queen! <3".
+**What?**
+Here is my daily log about what I have done in that day (probably in bullet points). So that I can keep track of my progress.
 
-## Why?
+**Why?**
 For creating such a page back ups the intention of mine to intro/in/spect myself better and share it publicly as I do believe in power of human interactions and any kind of neuron firing activity (also overwhelming responsibility of constantly watched feeling that pushes and gives an effect of vigorous cold weather maybe).
 
 ## 2023
@@ -30,6 +30,17 @@ For creating such a page back ups the intention of mine to intro/in/spect myself
 - attended lecture
 - finished to read articles (makale orucuna girmezsem kusarım)
 - read book (~20 p.)
-- art before sleep
+- study/draw brain anatomy
+
+:::
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} 08.03.2023
+
+- yoga
+- attended lecture
+- read book (~30 p.)
 
 :::
