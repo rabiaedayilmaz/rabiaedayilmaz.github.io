@@ -41,6 +41,23 @@ For creating such a page back ups the intention of mine to intro/in/spect myself
 
 - yoga
 - attended lecture
-- read book (~30 p.)
+- read book (~40 p.)
+- plan the projects
+
+:::
+
+:::{grid-item-card} 09.03.2023
+
+- yoga
+- read book (~40 p.)
+- completed BME3142 homework... and studied modeling a neuron
+- brain anatomy
+
+:::
+
+:::{grid-item-card} 10.03.2023
+
+- yoga
+- read book (~15 p.)
 
 :::
