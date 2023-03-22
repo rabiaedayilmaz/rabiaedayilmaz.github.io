@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: rey's log
+title: Rabia Eda Yılmaz
 author: Rabia Eda Yilmaz
-logo: logogo.png
+logo: assets/logogo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -30,3 +30,4 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_multitoc_numbering: false

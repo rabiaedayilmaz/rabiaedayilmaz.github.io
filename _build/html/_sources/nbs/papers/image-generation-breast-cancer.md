@@ -1,4 +1,4 @@
-# Image Generation - Breast Cancer - Papers
+# Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
 
 ## BCI: Breast Cancer Immunohistochemical Image Generation through Pyramid Pix2pix
 
@@ -9,66 +9,18 @@
 [Paper](https://arxiv.org/abs/2204.11425)
 :::
 
-```{figure} ../../assets/papers/bci-1.png
----
-name: directive-fig
----
-Samples from BCI Dataset
-```
-
 Human epidermal growth factor receptor 2 (HER2) is important for formulating a precise treatment of breast cancer. Evaluation of HER is performed with immunohistochemical techniques (IHC), however IHC is very costly to perform. Thus, in this paper, a breast cancer immunohistochemical (BCI) benchmark is proposed for the first time. The goal is to synthesize IHC data from the paired hematoxylin and eosin (HE) stained images. BCI dataset contains 4870 paired images with different expression levels (0, 1+, 2+, and 3+). Furthermore, a pyramid pix2pix universal image translation method is used. This paper, for the first time investigates this problem and tries to solve it.
 
 Breast cancer is a common type in woman and leading cause of death. Accurate diagnosis and treatment are key factors to survival. Histopathological checking is a gold standard to identify cancer. It is done by staining tumor materials and getting hematoxylin and eosin (HE) slices that later will be observed by pathologists through the microscope or analyzing the digitized whole slice images (WSI). After diagnosis, preparing precise treatment is an essential step. For this step, expression of specific proteins are checked, such as HER2. Over expression of HER2 indicates tendency to aggressive clinical behaviour. However, to conduct evaluation of HER2 is really expensive. Therefore, it is  aimed to create HER2 images from IHC-stained slices.
 
 IHC 0: no stain, IHC 1+: barely perceptible, IHC 2+: weak to moderate complete staining, and IHC 3+: complete and intense staining. 
 
-```{figure} ../../assets/papers/bci-2.png
----
-name: directive-fig
----
-Examples of slices and HER2 expressions
-```
-
-```{figure} ../../assets/papers/bci-3.png
----
-name: directive-fig
----
-How the Dataset is Formed
-```
-
 The data scanning equipment is Hamamatsu NanoZommer S60. For each pathological tissue sample, the doctor will cut two tissue from it, one for HE staining and the other one for HER2 detection. Thus, there will be differences between two tissue samples and furthermore, samples will be stretched or squeezed during slice preparation. To align both images, registration process is followed and projection transformation that is done by mapping squares of images and moreover, elastix registraion is applied. After these steps, post-processing is applied to remove black border between blocks and fill it with surrounding content. Lastly, the blank or not-well aligned ares are filtered out.
-
-```{figure} ../../assets/papers/bci-4.png
----
-name: directive-fig
----
-The Model: pix2pix
-```
 
 The L1 loss is directly calculates the difference between ground truth and generated image. Multi-scale loss is formed for scale transformation that applies low-pass filter to smooth the image and down-smapling smoothed image.
 
-```{figure} ../../assets/papers/bci-5.png
----
-name: directive-fig
----
-The Overall Objective Function
-```
-
 The method used in this paper is outperformed.
 
-```{figure} ../../assets/papers/bci-6.png
----
-name: directive-fig
----
-Benchmark Results
-```
-
-```{figure} ../../assets/papers/bci-7.png
----
-name: directive-fig
----
-HER2 Visualizations
-```
 The accuracy of the outcomes of the model is evaluated by pathologists and achieved 37.5% and 40.0% accuracy performance. Briefly, this is a challenging task and there is a need for more effective model.
 
 ---
@@ -83,27 +35,6 @@ The accuracy of the outcomes of the model is evaluated by pathologists and achie
 :::
 
 Supervised Pix2Pix and unsupervised Cycle-consistency are two models dominates the field of medical image-to-image translation. But both of them are not ideal. Moreover, it requires paired and well-pixel aligned images that makes it really challengable especially in medical field and not always feasible due to respiratory motion or anatomical changes between times of acquired paired images. Cycle-consistency works well on unpaired or misaligned images. However, accuracy performance is not optimal and may produce multiple solutions. To break this dilemma, in this paper, RegGAN is proposed for medical image-to-image translation. It is based on theory of "loss-correction". Misaligned target images are considered as noisy labels and generator is trained with an additional registration network. The main goal is to search for a common solution both for image-to-image translation and registration tasks. In this paper, it is demonstrated that RegGAN can be easily combined with these models and improve their performance. The key outcome of this paper is that they demonstrated using registrations improves significantly the performance of image-to-iamge translation because of adaptively eliminating the noise.
-
-```{figure} ../../assets/papers/reggan-1.png
----
-name: directive-fig
----
-Comparison of Models
-```
-
-```{figure} ../../assets/papers/reggan-2.png
----
-name: directive-fig
----
-Correction Loss
-```
-
-```{figure} ../../assets/papers/reggan-3.png
----
-name: directive-fig
----
-Comparison of Results
-```
 
 ---
 
@@ -151,76 +82,9 @@ Magnetic resonance imaging (MRI) is widely used protocol and each MR modality (T
 
 The edge maps are computed by using Sobel operator since it is simple and derivative can easily be computed.
 
-```{figure} ../../assets/papers/eagan-1.png
----
-name: directive-fig
----
-Sobel Filter and Edges
-```
 
-```{figure} ../../assets/papers/eagan-2.png
----
-name: directive-fig
----
-Objective of Generator in gEA-GAN
-```
-
-```{figure} ../../assets/papers/eagan-3.png
----
-name: directive-fig
----
-Objective of Discriminator in gEA-GAN
-```
-
-```{figure} ../../assets/papers/eagan-4.png
----
-name: directive-fig
----
-Final Objective Function of gEA-GAN
-```
-
-```{figure} ../../assets/papers/eagan-5.png
----
-name: directive-fig
----
-Objective of Generator in dEA-GAN
-```
-
-```{figure} ../../assets/papers/eagan-6.png
----
-name: directive-fig
----
-Objective of Discriminator in dEA-GAN
-```
 Similarly, the final objective function is summation of generator and discriminator objectives.
 Architecture consists of three modules: generator, discriminator and edge detector.
-```{figure} ../../assets/papers/eagan-7.png
----
-name: directive-fig
----
-Architecture of EA-GANs
-```
-
-```{figure} ../../assets/papers/eagan-8.png
----
-name: directive-fig
----
-Architecture fo Generator
-```
-
-```{figure} ../../assets/papers/eagan-10.png
----
-name: directive-fig
----
-Results on BRATS2015 Dataset
-```
-
-```{figure} ../../assets/papers/eagan-11.png
----
-name: directive-fig
----
-Comparison with Pix2Pix on Different 2D Datasets
-```
 
 ---
 
@@ -274,12 +138,6 @@ pix2pix uses a U-Net  based architecture for generator and convolutional PatchGA
 
 PatchGAN is also called as markovian discriminator. L2 and L1 produce generate blurry results so they will encourage low-level frequencies. To model high-frequencies, restricting attention on local patches is enough. This is how PatchGAN is proposed. Because it penalizes structure at the scale of the patches. Such a discriminator effectively models the image as a Markov random field by assuming independence between pixels seperated more than patch diameter. Lastly, PatchGAN can be considered as a form of texture/style loss. 
 
-```{figure} ../../assets/papers/pix2pix-1.png
----
-name: directive-fig
----
-Final Objective Function
-```
 
 ## Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
 
@@ -338,12 +196,6 @@ Auxiliary classifier GAN (AC-GAN) is proposed. Unlike the cGAN, they do not prov
 In the previous frameworks, the distributions of generated and real data are matched by means of the Jensen-Shannon (JS) divergence. This divergence measure causes vanishing gradients and makes the saddle-point optimization non-feasible that are underlying failures of GAN models. 
 
 In Wasserstein-GAN (WGAN) that uses the Earth Mover (ME) or Wasserstein-1 distance as a more optimal divergence measure to avoid vanishing gradients.The downside of WGAN is slow optimization.
-```{figure} ../../assets/papers/medganrev-2.png
----
-name: directive-fig
----
-Cycle and AC GANs
-```
 ### LSGAN
 Least-squares GANs tried to tackle with the training instability. Similar to WGAN, the loss function is modified to avoid vanishing gradients.
 
@@ -360,23 +212,9 @@ Least-squares GANs tried to tackle with the training instability. Similar to WGA
 
 In this paper, various GAN-architectures are tested from DCGAN to style-based GANs on three medical imaging modalities and organs: cardiac cine-MRI, liver CT and RGB retina images. Generating realistic-looking medical images by FID (Fréchet Inception Distance score) standards passed the Truing test, however segmentation results were not much satisfying.
 
-```{figure} ../../assets/papers/emprical-1.png
----
-name: directive-fig
----
-Used GANs
-```
-
 There are three main issues about GANs: convergence, vanishing gradients and mode collapse.
 There are several GANs: DCGAN, LSGAN, WGAN and WGAN-GP, HingeGAN, SPADE GAN(improvement of pix2pix, SOTA 2021) and StyleGAN.
 There are several evaluation metrics for GANs: Peak Signal to Noise Ratio (PSNR), Structural Similarity Index Measure (SSIM), Learned Perceptual Image Patch Similarity (LPIPS), Inception Score (IS), Frechet Inception Distance (FID but can not detect if GAN just memorizes the training set and suffers from high bias). GANs are highly sensitive to hyperparameters but hyperparameter space research takes 500 GPU-days. So, regarding to earlier studies parameters are chosen. SPADE GAN and StyleGAN did most, respectively.
-
-```{figure} ../../assets/papers/emprical-2.png
----
-name: directive-fig
----
-Selected Hyperparameters
-```
 
 ---
 
@@ -393,31 +231,9 @@ In this paper, a new method is presented that synthesizes high-resolution photo 
 
 The coarse-to-fine generator has two parts: G1 (global generator) and G2 (local enhancer).
 
-```{figure} ../../assets/papers/high-res-1.png
----
-name: directive-fig
----
-Generator Architecture 
-```
-
 The full objective function is combination of GAN loss and feature matching loss (related to perceptual loss). Lambda controls the importance of each loss.
 
-```{figure} ../../assets/papers/high-res-2.png
----
-name: directive-fig
----
-Objective Function
-```
-
 Existing image synthesis methods utilizes semantic label maps, despite this fact, in this paper instance label maps are used. It improved performance. Mapping from semantic map is one-to-many problem. But authors proposed low-dimensional feature channels as the input to the generator. To generate low dimensional features, an encoder network E to find low-dimensional feature vectors. To ensure that features are consistent within in each instance, an instance-wise average pooling layer to the output of the encoder to compute average feature for object instances. After training the encoder, it runned on all instances in the training images and record the obtained features. Then, k-clustering is performed for each semantic category. These features are used as input to the generator.
-
-```{figure} ../../assets/papers/high-res-3.png
----
-name: directive-fig
----
-Overall Network
-```
-
 ---
 
 ## Synthetic Medical Images from Dual Generative Adversarial Networks
@@ -449,13 +265,6 @@ Stacking GANs is effective since inhibits unstable nature of GANs. The lack of d
 
 In this paper, GANs are applied to medical images and generated synthetic data: fundus and multi-modal MR glioma. PGGANs are explored in medical images and showed that it is successful in being realistic and diverse. 
 
-```{figure} ../../assets/papers/ggan-1.png
----
-name: directive-fig
----
-PGGAN Architecture
-```
-
 PGGAN trains the network in a step-wise style.
 
 ---
@@ -472,34 +281,13 @@ PGGAN trains the network in a step-wise style.
 
 This is a comprehensive review paper that summarizes synthetic image generation methods and discuss the categories (image-to-image translation, fusion image generation, label-to-image mapping). 
 
-```{figure} ../../assets/papers/gan-rev-1.png
----
-name: directive-fig
----
-GAN Architectures Chronology
-```
-
 Here, GAN types will be reviewed.
 
 * **Convolutional GANs:** Moving from FC to CNN is appropriate for image data. However, experiments showed that training with CNNs is hard because of: non-convergence, diminished gradient, unbalance between discriminator&generator, model collapse, and hyperparameter selections. One solution is using Laplacian pyramids adversarial networks where a real image is converted into a multi scale pyramid image and convolutional GAN is trained to produce multi scale and multi level feature maps where final map is combination of all. The Laplacian pyramid is a linear invertible image demonstration containing band-pass images and a low-frequency residual.
 
-```{figure} ../../assets/papers/gan-rev-2.png
----
-name: directive-fig
----
-Laplacian Pyramid
-```
-
 * **Conditional GANs:** Proposed for image-to-image translation problem. It just not learns the mapping from input image to output image but also adopts a loss function to train this mapping. This provides opportunity to apply same generic method to problems that need complex loss formulations. There proposed InfoGAN (uses mutual info. so semantically meaningful), BAGAN (class conditioning in hidden space, similar to infogan but has two outputs) and ACGAN (similar infogan but no c conditional var. and added external classifier and optimized loss func.).
 
 * **Autoencoder GANs:** Autoencoders learn a deterministic mapping via the encoder and decoder. They are generally for learning non-linear mappings in both directions. Images generated by autoencoder gans are blurry but accurate and efficient.
-
-```{figure} ../../assets/papers/gan-rev-3.png
----
-name: directive-fig
----
-Autoencoder GAN Loss
-```
 
 There is also BiGAN, AGE, BEGAN etc. 
 
@@ -512,13 +300,6 @@ There is also BiGAN, AGE, BEGAN etc.
 * **Single Stage Methods:** These type of GANs follow a generator G and a discriminator D architecture. They have simple architecture and no additional connections. DCGAN, ControlGAN, ClusterGAN.
 
 * **Multi Stage Methods:** They use multiple generators and discriminators. Generators are in charge of different tasks. The idea behind this approach is to distinct an image into different portions, like foreground-background, style-structure. There, generators work in sequential or parallel. StructureGAN, CR-GAN, StarGAN, StarGAN-VC, StackGAN, AttenGAN, MC-GAN.
-
-```{figure} ../../assets/papers/gan-rev-4.png
----
-name: directive-fig
----
-Various GANs
-```
 
 ---
 
@@ -559,13 +340,6 @@ DCGAN, WGAN and BEGAN are applied and compared on thyroid images. WGANs and BEGA
 
 In computer vision unsupervised image-to-image translation is important. But they fail to generate diverse outputs from a given source domain image. To address this issue, Multimodal Unsupervised Image-to-Image Translation (MUNIT) framework is proposed. They assumed that the image representation can be decomposed into a content code that is domain invariant, and a style code that captures domain-specific properties. To translate an image to another domain, they recombined its content code with a random style code sampled from the style space of the target.
 
-```{figure} ../../assets/papers/gan-rev-5.png
----
-name: directive-fig
----
-Proposed Framework
-```
-
 ---
 
 ## ResViT: Residual vision transformers for multi-modal medical image synthesis
@@ -585,13 +359,6 @@ Vision transformers are highly promising since attention operators that learn co
 
 ResVit combines the sensitivity of vision transformers to global context, the localization power of CNNs, and the realism of adversarial learning. ResVit's generator follows an encoder-decoder architecture with a central bottleneck to distill task-critical information. The encoder and decoder contain CNN blocks to leverage local precision of convolution operators. The bottleneck comprises novel aggregated residual transformer (ART) blocks to preserve local and gloabal context, with a weight sharing strategy to minimize model complexity.
 
-```{figure} ../../assets/papers/resvit-1.png
----
-name: directive-fig
----
-ResVit Model
-```
-
 ---
 
 ## StarGAN v2: Diverse Image Synthesis for Multiple Domains
@@ -605,13 +372,6 @@ ResVit Model
 
 A good image model should learn i) diversit of generated images and ii) scalability over multiple domains. StarGAN deals with both.
 
-```{figure} ../../assets/papers/stargan-1.png
----
-name: directive-fig
----
-Four Modules of StarGAN
-```
-
 ---
 
 ## Unsupervised Multi-Modal Medical Image Registration via Discriminator-Free Image-to-Image Translation
@@ -624,20 +384,6 @@ Four Modules of StarGAN
 :::
 
 In this paper, a novel translation-based unsupervised deformable image registration approach to convert the multi-modal registration problem to mono-model one is proposed. Concretely, this approach incorporates a discriminator-free translation network to facilitate the training of the registration network and a patchwise contrastive loss  to encourage the translation network to preserve object shapres. Thus, main idea is to reduce the inconsistency and artifacts of the translation by removing discriminator. Moreover, replacing adversarial loss with novel two losses (local alignment and global alignment) is proposed so that an unsupervised method requiring no ground truth deformation or pairs of aligned images for training. Local alignment loss is for capturing detailed local texture information and global alignment loss is for focusing on the overall shape. Four variants of the approach evaluated on a public dataset. According to experiment results, it achieved SOTA performance (04/2022).
-
-```{figure} ../../assets/papers/multi-1.png
----
-name: directive-fig
----
-Overview of Method
-```
-
-```{figure} ../../assets/papers/multi-2.png
----
-name: directive-fig
----
-More Detailed Overview of Method
-```
 
 ---
 
@@ -680,13 +426,6 @@ classification accuracies of 99.29% and 85% on the BreakHis and BACH database, r
 AHoNet ->  efficient channel attention module with non-dimensionality reduction + local cross-channel
 interaction to achieve local salient deep features + matrix power normalization (more robust global feature presentation)
 
-```{figure} ../../assets/papers/ahonet-1.png
----
-name: directive-fig
----
-AHoNet Architecture
-```
-
 ---
 
 ## Breast Cancer Histopathological Image Classification using Deep Learning
@@ -714,6 +453,8 @@ The paper employs deep learning to classify breast cancer histopathological imag
 The imbalanced class distribution results in the degradation of performance. A novel learning strategy that involves a deep transfer network has been proposed in this paper. DCGAN is used in the
 initial phase for data augmentation of the minority class (benign) only. The dataset, with the class distribution now balanced, is applied as input to the deep transfer network. 
 
+---
+
 ## Experimental Assessment of Color Deconvolution and Color Normalization for Automated Classification of Histology Images Stained with Hematoxylin and Eosin
 
 ::::{grid}
@@ -728,6 +469,8 @@ and color normalization—could be used to correct such variability and improve 
 automated classification procedures and found that doing no color preprocessing was the best option in
 most cases.
 
+---
+
 ## Fusing of Deep Learning, Transfer Learning and GAN for Breast Cancer Histopathological Image Classification
 
 ::::{grid}
@@ -738,6 +481,8 @@ most cases.
 :::
 
 Biomedical image classification often deals with limited training sample due to the cost of labeling data. In this paper, they propose to combine deep learning, transfer learning and generative adversarial network (stylegan and pix2pix) to improve the classification performance. GANs made images noisy. :(
+
+---
 
 ## GAN-based synthetic medical image augmentation for increased CNN performance in liver lesion classification
 
@@ -750,6 +495,8 @@ Biomedical image classification often deals with limited training sample due to 
 
 Obtaining large datasets in the medical domain remains a challenge. They present methods for generating synthetic medical images using recently presented deep learning Generative Adversarial Networks (GANs). Furthermore, they show that generated medical images can be used for synthetic data augmentation, and improve the performance of CNN for medical image classification.
 
+---
+
 ## Multiclass classifcation of breast cancer histopathology images using multilevel features of deep convolutional neural network
 
 ::::{grid}
@@ -760,6 +507,8 @@ Obtaining large datasets in the medical domain remains a challenge. They present
 :::
 
 They utilized six intermediate layers of the pre-trained Xception model to extract salient features from input images. They first optimized the proposed architecture on the unnormalized dataset, and then evaluated its performance on normalized datasets resulting from Reinhard, Ruifrok, Macenko, and Vahadane stain normalization procedures. Overall, it is concluded that the proposed approach provides a generalized state-of-the-art classifcation performance towards the original and normalized datasets. Also, it can be deduced that even though the aforementioned stain normalization methods offered competitive results, they did not outperform the results of the original dataset.
+
+---
 
 ## SYNTHETIC DATA AUGMENTATION USING GAN FOR IMPROVED LIVER LESION CLASSIFICATION
 
@@ -772,6 +521,8 @@ They utilized six intermediate layers of the pre-trained Xception model to extra
 
 In this paper, they present a data augmentation method that generates synthetic medical images using Generative Adversarial Networks (GANs). We propose a training scheme that first uses classical data augmentation to enlarge the training set and then further enlarges the data size and its diversity by applying GAN techniques for synthetic data augmentation. And achieved a significant improvement of 7% using synthetic augmentation over the classic augmentation.
 
+---
+
 ## Two-Stage Convolutional Neural Network for Breast Cancer Histology Image Classification
 
 ::::{grid}
@@ -782,3 +533,261 @@ In this paper, they present a data augmentation method that generates synthetic 
 :::
 
 Due to the large size of each image in the training dataset, we propose a patch-based technique which consists of two consecutive convolutional neural networks. The first “patch-wise” network acts as  an auto-encoder that extracts the most salient features of image patches while the second “imagewise” network performs classification of the whole image. The main contribution of this work is presenting a pipeline which is able to process large scale images using minimal hardware.
+
+---
+
+## GAN Augmentation: Augmenting Training Data using Generative Adversarial Networks
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/1810.10863.pdf)
+:::
+
+Especially usage of machine learning in medical imaging has a major obstacle: lack of data (and results in overfitting) and experts to annotate. GANs are a possible remedy (observed between 1 and 5 percentage uplift). Synthetic data can reduce overfitting significantly. Boost up accuracy and generalizability.
+
+Progressive Growing of GANs (PGGAN) are used to generate synthetic data. From a paper[14th reference], it is suggested that different GAN architectures produce results which are, on average, not significantly different from each other.
+
+One major advantage that traditional augmentation has over GAN augmentation is the ability to extrapolate. GANs can provide an effective way to fill in
+gaps in the discrete training data distribution and augment sources of variance
+which are difficult to augment in other ways, but will not extend the distribution beyond the extremes of the training data. 
+
+Extrapolate -> traidional augmentation, Intrapolate -> GANs
+
+---
+
+## Self-Ensembling With GAN-Based Data Augmentation for Domain Adaptation in Semantic Segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://openaccess.thecvf.com/content_ICCV_2019/html/Choi_Self-Ensembling_With_GAN-Based_Data_Augmentation_for_Domain_Adaptation_in_Semantic_ICCV_2019_paper.html)
+:::
+
+Semantic segmentation suffers from insufficient data. Possible solution: unsupervised domain adaptation. In this paper, a self-ensembling technique that is generally used for classification is proposed. However, heavily-tuned manual data augmentation used in self-ensembling is not useful. To overcome this limitation, proposed a novel framework: data augmentation via GANs + self-ensembling.
+
+For lack of data, ther is a technique: data synthesis but it has domain shift (different distribution) problem so does not perform well. Unsupervised domain adaptation handles domain shift by transferring knowledge from the labeled dataset in the source domain to the unlabeled dataset in the target domain.
+
+Proposed framework is called as Target-Guided and Cycle-Free Data Augmentation (TGCF-DA). The first method is to generate labeled augmented data. And then, two segmentation networks as the teacher and the student in order to implement the self-ensembling algorithm.
+
+Self-ensembling is composed of a teacher and a student network. Student is compelled to produce consistent predictions provided by the teacher on the target data. Teacher is an ensembled model that averages students' weights. Predictions from the teacher on target data can be thought as the pseudo labels for the students. Self-ensembling proved its efficiency in classification and requires heavily-tuned manual-data augmentation. However, such data augmentation + geometric transformations are great for classification task, it is not suited to minimize the domain shift in semantic segmentation. But, two different geometric transformations on each input can cause spatial misalignment between the student and the teacher predictions. No worries! Here, a novel data augmentation framework is proposed.
+
+---
+
+## ClassMix: Segmentation-Based Data Augmentation for Semi-Supervised Learning
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://openaccess.thecvf.com/content/WACV2021/html/Olsson_ClassMix_Segmentation-Based_Data_Augmentation_for_Semi-Supervised_Learning_WACV_2021_paper.html)
+:::
+
+Uh, lack of data is a big problem, again. To resolve this issue, semi supervised methods are utilized. Here, a novel data augmentation mechanism, ClassMix, is proposed. It generates augmentations by mixing unlabelled samples. However, augmentation techniques proved their inefficiency in semi superviesd learning. Recent approaches try to overcome this issue by applying: i) adding perturbations on an encoded state of the network instead of the input, ii) using augmentation technique CutMix to enforce consistent predictions over mixed samples.
+ 
+ClassMix is a segmentation based data augmentation strategy and describe how it can be used for semi supervised semantic segmentation. Entropy minimization + pseudo labelling. It creates augmented images and artificial labels.
+
+---
+
+## Simple Copy-Paste Is a Strong Data Augmentation Method for Instance Segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://openaccess.thecvf.com/content/CVPR2021/html/Ghiasi_Simple_Copy-Paste_Is_a_Strong_Data_Augmentation_Method_for_Instance_CVPR_2021_paper.html?ref=https://githubhelp.com)
+:::
+
+In this paper, copy-paste augmentation (randomly paste objects in various scales onto image) is performed. Annatotating large datasets for instance segmentation is reaaaally expensive and time consuming. Copy-paste is similar to mixup  and cutmix but only copying the exact pixels corresponding to an object as opposed to all pixels in the object's bounding box. They do not use geometric transformations, Gaussian blurring.
+Copy and paste approach is also used for weakly supervised instance segmentation.
+
+Copy paste is a strong data augmentation technique: robustness to backbone initialization, robustness to training schedules, additive to large scale jittering augmentation and works well across backbones + image sizes. Large Scale Jittering (LSJ) + copy paste works freaking awesome, better than LSJ+[mixup](https://paperswithcode.com/method/mixup). Also, copy paste does not increase the training cost or inference time!!
+
+---
+
+## Improving Data Augmentation for Medical Image Segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://openreview.net/pdf?id=rkBBChjiG)
+:::
+
+Here, mixup augmentation technique and its performance on medical images is investigated. It boosts up the performance. In mixup, images from training set are such linearly combined that it is a linear combination of two training data. Also, they proposed mixmatch method that is like mixup but not totatlly random and its motivation is medical data is highly imbalanced. It seems okay technique but mixup is better.
+
+---
+
+## Equalization Loss v2: A New Gradient Balance Approach for Long-tailed Object Detection
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/2012.08548.pdf)
+:::
+
+There, they found the problem with EQL that is imbalanced gradients between positives and negatives. New version is gradient guided reweighing mechanism that rebalances the training process for each category indepedently and equally. Aaand EQLv2 >> EQL. EQL makes imrpovements on long-tailed dataset although end to end and decoupled training approaches work still better.
+
+---
+
+## Seesaw Loss for Long-Tailed Instance Segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Seesaw_Loss_for_Long-Tailed_Instance_Segmentation_CVPR_2021_paper.html)
+:::
+
+Seesaw loss is SOTA(2021). It improves performance of long tailed dataset as it is dynamic, ditribution-agnostic and self-calibrated. 
+
+---
+
+## ResNeSt: Split-Attention Networks
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/2004.08955v2.pdf)
+:::
+
+For visual recognition, featuremap attention and multi-path representation are important that utilize cross feature interactions and learning diverse representations. ResNeSt >> EffcientNet. Better speed accuracy trade off. Instance Segmentation part: this backbone is better.
+
+---
+
+## YOLACT: Real-Time Instance Segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://openaccess.thecvf.com/content_ICCV_2019/html/Bolya_YOLACT_Real-Time_Instance_Segmentation_ICCV_2019_paper.html)
+:::
+
+Training on only one GPU and achieves better accuracy, woho. They achieved this by breaking instance segmentation into two parallel subtasks: i) generating prototype masks and ii) predicting per instance mask coefficients. Then masks are produced by linearly combining the prototypes with the mask coefficients. Sicne this process does not depend on repooling, it produces very high quality masks and exhibits temporal stability. Finally, fast NMS is proposed. First real-time instance segmentation algorithm with competitive results. Design of network closely follow RetinaNet but... faster sonic boom. In fast nms, already removed detections supress other detections. But results in a little performance loss so added semantic loss additionally.
+
+---
+
+## Instance Segmentation of Indoor Scenes using a Coverage Loss
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://people.csail.mit.edu/dsontag/papers/SilSonFer_ECCV14.pdf)
+:::
+
+It is noted that the major limitation of semantic segmentation is that not being able to distinguish different objects in the same class. Here, a model is introduced that utilizes both semantic and instance segmentation simultaneously. Also ,a new higher-order loss function. However, searching over semantic and instance seg. space is computationally infeasible. So segmentation tree is used.
+
+---
+
+## blob loss: instance imbalance aware loss functions for semantic segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/2205.08209.pdf)
+:::
+
+Sørensen–Dice coefficient can tackle class imbalance however not aware of instance imbalance. Here, a novel family of loss functions is proposed by primarily aimed at maximizing instance level detection metrics. This func. is investigated mainly on medical datasets. 
+
+---
+ 
+## Efficient end-to-end learning for cell segmentation with machine generated weak annotations
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://www.nature.com/articles/s42003-023-04608-5#data-availability)
+:::
+
+A new model architecture for end to-end training using such incomplete annotations and machine-generated annotations are used. Model is LACSS (Location assisted cell segmentation system).
+
+Often, amount of annotated data is inversely correlated with model performance in weakly and self supervised learning. Here, they focused on a specific subtype of  weak annotations and designed anew model architectue for end-to-end training using such incomplete annotations. Results are competitive and sometimes surpass sota, so it is promising.
+
+---
+
+## A full data augmentation pipeline for small object detection based on generative adversarial networks
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://www.sciencedirect.com/science/article/pii/S0031320322004782)
+:::
+
+Proposed a full pipeline to generate data with GANs for small obejct detection. It generates new population of objects on an image.
+
+---
+
+## A survey of semi‑ and weakly supervised semantic segmentation of images
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://link.springer.com/article/10.1007/s10462-019-09792-7)
+:::
+
+Semisupervised and weakly supervised learning are gradually replacing fully supervised learning because good results with a lower cost. 
+
+---
+
+## Unsupervised Instance Segmentation in Microscopy Images via Panoptic Domain Adaptation and Task Re-weighting
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/2005.02066)
+:::
+
+Unsupervised domain adaptation is important. Cycle Consistency Panoptic Domain Adaptive Mask R-CNN
+(CyC-PDAM) architecture is proposed for unsupervised nuclei segmentation in histopathology images. Also, a reweighting mechanism to dynamically add trade off weights for the task specific loss functions.
+
+---
+
+## Self-Supervised Visual Feature Learning With Deep Neural Networks: A Survey
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/1902.06162)
+:::
+
+Nice survey, just read it :)
+
+---
+
+## Cut and Learn for Unsupervised Object Detection and Instance Segmentation
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/2301.11320)
+:::
+
+Cut-and-LEaRn (CutLER) that is a simple approach for training unsupervised object detection and segmentation (instance seg. desene abicim) models. It leverages for self-supervised models to discover objects without supervision and amplify it to train a sota localization model WITHOUT ANY HUMAN LABELS. CutLER first uses MaskCut to generate coarse masks for multiple objects in an image. And then, learns detector on these masks using their loss function. It can be applied to wide range of applications (data agnostic). CutLER >> ViT because good at multiple objects(salient) not just focusing prominent object. SOTA methods are (01/2023) FreeSOLO and MaskDistil but they need in domain unlabeled data. However, CutLER does not. Moreover, contains zero-shot detector. CutLER is solely trained on ImageNet. CutLER = Vit + MaskCut + Detector.
+
+---
+
+## FreeSOLO: Learning to Segment Objects without Annotations
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/2202.12181.pdf)
+:::
+
+Self-supervised instance segmentation method so without annotations. It generates class agnostic masks.
+
+---

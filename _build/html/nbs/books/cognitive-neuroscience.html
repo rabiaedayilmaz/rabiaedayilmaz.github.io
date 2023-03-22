@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Cognitive Neuroscience: The Biology of the Mind &#8212; rey&#39;s log</title>
+    <title>1. Cognitive Neuroscience: The Biology of the Mind &#8212; Rabia Eda Yılmaz</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Image Generation - Breast Cancer - Papers" href="../papers/image-generation-breast-cancer.html" />
+    <link rel="next" title="1. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers" href="../papers/image-generation-breast-cancer.html" />
     <link rel="prev" title="Welcome to rey’s world" href="../../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -90,9 +90,14 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
       
       
-      <h1 class="site-logo" id="site-title">rey's log</h1>
+      <img src="../../_static/logogo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Rabia Eda Yılmaz</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -128,7 +133,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../papers/image-generation-breast-cancer.html">
-   2. Image Generation - Breast Cancer - Papers
+   1. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../papers/gans.html">
+   2. GANs in Medical Image Synthesis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../papers/spiking_neural_nets.html">
+   3. Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../papers/eeg_sentiment_analysis.html">
+   4. Sentiment Analysis from EEG Sginal Data
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DEEP LEARNING
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../deep_learning/blogs.html">
+   1. My Medium Blog Posts
   </a>
  </li>
 </ul>
@@ -140,7 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../art/art.html">
-   3. rey’s Art
+   1. rey’s Art
   </a>
  </li>
 </ul>
@@ -588,9 +620,75 @@ out that the brain is active all the time, not just when stimulated by an impuls
 <li><p>Magnetic Resonance Imaging: anatomical images</p></li>
 <li><p>Functional Magnetic Resonance Imaging: detailed images of the body with physiology related to brain function, and it is sensitive.</p></li>
 </ul>
+<div class="tip admonition">
+<p class="admonition-title">Think About It</p>
+<p>a) Can we study how the mind works without studying the brain?</p>
+<ul class="simple">
+<li><p>We can since mind does not leave a trace in terms of just physiologically but also behavirol and cognitive psychology that focus on how people think, learn and behave. But further investigation understanding the brain’s structure and functions maintain its importance.
+b) Will modern brain-imaging experiments become the new phrenology?</p></li>
+<li><p>No because phrenology is a pseudo-scientific practice and claims to be able to determine the character, personality and mental abilities based on the shape and size of the skull. It is not based on science and evidence. In contrast, modern brain imaging techniques use such as fMRI and PET that visualize and measure brain activity. They investigate specific cognitive processes and neural mechanisms to understand behavior and mental states by being statistically robust and reliable.
+c) How do you think the brain might be studied in the future?</p></li>
+<li><p>I think that future will enable us to experiment brain not just in vivo but also in silico with the improvements of artifical intelligence. On the other hand, there are four major topics that are expected to be developed over the time largely. They are brain imaging, brain-machine interfaces, artifical intelligence, optogenetics(controlling neuron and brain activity by using light) and brain simulation.
+d) Why do good ideas and theories occasionally get lost over the passage of time? How do they often get rediscovered?</p></li>
+<li><p>It happens often to ignore the outcomes or rediscovering them. Because at that time, the importance of the outcome may not well understood or could not be concluded in a such way to unlock more unknown. The key reasons are lack of documentation, lack of interest, lack of accessability etc.</p></li>
+</ul>
+</div>
 </section>
 <section id="structure-and-function-of-nervous-system">
 <h3><span class="section-number">1.1.2. </span>Structure and Function of Nervous System<a class="headerlink" href="#structure-and-function-of-nervous-system" title="Permalink to this headline">#</a></h3>
+<p>Nervous system has two core cell types: neurons and glial cells. Neurons are basic signaling units and transmit information throughout nervous system. They vary due to their function. Glial cells provide structural support and electrical insulation to neurons and modulating neuronal activity. There are three major types of glial cells: astrocytes, microglial cells, and oligodendrocytes.</p>
+<p>Astrocytes are large, surrounding neurons and close contact with brain’s vasculature. They create a barrier, blood-brain barrier. It restricts the diffusion of microscopic objects (such as bacteria, pathogen, chemical compounds) and large hydrophilic molecules in the blood from entering the neural tissue. They respond to and release neurotransmitters.</p>
+<p>Glial cells have fatty substance called myelin. In the central nervous system oligodendrocytes form myelin and in the peripheral nervous system Schwann cells form myelin. They wrap the axon and creates myelin that is good electric insulator and prevents electrical loss(increase in speed and distance).</p>
+<p>Microglial cells are small and irregular shaped. They are phagocytes devour and remove damaged cells. They can proliferate even in the adults.</p>
+<p>Nodes of Ranvier are where myelin has gaps and voltage gated Na+ and K+.</p>
+<p>Soma (Greek - body) is the cell body and it contains nucleus, endoplasmic reticulum, cytoskeleton, mitochondria, Golgi apparatus etc. They are in the cytoplasm that is salty fluid containing ions of potassium, sodium, chloride, and calcium and molecules like protein. Neurons have two structure: dendrites (branching extensions) and axons (output side). Synapse is where two neurons contact.</p>
+<p>Presynaptic neuron is when their axon’s output synapses make connections onto another neuron.
+Postsynaptic neuron is when other neurons make a connection at input synapses.</p>
+<p>The process of signaling has several stages. First, energy is needed to generate the signals. Second, this energy is in the form of an electrical potential across the neuronal membrane (difference in voltage). Third, these two voltages are depended on the concentrations of potassium, sodium and chloride ions. Fourth, when a neuron is in resting state, the inside of the neuron is charged more negatively (about 70 mV-resting potential). The neuronal membrane has ion channels and pumps. Ion channels are passive (always open) or gated (stimulation needed electrical, chemical, physical etc.)
+Action potentials are all or none due to the threshold. Postsynaptic potentials lead to action potentials and can be measured with EEG etc.</p>
+<p>Neurotransmitters are synthesized by and localized within the presynaptic neuron, and stored in the presynaptic
+terminal before release. It is releasedby the presynaptic neuron when action potentials depolarize with Ca+2. Some neurotransmitters are amino acids (aspartate, gamma amynobutyric acid (GABA), glutamate and glycine), biogenic amines (dopamine, norepinephrine and epinephrine [three of them aka catecholamines], serotonin (5-hydroxytryptamine) and histamine), asethylcholine (ACh), neuropeptides(large molecules, strings of amino acids). Neuropeptides are tachykinins (brain-gut peptides), neurohypophyseal hormones (oxytocin, vazopressin), hypothalamic releasing hormones (corticotropine hormones like somatostatin/stress, gonadotropin/growth inhibitor), opioid peptides (like drug, yes, endorphins and enkaphalins) and others(insulin, secretin etc.).</p>
+<p>Chemical transmission results in release of neurotransmitters from the presynaptic neuron and binding of those neurotransmitters on the postsynaptic neuron. After binding neurotransmitters must be removed from the receptor. This can be achieved by reuptake back into the presynaptic terminal, enzymatic breakdown or diffusion.</p>
+<p>Electrical synapses are different from chemical synapses. Because they operate by passing current directly from one neuron (presynaptic) to another neuron (postsynaptic) via specialized channels.</p>
+<p>Two main division of nervous system: centralnervous system (CNS, brain+spinal cord) and peripheral nervous system (PNS, nerves+ganglia). PNS deliverssensory information to CNS. This is achieved by two subsystems: somatic motor system (voluntary muscles) and autonomic motor system (automated visceral functions).</p>
+<p>Autonomic motor system has two branches: sympathetic (norepinephrine, fight or flight) and parasympathetic (acetylcholine, uwu peace).</p>
+<p>CNS formed by brain and spinal cord. Each is covered with protection membranes that is called meninges. Meninges has three layers: dura mater (outer), arachnoid mater (middle) and pia mater (inner). Between arachnoid and pia mater, it is filled with a fluid that is called cerebrospinal fluid (CSF). The brain actually floats in CSF (for pressure and damage).</p>
+<p>The brain needs energy and oxygen (from blood). Approximately 20% of blood flow of the heart is supplied to brain.</p>
+<p>Guide to navigate to brain:
+dorsal
+rostral (eye)       (nape) caudal
+ventral</p>
+<p>The brainstem = medulla(vital functions), pons(REM sleep, eye movements) and midbrain. Cerebellum.
+The diencephalon = thalamus and hypothalamus. Pituiary gland, amygdala.
+Telencephalon = cerebrum.</p>
+<p>Limbic system = hypothalamus, thalammus, amygdala and hypocampus. Behavioural and emotional responses.</p>
+<p>Basal ganglia = caudate nucleus, putamen/striatum, globus pallidus, subthalamic nucleus, and substantia nigra. Motivation and learning. Reward-based learning and goal-oriented behavior. Timing and task-switching.</p>
+<p>Dividing cortex by function: frontal lobe (motor cortex), parietal lobe (somatosensory area), occipital lobe (visual processing areas), temporal lobe (auditory processsing area).</p>
+<p>The wrinkled/folded structure of the brain = gyri (bumps) and sulci (groove).</p>
+<p>Evolution of the brain: minimizing connection lengths and a small number of long connections.</p>
+<p>New neurons form through the life in certain brain regions. (neurogenesis)</p>
+<div class="tip admonition">
+<p class="admonition-title">Think About It</p>
+<p>a) If action potentials are all or none, how does the nervous system code differences in sensory stimulus amplitudes?</p>
+<ul class="simple">
+<li><p>Amplitudes of the sensory stimuli vary due to frequency and total number of action potentials.
+b) What property (or properties) of ion channels makes them selective to only one ion, such as K+, and not another, such as Na+? Is it the size of the channel, other factors, or a combination?</p></li>
+<li><p>The selectivity of the ion channels are determined by the size, shape and charge distribution of the channel pore.
+c) Given that synaptic currents produce electrotonic potentials that are decremental, how do inputs located distantly on a neuron’s dendrites have any influence on the firing of the cell?</p></li>
+<li><p>Neurons are not passive cables, so neuron’s soma can still have influence on the firing cell.
+d) What would be the consequence for the activity of a postsynaptic neuron if reuptake or degradation systems for neurotransmitters were damaged?</p></li>
+<li><p>Then, neurotransmitters could not be removed, it can affect the activity of the postsynaptic neuron and long term neural circuit. And it may lead some consequences: increased excitability, neurotransmitter depletion, altered synaptic plasticity,neurological disorders.
+e) What are glial cells, and what functions do they perform?</p></li>
+<li><p>They are non neural cell that are responsible for transmitting electrical and chemical signals in the nervous system. They have propoerties such as blood brain barrier (astrocytes), myelin&amp;Schawann cells (oligodendricytes), immune by removing damaged cells (microglia) etc.
+f) Which region of the cerebral cortex has increased in size the most across species during evolution? What function does this brain region carry out in humans that is absent or reduced in animals?</p></li>
+<li><p>It is prefrontal cortex. Its tasks include working memory, decision making, planning, attention, social behavior. In humans it is essential as it enables us to carry out complex tasks. In animals it is less developed.
+g) How do the factors of brain size, neuron number, and connectivity contribute to human cognitive capacity ?</p></li>
+<li><p>Brain size may be coralated with increased cognitive capacity since it enables to have larger space to more cortical areas. Neuron number is the key determinant of cognitive capacity because it provides to achieve more complex tasks. Complexity and density of connectivity contributes a lot to cognitive capacity.
+h) What brain areas have been associated with the creation of new neurons, and what functions are they
+thought to perform?</p></li>
+<li><p>This process is called neurogenesis. The regions of brain that have neurogenesis are: hyppocampus (learning, memory, spatial navigation), subventricular zone (migrates to olfactory bulb, odor perception), olfactory bulb.</p></li>
+</ul>
+</div>
 </section>
 <section id="methods-of-cognitive-neuroscience">
 <h3><span class="section-number">1.1.3. </span>Methods of Cognitive Neuroscience<a class="headerlink" href="#methods-of-cognitive-neuroscience" title="Permalink to this headline">#</a></h3>
@@ -674,7 +772,7 @@ out that the brain is active all the time, not just when stimulated by an impuls
     <a class='right-next' id="next-link" href="../papers/image-generation-breast-cancer.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Image Generation - Breast Cancer - Papers</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

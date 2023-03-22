@@ -3,8 +3,12 @@
 
 root: intro
 format: jb-book
-defaults:
+defaults: 
+  titlesonly: True
+  numbered: True
+options:
   numbered: true
+
 parts:
 #  - caption: DEEP LEARNING FUNDAMENTALS
 #    chapters:
@@ -25,7 +29,18 @@ parts:
 - caption: PAPERS
   chapters:
     - file: nbs/papers/image-generation-breast-cancer
+    - file: nbs/papers/gans
+    - file: nbs/papers/spiking_neural_nets
+    - file: nbs/papers/eeg_sentiment_analysis
+
+- caption: DEEP LEARNING
+  chapters:
+    - file: nbs/deep_learning/blogs
   
 - caption: ART
   chapters:
     - file: nbs/art/art
+
+#- caption: LOG
+#  chapters:
+#    - file: nbs/diary/diary

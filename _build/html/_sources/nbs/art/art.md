@@ -21,7 +21,7 @@ Guide Your Own Way
 height: 512px
 name: directive-fig
 ---
-It is not You, It is Just How You Feel.
+The House of Rising Sun
 ```
 
 ```{figure} ../../assets/last.png
@@ -77,7 +77,7 @@ Tamino
 height: 512px
 name: directive-fig
 ---
-Python-chan
+Desert of Python-chan
 ```
 
 ```{figure} ../../assets/bmo.png
@@ -93,7 +93,7 @@ Time of Adventure
 height: 512px
 name: directive-fig
 ---
-Desert of Python-chan
+Python-chan
 ```
 
 ```{figure} ../../assets/dgkosenpai.png
@@ -102,4 +102,12 @@ height: 512px
 name: directive-fig
 ---
 Twinkle Twinkle
+```
+
+```{figure} ../../assets/combee.png
+---
+height: 512px
+name: directive-fig
+---
+Manner of Speaking is Honey
 ```
