@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation &#8212; Rabia Eda Yılmaz</title>
+    <title>3. Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation &#8212; Rabia Eda Yılmaz</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="My Medium Blog Posts" href="../deep_learning/blogs.html" />
-    <link rel="prev" title="GANs in Medical Image Synthesis" href="gans.html" />
+    <link rel="next" title="4. Sentiment Analysis from EEG Sginal Data" href="eeg_sentiment_analysis.html" />
+    <link rel="prev" title="2. GANs in Medical Image Synthesis" href="gans.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,7 +121,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../books/cognitive-neuroscience.html">
-   Cognitive Neuroscience: The Biology of the Mind
+   1. Cognitive Neuroscience: The Biology of the Mind
   </a>
  </li>
 </ul>
@@ -133,17 +133,22 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="image-generation-breast-cancer.html">
-   Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
+   1. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="gans.html">
-   GANs in Medical Image Synthesis
+   2. GANs in Medical Image Synthesis
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation
+   3. Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eeg_sentiment_analysis.html">
+   4. Sentiment Analysis from EEG Sginal Data
   </a>
  </li>
 </ul>
@@ -155,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../deep_learning/blogs.html">
-   My Medium Blog Posts
+   1. My Medium Blog Posts
   </a>
  </li>
 </ul>
@@ -167,7 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../art/art.html">
-   rey’s Art
+   1. rey’s Art
   </a>
  </li>
 </ul>
@@ -349,47 +354,47 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#deep-learning-in-spiking-neural-networks">
-   Deep Learning in Spiking Neural Networks
+   3.1. Deep Learning in Spiking Neural Networks
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#spiking-neural-networks-and-their-applications-a-review">
-   Spiking Neural Networks and Their Applications: A Review
+   3.2. Spiking Neural Networks and Their Applications: A Review
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#improved-spiking-neural-networks-for-eeg-classification-and-epilepsy-and-seizure-detection">
-   Improved spiking neural networks for EEG classification and epilepsy and seizure detection
+   3.3. Improved spiking neural networks for EEG classification and epilepsy and seizure detection
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#training-deep-spiking-neural-networks-using-backpropagation">
-   Training Deep Spiking Neural Networks Using Backpropagation
+   3.4. Training Deep Spiking Neural Networks Using Backpropagation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gradients-without-backpropagation">
-   Gradients without Backpropagation
+   3.5. Gradients without Backpropagation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#error-driven-input-modulation-solving-the-credit-assignment-problem-without-a-backward-pass">
-   Error-driven Input Modulation: Solving the Credit Assignment Problem without a Backward Pass
+   3.6. Error-driven Input Modulation: Solving the Credit Assignment Problem without a Backward Pass
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-forward-forward-algorithm-some-preliminary-investigations">
-   The Forward-Forward Algorithm: Some Preliminary Investigations
+   3.7. The Forward-Forward Algorithm: Some Preliminary Investigations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-important-is-weight-symmetry-in-backpropagation">
-   How important is weight symmetry in backpropagation?
+   3.8. How important is weight symmetry in backpropagation?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#signal-propagation-a-framework-for-learning-and-inference-in-a-forward-pass">
-   Signal Propagation: A Framework for Learning and Inference In a Forward Pass
+   3.9. Signal Propagation: A Framework for Learning and Inference In a Forward Pass
   </a>
  </li>
 </ul>
@@ -413,47 +418,47 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#deep-learning-in-spiking-neural-networks">
-   Deep Learning in Spiking Neural Networks
+   3.1. Deep Learning in Spiking Neural Networks
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#spiking-neural-networks-and-their-applications-a-review">
-   Spiking Neural Networks and Their Applications: A Review
+   3.2. Spiking Neural Networks and Their Applications: A Review
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#improved-spiking-neural-networks-for-eeg-classification-and-epilepsy-and-seizure-detection">
-   Improved spiking neural networks for EEG classification and epilepsy and seizure detection
+   3.3. Improved spiking neural networks for EEG classification and epilepsy and seizure detection
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#training-deep-spiking-neural-networks-using-backpropagation">
-   Training Deep Spiking Neural Networks Using Backpropagation
+   3.4. Training Deep Spiking Neural Networks Using Backpropagation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gradients-without-backpropagation">
-   Gradients without Backpropagation
+   3.5. Gradients without Backpropagation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#error-driven-input-modulation-solving-the-credit-assignment-problem-without-a-backward-pass">
-   Error-driven Input Modulation: Solving the Credit Assignment Problem without a Backward Pass
+   3.6. Error-driven Input Modulation: Solving the Credit Assignment Problem without a Backward Pass
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-forward-forward-algorithm-some-preliminary-investigations">
-   The Forward-Forward Algorithm: Some Preliminary Investigations
+   3.7. The Forward-Forward Algorithm: Some Preliminary Investigations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-important-is-weight-symmetry-in-backpropagation">
-   How important is weight symmetry in backpropagation?
+   3.8. How important is weight symmetry in backpropagation?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#signal-propagation-a-framework-for-learning-and-inference-in-a-forward-pass">
-   Signal Propagation: A Framework for Learning and Inference In a Forward Pass
+   3.9. Signal Propagation: A Framework for Learning and Inference In a Forward Pass
   </a>
  </li>
 </ul>
@@ -467,9 +472,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="spiking-neural-networks-snns-forward-forward-network-learning-without-backpropagation">
-<h1>Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation<a class="headerlink" href="#spiking-neural-networks-snns-forward-forward-network-learning-without-backpropagation" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3. </span>Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation<a class="headerlink" href="#spiking-neural-networks-snns-forward-forward-network-learning-without-backpropagation" title="Permalink to this headline">#</a></h1>
 <section id="deep-learning-in-spiking-neural-networks">
-<h2>Deep Learning in Spiking Neural Networks<a class="headerlink" href="#deep-learning-in-spiking-neural-networks" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.1. </span>Deep Learning in Spiking Neural Networks<a class="headerlink" href="#deep-learning-in-spiking-neural-networks" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -488,7 +493,7 @@ activation. Yet biological neurons use discrete spikes to compute and transmit i
 </div>
 </section>
 <section id="spiking-neural-networks-and-their-applications-a-review">
-<h2>Spiking Neural Networks and Their Applications: A Review<a class="headerlink" href="#spiking-neural-networks-and-their-applications-a-review" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.2. </span>Spiking Neural Networks and Their Applications: A Review<a class="headerlink" href="#spiking-neural-networks-and-their-applications-a-review" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -507,7 +512,7 @@ To Read</div>
 </div>
 </section>
 <section id="improved-spiking-neural-networks-for-eeg-classification-and-epilepsy-and-seizure-detection">
-<h2>Improved spiking neural networks for EEG classification and epilepsy and seizure detection<a class="headerlink" href="#improved-spiking-neural-networks-for-eeg-classification-and-epilepsy-and-seizure-detection" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.3. </span>Improved spiking neural networks for EEG classification and epilepsy and seizure detection<a class="headerlink" href="#improved-spiking-neural-networks-for-eeg-classification-and-epilepsy-and-seizure-detection" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -525,7 +530,7 @@ To Read</div>
 </div>
 </section>
 <section id="training-deep-spiking-neural-networks-using-backpropagation">
-<h2>Training Deep Spiking Neural Networks Using Backpropagation<a class="headerlink" href="#training-deep-spiking-neural-networks-using-backpropagation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4. </span>Training Deep Spiking Neural Networks Using Backpropagation<a class="headerlink" href="#training-deep-spiking-neural-networks-using-backpropagation" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -543,7 +548,7 @@ To Read</div>
 </div>
 </section>
 <section id="gradients-without-backpropagation">
-<h2>Gradients without Backpropagation<a class="headerlink" href="#gradients-without-backpropagation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.5. </span>Gradients without Backpropagation<a class="headerlink" href="#gradients-without-backpropagation" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -562,7 +567,7 @@ To Read</div>
 </div>
 </section>
 <section id="error-driven-input-modulation-solving-the-credit-assignment-problem-without-a-backward-pass">
-<h2>Error-driven Input Modulation: Solving the Credit Assignment Problem without a Backward Pass<a class="headerlink" href="#error-driven-input-modulation-solving-the-credit-assignment-problem-without-a-backward-pass" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.6. </span>Error-driven Input Modulation: Solving the Credit Assignment Problem without a Backward Pass<a class="headerlink" href="#error-driven-input-modulation-solving-the-credit-assignment-problem-without-a-backward-pass" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -580,7 +585,7 @@ To Read</div>
 </div>
 </section>
 <section id="the-forward-forward-algorithm-some-preliminary-investigations">
-<h2>The Forward-Forward Algorithm: Some Preliminary Investigations<a class="headerlink" href="#the-forward-forward-algorithm-some-preliminary-investigations" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.7. </span>The Forward-Forward Algorithm: Some Preliminary Investigations<a class="headerlink" href="#the-forward-forward-algorithm-some-preliminary-investigations" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -622,7 +627,7 @@ learn the generative model, it just reuses the representations learned by the di
 </div>
 </section>
 <section id="how-important-is-weight-symmetry-in-backpropagation">
-<h2>How important is weight symmetry in backpropagation?<a class="headerlink" href="#how-important-is-weight-symmetry-in-backpropagation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.8. </span>How important is weight symmetry in backpropagation?<a class="headerlink" href="#how-important-is-weight-symmetry-in-backpropagation" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -640,7 +645,7 @@ To Read</div>
 </div>
 </section>
 <section id="signal-propagation-a-framework-for-learning-and-inference-in-a-forward-pass">
-<h2>Signal Propagation: A Framework for Learning and Inference In a Forward Pass<a class="headerlink" href="#signal-propagation-a-framework-for-learning-and-inference-in-a-forward-pass" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.9. </span>Signal Propagation: A Framework for Learning and Inference In a Forward Pass<a class="headerlink" href="#signal-propagation-a-framework-for-learning-and-inference-in-a-forward-pass" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -714,13 +719,13 @@ contribution of each neuron to the network’s output error. Also, BP is not sim
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">GANs in Medical Image Synthesis</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>GANs in Medical Image Synthesis</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../deep_learning/blogs.html" title="next page">
+    <a class='right-next' id="next-link" href="eeg_sentiment_analysis.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">My Medium Blog Posts</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Sentiment Analysis from EEG Sginal Data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
