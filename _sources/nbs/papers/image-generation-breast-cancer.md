@@ -9,66 +9,18 @@
 [Paper](https://arxiv.org/abs/2204.11425)
 :::
 
-```{figure} ../../assets/papers/bci-1.png
----
-name: directive-fig
----
-Samples from BCI Dataset
-```
-
 Human epidermal growth factor receptor 2 (HER2) is important for formulating a precise treatment of breast cancer. Evaluation of HER is performed with immunohistochemical techniques (IHC), however IHC is very costly to perform. Thus, in this paper, a breast cancer immunohistochemical (BCI) benchmark is proposed for the first time. The goal is to synthesize IHC data from the paired hematoxylin and eosin (HE) stained images. BCI dataset contains 4870 paired images with different expression levels (0, 1+, 2+, and 3+). Furthermore, a pyramid pix2pix universal image translation method is used. This paper, for the first time investigates this problem and tries to solve it.
 
 Breast cancer is a common type in woman and leading cause of death. Accurate diagnosis and treatment are key factors to survival. Histopathological checking is a gold standard to identify cancer. It is done by staining tumor materials and getting hematoxylin and eosin (HE) slices that later will be observed by pathologists through the microscope or analyzing the digitized whole slice images (WSI). After diagnosis, preparing precise treatment is an essential step. For this step, expression of specific proteins are checked, such as HER2. Over expression of HER2 indicates tendency to aggressive clinical behaviour. However, to conduct evaluation of HER2 is really expensive. Therefore, it is  aimed to create HER2 images from IHC-stained slices.
 
 IHC 0: no stain, IHC 1+: barely perceptible, IHC 2+: weak to moderate complete staining, and IHC 3+: complete and intense staining. 
 
-```{figure} ../../assets/papers/bci-2.png
----
-name: directive-fig
----
-Examples of slices and HER2 expressions
-```
-
-```{figure} ../../assets/papers/bci-3.png
----
-name: directive-fig
----
-How the Dataset is Formed
-```
-
 The data scanning equipment is Hamamatsu NanoZommer S60. For each pathological tissue sample, the doctor will cut two tissue from it, one for HE staining and the other one for HER2 detection. Thus, there will be differences between two tissue samples and furthermore, samples will be stretched or squeezed during slice preparation. To align both images, registration process is followed and projection transformation that is done by mapping squares of images and moreover, elastix registraion is applied. After these steps, post-processing is applied to remove black border between blocks and fill it with surrounding content. Lastly, the blank or not-well aligned ares are filtered out.
-
-```{figure} ../../assets/papers/bci-4.png
----
-name: directive-fig
----
-The Model: pix2pix
-```
 
 The L1 loss is directly calculates the difference between ground truth and generated image. Multi-scale loss is formed for scale transformation that applies low-pass filter to smooth the image and down-smapling smoothed image.
 
-```{figure} ../../assets/papers/bci-5.png
----
-name: directive-fig
----
-The Overall Objective Function
-```
-
 The method used in this paper is outperformed.
 
-```{figure} ../../assets/papers/bci-6.png
----
-name: directive-fig
----
-Benchmark Results
-```
-
-```{figure} ../../assets/papers/bci-7.png
----
-name: directive-fig
----
-HER2 Visualizations
-```
 The accuracy of the outcomes of the model is evaluated by pathologists and achieved 37.5% and 40.0% accuracy performance. Briefly, this is a challenging task and there is a need for more effective model.
 
 ---
@@ -83,27 +35,6 @@ The accuracy of the outcomes of the model is evaluated by pathologists and achie
 :::
 
 Supervised Pix2Pix and unsupervised Cycle-consistency are two models dominates the field of medical image-to-image translation. But both of them are not ideal. Moreover, it requires paired and well-pixel aligned images that makes it really challengable especially in medical field and not always feasible due to respiratory motion or anatomical changes between times of acquired paired images. Cycle-consistency works well on unpaired or misaligned images. However, accuracy performance is not optimal and may produce multiple solutions. To break this dilemma, in this paper, RegGAN is proposed for medical image-to-image translation. It is based on theory of "loss-correction". Misaligned target images are considered as noisy labels and generator is trained with an additional registration network. The main goal is to search for a common solution both for image-to-image translation and registration tasks. In this paper, it is demonstrated that RegGAN can be easily combined with these models and improve their performance. The key outcome of this paper is that they demonstrated using registrations improves significantly the performance of image-to-iamge translation because of adaptively eliminating the noise.
-
-```{figure} ../../assets/papers/reggan-1.png
----
-name: directive-fig
----
-Comparison of Models
-```
-
-```{figure} ../../assets/papers/reggan-2.png
----
-name: directive-fig
----
-Correction Loss
-```
-
-```{figure} ../../assets/papers/reggan-3.png
----
-name: directive-fig
----
-Comparison of Results
-```
 
 ---
 
@@ -151,76 +82,9 @@ Magnetic resonance imaging (MRI) is widely used protocol and each MR modality (T
 
 The edge maps are computed by using Sobel operator since it is simple and derivative can easily be computed.
 
-```{figure} ../../assets/papers/eagan-1.png
----
-name: directive-fig
----
-Sobel Filter and Edges
-```
 
-```{figure} ../../assets/papers/eagan-2.png
----
-name: directive-fig
----
-Objective of Generator in gEA-GAN
-```
-
-```{figure} ../../assets/papers/eagan-3.png
----
-name: directive-fig
----
-Objective of Discriminator in gEA-GAN
-```
-
-```{figure} ../../assets/papers/eagan-4.png
----
-name: directive-fig
----
-Final Objective Function of gEA-GAN
-```
-
-```{figure} ../../assets/papers/eagan-5.png
----
-name: directive-fig
----
-Objective of Generator in dEA-GAN
-```
-
-```{figure} ../../assets/papers/eagan-6.png
----
-name: directive-fig
----
-Objective of Discriminator in dEA-GAN
-```
 Similarly, the final objective function is summation of generator and discriminator objectives.
 Architecture consists of three modules: generator, discriminator and edge detector.
-```{figure} ../../assets/papers/eagan-7.png
----
-name: directive-fig
----
-Architecture of EA-GANs
-```
-
-```{figure} ../../assets/papers/eagan-8.png
----
-name: directive-fig
----
-Architecture fo Generator
-```
-
-```{figure} ../../assets/papers/eagan-10.png
----
-name: directive-fig
----
-Results on BRATS2015 Dataset
-```
-
-```{figure} ../../assets/papers/eagan-11.png
----
-name: directive-fig
----
-Comparison with Pix2Pix on Different 2D Datasets
-```
 
 ---
 
@@ -274,12 +138,6 @@ pix2pix uses a U-Net  based architecture for generator and convolutional PatchGA
 
 PatchGAN is also called as markovian discriminator. L2 and L1 produce generate blurry results so they will encourage low-level frequencies. To model high-frequencies, restricting attention on local patches is enough. This is how PatchGAN is proposed. Because it penalizes structure at the scale of the patches. Such a discriminator effectively models the image as a Markov random field by assuming independence between pixels seperated more than patch diameter. Lastly, PatchGAN can be considered as a form of texture/style loss. 
 
-```{figure} ../../assets/papers/pix2pix-1.png
----
-name: directive-fig
----
-Final Objective Function
-```
 
 ## Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
 
@@ -338,12 +196,6 @@ Auxiliary classifier GAN (AC-GAN) is proposed. Unlike the cGAN, they do not prov
 In the previous frameworks, the distributions of generated and real data are matched by means of the Jensen-Shannon (JS) divergence. This divergence measure causes vanishing gradients and makes the saddle-point optimization non-feasible that are underlying failures of GAN models. 
 
 In Wasserstein-GAN (WGAN) that uses the Earth Mover (ME) or Wasserstein-1 distance as a more optimal divergence measure to avoid vanishing gradients.The downside of WGAN is slow optimization.
-```{figure} ../../assets/papers/medganrev-2.png
----
-name: directive-fig
----
-Cycle and AC GANs
-```
 ### LSGAN
 Least-squares GANs tried to tackle with the training instability. Similar to WGAN, the loss function is modified to avoid vanishing gradients.
 
@@ -360,23 +212,9 @@ Least-squares GANs tried to tackle with the training instability. Similar to WGA
 
 In this paper, various GAN-architectures are tested from DCGAN to style-based GANs on three medical imaging modalities and organs: cardiac cine-MRI, liver CT and RGB retina images. Generating realistic-looking medical images by FID (Fréchet Inception Distance score) standards passed the Truing test, however segmentation results were not much satisfying.
 
-```{figure} ../../assets/papers/emprical-1.png
----
-name: directive-fig
----
-Used GANs
-```
-
 There are three main issues about GANs: convergence, vanishing gradients and mode collapse.
 There are several GANs: DCGAN, LSGAN, WGAN and WGAN-GP, HingeGAN, SPADE GAN(improvement of pix2pix, SOTA 2021) and StyleGAN.
 There are several evaluation metrics for GANs: Peak Signal to Noise Ratio (PSNR), Structural Similarity Index Measure (SSIM), Learned Perceptual Image Patch Similarity (LPIPS), Inception Score (IS), Frechet Inception Distance (FID but can not detect if GAN just memorizes the training set and suffers from high bias). GANs are highly sensitive to hyperparameters but hyperparameter space research takes 500 GPU-days. So, regarding to earlier studies parameters are chosen. SPADE GAN and StyleGAN did most, respectively.
-
-```{figure} ../../assets/papers/emprical-2.png
----
-name: directive-fig
----
-Selected Hyperparameters
-```
 
 ---
 
@@ -393,31 +231,9 @@ In this paper, a new method is presented that synthesizes high-resolution photo 
 
 The coarse-to-fine generator has two parts: G1 (global generator) and G2 (local enhancer).
 
-```{figure} ../../assets/papers/high-res-1.png
----
-name: directive-fig
----
-Generator Architecture 
-```
-
 The full objective function is combination of GAN loss and feature matching loss (related to perceptual loss). Lambda controls the importance of each loss.
 
-```{figure} ../../assets/papers/high-res-2.png
----
-name: directive-fig
----
-Objective Function
-```
-
 Existing image synthesis methods utilizes semantic label maps, despite this fact, in this paper instance label maps are used. It improved performance. Mapping from semantic map is one-to-many problem. But authors proposed low-dimensional feature channels as the input to the generator. To generate low dimensional features, an encoder network E to find low-dimensional feature vectors. To ensure that features are consistent within in each instance, an instance-wise average pooling layer to the output of the encoder to compute average feature for object instances. After training the encoder, it runned on all instances in the training images and record the obtained features. Then, k-clustering is performed for each semantic category. These features are used as input to the generator.
-
-```{figure} ../../assets/papers/high-res-3.png
----
-name: directive-fig
----
-Overall Network
-```
-
 ---
 
 ## Synthetic Medical Images from Dual Generative Adversarial Networks
@@ -449,13 +265,6 @@ Stacking GANs is effective since inhibits unstable nature of GANs. The lack of d
 
 In this paper, GANs are applied to medical images and generated synthetic data: fundus and multi-modal MR glioma. PGGANs are explored in medical images and showed that it is successful in being realistic and diverse. 
 
-```{figure} ../../assets/papers/ggan-1.png
----
-name: directive-fig
----
-PGGAN Architecture
-```
-
 PGGAN trains the network in a step-wise style.
 
 ---
@@ -472,34 +281,13 @@ PGGAN trains the network in a step-wise style.
 
 This is a comprehensive review paper that summarizes synthetic image generation methods and discuss the categories (image-to-image translation, fusion image generation, label-to-image mapping). 
 
-```{figure} ../../assets/papers/gan-rev-1.png
----
-name: directive-fig
----
-GAN Architectures Chronology
-```
-
 Here, GAN types will be reviewed.
 
 * **Convolutional GANs:** Moving from FC to CNN is appropriate for image data. However, experiments showed that training with CNNs is hard because of: non-convergence, diminished gradient, unbalance between discriminator&generator, model collapse, and hyperparameter selections. One solution is using Laplacian pyramids adversarial networks where a real image is converted into a multi scale pyramid image and convolutional GAN is trained to produce multi scale and multi level feature maps where final map is combination of all. The Laplacian pyramid is a linear invertible image demonstration containing band-pass images and a low-frequency residual.
 
-```{figure} ../../assets/papers/gan-rev-2.png
----
-name: directive-fig
----
-Laplacian Pyramid
-```
-
 * **Conditional GANs:** Proposed for image-to-image translation problem. It just not learns the mapping from input image to output image but also adopts a loss function to train this mapping. This provides opportunity to apply same generic method to problems that need complex loss formulations. There proposed InfoGAN (uses mutual info. so semantically meaningful), BAGAN (class conditioning in hidden space, similar to infogan but has two outputs) and ACGAN (similar infogan but no c conditional var. and added external classifier and optimized loss func.).
 
 * **Autoencoder GANs:** Autoencoders learn a deterministic mapping via the encoder and decoder. They are generally for learning non-linear mappings in both directions. Images generated by autoencoder gans are blurry but accurate and efficient.
-
-```{figure} ../../assets/papers/gan-rev-3.png
----
-name: directive-fig
----
-Autoencoder GAN Loss
-```
 
 There is also BiGAN, AGE, BEGAN etc. 
 
@@ -512,13 +300,6 @@ There is also BiGAN, AGE, BEGAN etc.
 * **Single Stage Methods:** These type of GANs follow a generator G and a discriminator D architecture. They have simple architecture and no additional connections. DCGAN, ControlGAN, ClusterGAN.
 
 * **Multi Stage Methods:** They use multiple generators and discriminators. Generators are in charge of different tasks. The idea behind this approach is to distinct an image into different portions, like foreground-background, style-structure. There, generators work in sequential or parallel. StructureGAN, CR-GAN, StarGAN, StarGAN-VC, StackGAN, AttenGAN, MC-GAN.
-
-```{figure} ../../assets/papers/gan-rev-4.png
----
-name: directive-fig
----
-Various GANs
-```
 
 ---
 
@@ -559,13 +340,6 @@ DCGAN, WGAN and BEGAN are applied and compared on thyroid images. WGANs and BEGA
 
 In computer vision unsupervised image-to-image translation is important. But they fail to generate diverse outputs from a given source domain image. To address this issue, Multimodal Unsupervised Image-to-Image Translation (MUNIT) framework is proposed. They assumed that the image representation can be decomposed into a content code that is domain invariant, and a style code that captures domain-specific properties. To translate an image to another domain, they recombined its content code with a random style code sampled from the style space of the target.
 
-```{figure} ../../assets/papers/gan-rev-5.png
----
-name: directive-fig
----
-Proposed Framework
-```
-
 ---
 
 ## ResViT: Residual vision transformers for multi-modal medical image synthesis
@@ -585,13 +359,6 @@ Vision transformers are highly promising since attention operators that learn co
 
 ResVit combines the sensitivity of vision transformers to global context, the localization power of CNNs, and the realism of adversarial learning. ResVit's generator follows an encoder-decoder architecture with a central bottleneck to distill task-critical information. The encoder and decoder contain CNN blocks to leverage local precision of convolution operators. The bottleneck comprises novel aggregated residual transformer (ART) blocks to preserve local and gloabal context, with a weight sharing strategy to minimize model complexity.
 
-```{figure} ../../assets/papers/resvit-1.png
----
-name: directive-fig
----
-ResVit Model
-```
-
 ---
 
 ## StarGAN v2: Diverse Image Synthesis for Multiple Domains
@@ -605,13 +372,6 @@ ResVit Model
 
 A good image model should learn i) diversit of generated images and ii) scalability over multiple domains. StarGAN deals with both.
 
-```{figure} ../../assets/papers/stargan-1.png
----
-name: directive-fig
----
-Four Modules of StarGAN
-```
-
 ---
 
 ## Unsupervised Multi-Modal Medical Image Registration via Discriminator-Free Image-to-Image Translation
@@ -624,20 +384,6 @@ Four Modules of StarGAN
 :::
 
 In this paper, a novel translation-based unsupervised deformable image registration approach to convert the multi-modal registration problem to mono-model one is proposed. Concretely, this approach incorporates a discriminator-free translation network to facilitate the training of the registration network and a patchwise contrastive loss  to encourage the translation network to preserve object shapres. Thus, main idea is to reduce the inconsistency and artifacts of the translation by removing discriminator. Moreover, replacing adversarial loss with novel two losses (local alignment and global alignment) is proposed so that an unsupervised method requiring no ground truth deformation or pairs of aligned images for training. Local alignment loss is for capturing detailed local texture information and global alignment loss is for focusing on the overall shape. Four variants of the approach evaluated on a public dataset. According to experiment results, it achieved SOTA performance (04/2022).
-
-```{figure} ../../assets/papers/multi-1.png
----
-name: directive-fig
----
-Overview of Method
-```
-
-```{figure} ../../assets/papers/multi-2.png
----
-name: directive-fig
----
-More Detailed Overview of Method
-```
 
 ---
 
@@ -679,13 +425,6 @@ classification accuracies of 99.29% and 85% on the BreakHis and BACH database, r
 
 AHoNet ->  efficient channel attention module with non-dimensionality reduction + local cross-channel
 interaction to achieve local salient deep features + matrix power normalization (more robust global feature presentation)
-
-```{figure} ../../assets/papers/ahonet-1.png
----
-name: directive-fig
----
-AHoNet Architecture
-```
 
 ---
 

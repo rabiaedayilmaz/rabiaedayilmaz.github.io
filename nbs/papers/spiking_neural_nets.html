@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation &#8212; Rabia Eda Yılmaz</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="My Medium Blog Posts" href="../deep_learning/blogs.html" />
+    <link rel="prev" title="GANs in Medical Image Synthesis" href="gans.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logogo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Rabia Eda Yılmaz</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to rey’s world
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  BOOKS &lt;3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../books/cognitive-neuroscience.html">
+   Cognitive Neuroscience: The Biology of the Mind
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PAPERS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="image-generation-breast-cancer.html">
+   Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gans.html">
+   GANs in Medical Image Synthesis
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DEEP LEARNING
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../deep_learning/blogs.html">
+   My Medium Blog Posts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ART
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../art/art.html">
+   rey’s Art
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/rabiaedayilmaz/rabiaedayilmaz.github.io"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/rabiaedayilmaz/rabiaedayilmaz.github.io/issues/new?title=Issue%20on%20page%20%2Fnbs/papers/spiking_neural_nets.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/nbs/papers/spiking_neural_nets.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deep-learning-in-spiking-neural-networks">
+   Deep Learning in Spiking Neural Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spiking-neural-networks-and-their-applications-a-review">
+   Spiking Neural Networks and Their Applications: A Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improved-spiking-neural-networks-for-eeg-classification-and-epilepsy-and-seizure-detection">
+   Improved spiking neural networks for EEG classification and epilepsy and seizure detection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#training-deep-spiking-neural-networks-using-backpropagation">
+   Training Deep Spiking Neural Networks Using Backpropagation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gradients-without-backpropagation">
+   Gradients without Backpropagation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#error-driven-input-modulation-solving-the-credit-assignment-problem-without-a-backward-pass">
+   Error-driven Input Modulation: Solving the Credit Assignment Problem without a Backward Pass
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-forward-forward-algorithm-some-preliminary-investigations">
+   The Forward-Forward Algorithm: Some Preliminary Investigations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-important-is-weight-symmetry-in-backpropagation">
+   How important is weight symmetry in backpropagation?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signal-propagation-a-framework-for-learning-and-inference-in-a-forward-pass">
+   Signal Propagation: A Framework for Learning and Inference In a Forward Pass
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Spiking Neural Networks - SNNs && Forward-Forward Network && Learning Without Backpropagation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deep-learning-in-spiking-neural-networks">
+   Deep Learning in Spiking Neural Networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spiking-neural-networks-and-their-applications-a-review">
+   Spiking Neural Networks and Their Applications: A Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improved-spiking-neural-networks-for-eeg-classification-and-epilepsy-and-seizure-detection">
+   Improved spiking neural networks for EEG classification and epilepsy and seizure detection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#training-deep-spiking-neural-networks-using-backpropagation">
+   Training Deep Spiking Neural Networks Using Backpropagation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gradients-without-backpropagation">
+   Gradients without Backpropagation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#error-driven-input-modulation-solving-the-credit-assignment-problem-without-a-backward-pass">
+   Error-driven Input Modulation: Solving the Credit Assignment Problem without a Backward Pass
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-forward-forward-algorithm-some-preliminary-investigations">
+   The Forward-Forward Algorithm: Some Preliminary Investigations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-important-is-weight-symmetry-in-backpropagation">
+   How important is weight symmetry in backpropagation?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signal-propagation-a-framework-for-learning-and-inference-in-a-forward-pass">
+   Signal Propagation: A Framework for Learning and Inference In a Forward Pass
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="spiking-neural-networks-snns-forward-forward-network-learning-without-backpropagation">
+<h1>Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation<a class="headerlink" href="#spiking-neural-networks-snns-forward-forward-network-learning-without-backpropagation" title="Permalink to this headline">#</a></h1>
+<section id="deep-learning-in-spiking-neural-networks">
+<h2>Deep Learning in Spiking Neural Networks<a class="headerlink" href="#deep-learning-in-spiking-neural-networks" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/1804.08150.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>A review paper. Neurons in an ANN are characterized by a single, static, continuous-valued
+activation. Yet biological neurons use discrete spikes to compute and transmit information, and the spike times, in addition to the spike rates, matter. Spiking neural networks (SNNs) are thus more biologically realistic than ANNs, and arguably the only viable option if one wants to understand how the brain computes. SNNs are also more hardware friendly and energy-efficient than ANNs, and are thus appealing for technology, especially for portable devices. However, training deep SNNs remains a challenge. Spiking neurons’ transfer function is usually non-differentiable, which prevents using backpropagation.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="spiking-neural-networks-and-their-applications-a-review">
+<h2>Spiking Neural Networks and Their Applications: A Review<a class="headerlink" href="#spiking-neural-networks-and-their-applications-a-review" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9313413/">Paper</a></p>
+</div>
+</div>
+</div>
+<p><strong>Training of SNNs:</strong> There are two main approaches to train SNNs: (i) training SNNs directly based on either supervised learning with gradient descent or unsupervised learning with STDP (ii) convert a pre-trained ANN to an SNN model. The first approach has the problem of gradient vanishing or explosion because of a non-differentiable spiking signal.</p>
+<p>While the majority of existing works on SNNs have focused on the image classification problem. While SNNs have shown an impressive advantage with regard to energy efficiency, their accuracy performances are still low compared to ANNs on large-scale datasets such as ImageNet.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="improved-spiking-neural-networks-for-eeg-classification-and-epilepsy-and-seizure-detection">
+<h2>Improved spiking neural networks for EEG classification and epilepsy and seizure detection<a class="headerlink" href="#improved-spiking-neural-networks-for-eeg-classification-and-epilepsy-and-seizure-detection" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://dl.acm.org/doi/10.5555/1367089.1367090">Paper</a></p>
+</div>
+</div>
+</div>
+<p>A complicated pattern recognition problem: epilepsy and epileptic seizure detection. Three training algorithms are investigated: SpikeProp (using both incremental and batch processing), QuickProp, and RProp. The result is a remarkable increase in computational efficiency.For the XOR problem, the computational efficiency of SpikeProp, QuickProp, and RProp is increased by a factor of 588, 82, and 75, respectively. EEGs from three different subject groups are analyzed. RProp is the best training algorithm because it has the highest classification accuracy among all training algorithms specially for large size training datasets with about the same computational efficiency provided by SpikeProp. classification accuracy of 92.5%.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="training-deep-spiking-neural-networks-using-backpropagation">
+<h2>Training Deep Spiking Neural Networks Using Backpropagation<a class="headerlink" href="#training-deep-spiking-neural-networks-using-backpropagation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fnins.2016.00508/full">Paper</a></p>
+</div>
+</div>
+</div>
+<p>In this paper, we introduce a novel technique, which treats the membrane potentials of spiking neurons as differentiable signals, where discontinuities at spike times are considered as noise. This enables an error backpropagation mechanism for deep SNNs that follows the same principles as in conventional deep networks, but works directly on spike signals and membrane potentials. In the N-MNIST example, equivalent accuracy is achieved with about five times fewer computational operations.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="gradients-without-backpropagation">
+<h2>Gradients without Backpropagation<a class="headerlink" href="#gradients-without-backpropagation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2202.08587.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Backpropagation, or reverse-mode differentiation, is a special case within the general family of automatic differentiation algorithms that also includes the forward mode. We present a method to compute gradients based solely on the directional derivative that one can compute exactly and efficiently via the forward mode.They called it <strong>forward gradient</strong> by entirely eliminating the need for backpropagation in gradient descent.</p>
+<p>SOURCE CODE WILL BE RELEASED.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="error-driven-input-modulation-solving-the-credit-assignment-problem-without-a-backward-pass">
+<h2>Error-driven Input Modulation: Solving the Credit Assignment Problem without a Backward Pass<a class="headerlink" href="#error-driven-input-modulation-solving-the-credit-assignment-problem-without-a-backward-pass" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://www.semanticscholar.org/paper/Error-driven-Input-Modulation%3A-Solving-the-Credit-a-Dellaferrera-Kreiman/7e9020792cbdb0731fb623735127e202eff198db">Paper</a></p>
+</div>
+</div>
+</div>
+<p>BP lacks biological plausibility in many regards, including the weight symmetry problem, the dependence of learning on non-local signals, the freezing of neural activity during error propagation, and the update locking problem. They proposed to replace the backward pass with a second forward pass in which the input signal is modulated based on the error of the network. We show that this novel learning rule comprehensively addresses all the above-mentioned issues and can be applied to both fully connected and convolutional models.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="the-forward-forward-algorithm-some-preliminary-investigations">
+<h2>The Forward-Forward Algorithm: Some Preliminary Investigations<a class="headerlink" href="#the-forward-forward-algorithm-some-preliminary-investigations" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://www.cs.toronto.edu/~hinton/FFA13.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>The Forward-Forward algorithm replaces the forward and
+backward passes of backpropagation by two forward passes, one with positive
+(i.e. real) data and the other with negative data which could be generated by the
+network itself. Each layer has its own objective function which is simply to have
+high goodness for positive data and low goodness for negative data. The sum of the
+squared activities in a layer can be used as the goodness but there are many other
+possibilities, including minus the sum of the squared activities. If the positive and
+negative passes can be separated in time, the negative passes can be done offline,
+which makes the learning much simpler in the positive pass and allows video to
+be pipelined through the network without ever storing activities or stopping to
+propagate derivatives.</p>
+<p>The Forward-Forward algorithm (FF) is comparable
+in speed to backpropagation but has the advantage that it can be used when the precise details of
+the forward computation are unknown. It also has the advantage that it can learn while pipelining
+sequential data through a neural network without ever storing the neural activities or stopping to
+propagate error derivatives. Somewhat slower than backpropagation and does not generalize quite as well on several of the toy problems. The two areas in which the forward-forward algorithm may be superior to backpropagation are as a model of learning in cortex and as a way of making use of very low-power analog hardware without resorting to reinforcement learning. Inspired by Boltzmann machines ( unsupervised contrastive learning ) and Noise Contrastive Estimation. Contrastive learning is the core idea.</p>
+<p>The Boltzmann machine can be seen as a combination of two ideas:</p>
+<ol class="simple">
+<li><p>Learn by minimizing the free energy on real data and maximizing the free energy on negative data generated by the network itself.</p></li>
+<li><p>Use the Hopfield energy as the energy function and use repeated stochastic updates to sample global configurations from the Boltzmann distribution defined by the energy function.</p></li>
+</ol>
+<p>FF can be viewed as a special case of a GAN in which every hidden layer of the discriminative
+network makes its own greedy decision about whether the input is positive or negative so there is no
+need to backpropagate to learn the discriminative model. No need to backpropagate to
+learn the generative model, it just reuses the representations learned by the discriminative model.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="how-important-is-weight-symmetry-in-backpropagation">
+<h2>How important is weight symmetry in backpropagation?<a class="headerlink" href="#how-important-is-weight-symmetry-in-backpropagation" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://dl.acm.org/doi/10.5555/3016100.3016156">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Gradient backpropagation (BP) requires symmetric feedforward and feedback connections—the same weights must be used for forward and backward passes. This “weight transport problem” (Grossberg 1987) is thought to be one of the main reasons to doubt BP’s biologically plausibility.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="signal-propagation-a-framework-for-learning-and-inference-in-a-forward-pass">
+<h2>Signal Propagation: A Framework for Learning and Inference In a Forward Pass<a class="headerlink" href="#signal-propagation-a-framework-for-learning-and-inference-in-a-forward-pass" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/abs/2204.01723">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Author has a <a class="reference external" href="https://amassivek.github.io/sigprop">blog article</a>:</p>
+<p>Two constraints of backpropagation on the training network are: (1) the addition of feedback weights that are symmetric with the feedforward weights; and (2) the requirement of having these feedback weights for every neuron.</p>
+<p>Spiking neural networks are similar to biological neural networks and used for neuromorphic chips.There are two problems for learning in spiking neural networks. First, the learning constraints under backpropagation are difficult to reconcile with learning in the brain, and hinders efficient implementations of learning algorithms on hardware. Second, training spiking networks results in the dead neuron problem (response is always nothing).</p>
+<p>Works on Forward Learning: Error Forward Propagation (2018) and Forward Forward (2022).</p>
+<p><strong>Spatial Credit Assignment</strong> How does the learning signal reach every neuron?
+Broadly, there are two approaches to the learning phase. The first approach computes a global learning signal (left middle figure) and then sends this learning signal to every neuron. The second approach computes a local learning signal (right figure) at each neuron (or layer). The first approach has the problem of having to coordinate sending this signal to every neuron in a precise way. This is costly in time, memory, and compatibility. The second approach does not encounter this problem, but has worse performance.</p>
+<p><strong>Global signal:</strong> feedforward network, gradient backpropagation, random feedback.
+<strong>Local signal:</strong> perturbation learning, local losses.</p>
+<p><strong>Temporal Credit Assignment</strong> How does the global learning signal reach multiple connected inputs (aka every time step)?</p>
+<blockquote>
+<div><p>There are two popular methods to answer this question: Backpropagation through time, and forward mode differentiation (FMD does step 1 (inference) and step 2 (learning) together (alternating)).</p>
+</div></blockquote>
+<p>Paper:</p>
+<p>They proposed a new learning framework, signal propagation (sigprop), for propagating a learning signal and updating neural network parameters via a forward pass, as an alternative to backpropagation. In sigprop, there is only the forward path for inference and learning. So, there are no structural or computational constraints necessary for learning to take place, beyond the inference model itself, such as feedback connectivity, weight transport, or a backward pass, which exist under backpropagation based approaches. That is, sigprop enables global supervised learning with only a forward path. This is ideal for parallel training of layers or modules. In biology, this explains how neurons without feedback connections can still receive a global learning signal. They used sigprop to train continuous time neural networks with Hebbian updates, and train spiking neural networks with only the voltage or with biologically and hardware compatible surrogate functions.</p>
+<p>BP is computationally inefficient for memory and time, and bottleneck parallel learning. Calculates the
+contribution of each neuron to the network’s output error. Also, BP is not similar how the brain does not have comprehensive feedback connectivity, neither neural feedback, and feedback and feedforward connectivity would need to have weight symmetry.</p>
+<p>Sigprop has the following desirable features:</p>
+<p>First, inputs and learning signals use the same forward path, so there are no additional structural or computational requirements for learning, such as feedback connectivity, weight transport, or a backward pass.</p>
+<p>Second, without a backward pass, the network parameters are updated as soon as they are reached by a forward pass containing the learning signal. Sigprop does not block the next input or store activations. So, sigprop is ideal for parallel training of layers or modules.</p>
+<p>Third, since the same forwardpass used for inputs is used for updating parameters, there is only one type of computation. And performs global learning signal.</p>
+<p><strong>Feedback Alignment:</strong> uses fixed random weights to transport error gradient information back to hidden layers, instead of using symmetric weights.</p>
+<p><strong>Local Learning:</strong> layers are trained independently by calculating a separate loss for each layer using an auxiliary classifier per layer.</p>
+<p><strong>Target Propagation:</strong> generates a target activation for each layer instead of gradients by propagating backward through the network. It requires reciprocal connectivity and is forwardpass and backwardpass locked. In contrast, sigprop generates a target activation at each layer by going forward through the network.</p>
+<p><strong>Equilibrium Propagation:</strong> is an energy based model using a local contrastive Hebbian learning with the same computation in the inference and learning phases. It is a continuous recurrent neural network that minimizes the difference between two fixed points: when receiving an input only and when receiving the target for error correction.</p>
+<p><strong>Error Forward Propagation:</strong> is for closed loop control systems or autoencoders. In either case, the output of the network is in the same space as the input of the network. These works calculate an error between the output and input of the network and then propagate the error forward through the network, instead of backward, calculating the gradient as in error backpropagation. Error forward propagation is backwardpass locked and forwardpass locked. It also requires different types of computation for learning and inference.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./nbs\papers"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="gans.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">GANs in Medical Image Synthesis</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../deep_learning/blogs.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">My Medium Blog Posts</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Rabia Eda Yilmaz<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
