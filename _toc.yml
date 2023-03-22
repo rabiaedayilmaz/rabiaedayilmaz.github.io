@@ -37,6 +37,11 @@ parts:
   chapters:
     - file: nbs/deep_learning/blogs
   
+- caption: BUILDING STUFF
+  chapters:
+    - file: nbs/Projects/projects
+    - file: nbs/Projects/blogs
+
 - caption: ART
   chapters:
     - file: nbs/art/art
