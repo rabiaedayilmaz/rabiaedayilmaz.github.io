@@ -120,8 +120,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../books/book-list.html">
+   1. Books I’ve Read
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../books/cognitive-neuroscience.html">
-   1. Cognitive Neuroscience: The Biology of the Mind
+   2. Cognitive Neuroscience: The Biology of the Mind
   </a>
  </li>
 </ul>
@@ -154,13 +159,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  DEEP LEARNING
+  BUILDING STUFF
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../deep_learning/blogs.html">
-   1. My Medium Blog Posts
+  <a class="reference internal" href="../Projects/projects.html">
+   1. Projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Projects/blogs.html">
+   2. My Medium Blog Posts
   </a>
  </li>
 </ul>
@@ -397,6 +407,31 @@ title="Print to PDF"
    3.9. Signal Propagation: A Framework for Learning and Inference In a Forward Pass
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#training-spiking-neural-networks-using-lessons-from-deep-learning">
+   3.10. TRAINING SPIKING NEURAL NETWORKS USING LESSONS FROM DEEP LEARNING
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memristor-based-binarized-spiking-neural-networks-challenges-and-applications">
+   3.11. Memristor-Based Binarized Spiking Neural Networks: Challenges and applications
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attention-spiking-neural-networks-3">
+   3.12. Attention Spiking Neural Networks - &lt;3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revisiting-batch-normalization-for-training-low-latency-deep-spiking-neural-networks-from-scratch-3">
+   3.13. Revisiting Batch Normalization for Training Low-Latency Deep Spiking Neural Networks From Scratch - &lt;3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#neuromorphic-deep-spiking-neural-networks-for-seizure-detection">
+   3.14. Neuromorphic deep spiking neural networks for seizure detection
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -459,6 +494,31 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#signal-propagation-a-framework-for-learning-and-inference-in-a-forward-pass">
    3.9. Signal Propagation: A Framework for Learning and Inference In a Forward Pass
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#training-spiking-neural-networks-using-lessons-from-deep-learning">
+   3.10. TRAINING SPIKING NEURAL NETWORKS USING LESSONS FROM DEEP LEARNING
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memristor-based-binarized-spiking-neural-networks-challenges-and-applications">
+   3.11. Memristor-Based Binarized Spiking Neural Networks: Challenges and applications
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attention-spiking-neural-networks-3">
+   3.12. Attention Spiking Neural Networks - &lt;3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revisiting-batch-normalization-for-training-low-latency-deep-spiking-neural-networks-from-scratch-3">
+   3.13. Revisiting Batch Normalization for Training Low-Latency Deep Spiking Neural Networks From Scratch - &lt;3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#neuromorphic-deep-spiking-neural-networks-for-seizure-detection">
+   3.14. Neuromorphic deep spiking neural networks for seizure detection
   </a>
  </li>
 </ul>
@@ -683,6 +743,128 @@ contribution of each neuron to the network’s output error. Also, BP is not sim
 <p><strong>Equilibrium Propagation:</strong> is an energy based model using a local contrastive Hebbian learning with the same computation in the inference and learning phases. It is a continuous recurrent neural network that minimizes the difference between two fixed points: when receiving an input only and when receiving the target for error correction.</p>
 <p><strong>Error Forward Propagation:</strong> is for closed loop control systems or autoencoders. In either case, the output of the network is in the same space as the input of the network. These works calculate an error between the output and input of the network and then propagate the error forward through the network, instead of backward, calculating the gradient as in error backpropagation. Error forward propagation is backwardpass locked and forwardpass locked. It also requires different types of computation for learning and inference.</p>
 <hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="training-spiking-neural-networks-using-lessons-from-deep-learning">
+<h2><span class="section-number">3.10. </span>TRAINING SPIKING NEURAL NETWORKS USING LESSONS FROM DEEP LEARNING<a class="headerlink" href="#training-spiking-neural-networks-using-lessons-from-deep-learning" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2109.12894.pdf">Paper</a></p>
+</div>
+</div>
+</div>
+<p>If our brains dissipated as much heat as state-of-the-art deep learning models, then natural selection would have wiped humanity out long before we could have invented machine learning.</p>
+<p>There are several persistent themes across these theories, which can be distilled down to ‘the three S’s’: spikes, sparsity, and static suppression (event driven processing).</p>
+<p>Much like the artificial neuron model, spiking neurons operate on a weighted sum of inputs. Rather than passing the result through a sigmoid or ReLU nonlinearity, the weighted sum contributes to the membrane potential U(t) of the neuron.</p>
+<p>Input encoding (rate coding, latency, delta modulation) + output decoding (rating coding, latency, population coding).</p>
+<p>Objective functions: cross-entropy loss (cross-entropy spike rate/spike count, maximum membrane/membrane potential) and mean square error (mean square spike loss/spike count, mean square membrane/membrane potential).</p>
+<p>SNN training methods: shadow training, backpropagation using spikes, local learning rules.</p>
+<p>Where inference efficiency is more important than training efficiency, and if input data is not time-varying, then shadow training could be the optimal way to go.</p>
+<p>Hybrid approach:</p>
+<ul class="simple">
+<li><p>Taking the gradient only at spike times, unbiased error but not training dead neuron.</p></li>
+<li><p>Surrogate gradient descent, biased error, training dead neurons.</p></li>
+</ul>
+<p>Long term temporal dependencies: adaptive thresholds, axonal delays, membrane dynamics, multistable neural activity.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="memristor-based-binarized-spiking-neural-networks-challenges-and-applications">
+<h2><span class="section-number">3.11. </span>Memristor-Based Binarized Spiking Neural Networks: Challenges and applications<a class="headerlink" href="#memristor-based-binarized-spiking-neural-networks-challenges-and-applications" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://ieeexplore.ieee.org/document/9693512/">Paper</a></p>
+</div>
+</div>
+</div>
+<p>Nature has engineered the most efficient computational processor, and yet the blueprint of the brain remains a mystery. How does the brain achieve within 20 W what it takes data centers hundreds of thousands of watts to process? Emerging memory technologies, such as memristors/ resistive random-access memory (RAM), are reducing the gap between the physical and algorithmic layers of computing from a bottom-up approach, while SNNs draw inspiration from the brain’s spikebased computational paradigm, providing top-down integration opportunities.</p>
+<p>Representing information as digital spiking events can improve noise margins and tolerance to device variability.</p>
+<p>Restricting neuron activations to single-bit spikes also alleviates the significant analog-todigital converter overhead that mixed-signal approaches have struggled to overcome.</p>
+<p>Power Consumption Order (descending): SRAM, Arithmetic Units, ADC, Routers, Crossbar.</p>
+<p>Even if activations and weights are bounded in precision, time can be thought of as continuous and provides an alternative dimension to encode information in.</p>
+<p>In general, large-scale networks appear to be far more tolerant of quantization errors than constrained models are.</p>
+<p>The leaky integrate-and-fire (LIF) neuron model is commonly used in conjunction with large-scale network models. Computationally inexpensive and easily trainable with the BPTT algorithm.</p>
+<p>There is a justified concern that advances in hardware will struggle to keep up, and the benefits derived from modern deep learning may soon saturate.</p>
+<p>A floating-point version of the weights is stored, and a quantized version of the weights is used during the forward pass to calculate the loss at the output. During error backpropagation, the gradient is computed with respect to each layer’s activations and binary weights. The gradients are used to update the highprecision weights during the update step. This process is repeated for all time steps.</p>
+<p>Network structure of this work: conv5 &gt; avg. pool2 &gt; conv5 &gt; avg. pool2 &gt; fully connected.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="attention-spiking-neural-networks-3">
+<h2><span class="section-number">3.12. </span>Attention Spiking Neural Networks - &lt;3<a class="headerlink" href="#attention-spiking-neural-networks-3" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://arxiv.org/abs/2209.13929">Paper</a></p>
+</div>
+</div>
+</div>
+<p>We first present our idea of attention in SNNs with a plug-and-play combined module kit, termed the Multi-dimensional Attention (MA) module. Then, a new attention SNN architecture with end-to-end training called ”MA-SNN” is proposed, which infers attention weights along the temporal dimension, channel dimension, as well as spatial dimension separately or simultaneously. Based on the existing neuroscience theories, we exploit the attention weights to optimize membrane potentials, which in turn regulate the spiking response in a data-dependent way. At the cost of negligible additional parameters, MA facilitates vanilla SNNs to achieve sparser spiking activity, better performance, and energy efficiency concurrently.</p>
+<p>To our best knowledge, this is for the first time, that the SNN community achieves comparable or even better performance compared with its ANN counterpart in the large-scale dataset. Compared with counterpart Res-ANN-104, the performance gap becomes -0.95/+0.21 percent and has 31.8×/7.4× better energy efficiency.</p>
+<p>Design philosophy is clear, exploiting attention to regulate membrane potentials, i.e., focusing on important features and suppressing unnecessary ones, which in turn affects the spiking activity.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="revisiting-batch-normalization-for-training-low-latency-deep-spiking-neural-networks-from-scratch-3">
+<h2><span class="section-number">3.13. </span>Revisiting Batch Normalization for Training Low-Latency Deep Spiking Neural Networks From Scratch - &lt;3<a class="headerlink" href="#revisiting-batch-normalization-for-training-low-latency-deep-spiking-neural-networks-from-scratch-3" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fnins.2021.773954/full">Paper</a>
+<a class="reference external" href="https://github.com/Intelligent-Computing-Lab-Yale/BNTT-Batch-Normalization-Through-Time">Github</a></p>
+</div>
+</div>
+</div>
+<p>SNNs convey temporally-varying spike activation through time that is likely to induce a large variation of forward activation and backward gradients, resulting in unstable training.
+To address this training issue in SNNs, we revisit Batch Normalization (BN) and propose a temporal Batch Normalization Through Time (BNTT) technique.
+Different from previous BN techniques with SNNs, we find that varying the BN parameters at every time-step allows the model to learn the time-varying input distribution better. Specifically, our proposed BNTT decouples the parameters in a BNTT layer along the time axis to capture the temporal dynamics of spikes.</p>
+<hr class="docutils" />
+</div>
+</div>
+</section>
+<section id="neuromorphic-deep-spiking-neural-networks-for-seizure-detection">
+<h2><span class="section-number">3.14. </span>Neuromorphic deep spiking neural networks for seizure detection<a class="headerlink" href="#neuromorphic-deep-spiking-neural-networks-for-seizure-detection" title="Permalink to this headline">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+To Read</div>
+<p class="sd-card-text"><a class="reference external" href="https://iopscience.iop.org/article/10.1088/2634-4386/acbab8/meta">Paper</a></p>
+</div>
+</div>
+</div>
+<p>EEG public datasets.
+Vast majority of model are on cloud computing resources. But, edge devices can securely analyze sensitive medical data in a real-time and personalised manner, for seizure detection etc. Novel spiking ConvLSTM unit for a surrogate gradient-based deep spiking neural network (SNN). Computational overhead and energy consumption are significantly reduced. Hardware-friendly, low-power neuromorphic system. First feasibility study using a deep SNN for seizure detection on several reliable public datasets.</p>
+<p>Three problems stand with the deep SNN (dSNN) conversion approach: (a) SNN conversion has not yet been optimized for sequential neural networks, and thus, temporal data is represented as an image. Forecasting models become prone to the future data leakage problem; (b) the SNN is an approximation of the deep neural network (DNN), and thus, the non-spiking network sets an upper-bound on performance, and (c) as the initial DNN is trained using error backpropagation, online learning for patient adaptation is no longer an option on resource-constrained hardware.</p>
+<p>Converting raw EEG signals to the frequency domain enables better performance seizure for seizure identification.</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Embedded Machine Learning and breast cancer - a wide range of low-power devices, including wearables, smartphones, and other IoT devices - future?</p>
+</div></blockquote>
 </div>
 </div>
 </section>
