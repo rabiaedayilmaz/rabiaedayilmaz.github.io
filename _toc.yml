@@ -24,6 +24,7 @@ parts:
 
 - caption: BOOKS <3
   chapters:
+    - file: nbs/books/book-list.md
     - file: nbs/books/cognitive-neuroscience
 
 - caption: PAPERS

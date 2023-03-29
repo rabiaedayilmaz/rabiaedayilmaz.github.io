@@ -187,3 +187,118 @@ Third, since the same forwardpass used for inputs is used for updating parameter
 **Error Forward Propagation:** is for closed loop control systems or autoencoders. In either case, the output of the network is in the same space as the input of the network. These works calculate an error between the output and input of the network and then propagate the error forward through the network, instead of backward, calculating the gradient as in error backpropagation. Error forward propagation is backwardpass locked and forwardpass locked. It also requires different types of computation for learning and inference.
 
 ---
+
+## TRAINING SPIKING NEURAL NETWORKS USING LESSONS FROM DEEP LEARNING
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/pdf/2109.12894.pdf)
+:::
+
+If our brains dissipated as much heat as state-of-the-art deep learning models, then natural selection would have wiped humanity out long before we could have invented machine learning.
+
+There are several persistent themes across these theories, which can be distilled down to ‘the three S’s’: spikes, sparsity, and static suppression (event driven processing).
+
+Much like the artificial neuron model, spiking neurons operate on a weighted sum of inputs. Rather than passing the result through a sigmoid or ReLU nonlinearity, the weighted sum contributes to the membrane potential U(t) of the neuron.
+
+Input encoding (rate coding, latency, delta modulation) + output decoding (rating coding, latency, population coding).
+
+Objective functions: cross-entropy loss (cross-entropy spike rate/spike count, maximum membrane/membrane potential) and mean square error (mean square spike loss/spike count, mean square membrane/membrane potential).
+
+SNN training methods: shadow training, backpropagation using spikes, local learning rules.
+
+Where inference efficiency is more important than training efficiency, and if input data is not time-varying, then shadow training could be the optimal way to go.
+
+Hybrid approach: 
+* Taking the gradient only at spike times, unbiased error but not training dead neuron.
+* Surrogate gradient descent, biased error, training dead neurons.
+
+Long term temporal dependencies: adaptive thresholds, axonal delays, membrane dynamics, multistable neural activity.
+
+---
+
+## Memristor-Based Binarized Spiking Neural Networks: Challenges and applications
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://ieeexplore.ieee.org/document/9693512/)
+:::
+
+Nature has engineered the most efficient computational processor, and yet the blueprint of the brain remains a mystery. How does the brain achieve within 20 W what it takes data centers hundreds of thousands of watts to process? Emerging memory technologies, such as memristors/ resistive random-access memory (RAM), are reducing the gap between the physical and algorithmic layers of computing from a bottom-up approach, while SNNs draw inspiration from the brain’s spikebased computational paradigm, providing top-down integration opportunities.
+
+Representing information as digital spiking events can improve noise margins and tolerance to device variability.
+
+Restricting neuron activations to single-bit spikes also alleviates the significant analog-todigital converter overhead that mixed-signal approaches have struggled to overcome.
+
+Power Consumption Order (descending): SRAM, Arithmetic Units, ADC, Routers, Crossbar.
+
+Even if activations and weights are bounded in precision, time can be thought of as continuous and provides an alternative dimension to encode information in.
+
+In general, large-scale networks appear to be far more tolerant of quantization errors than constrained models are.
+
+The leaky integrate-and-fire (LIF) neuron model is commonly used in conjunction with large-scale network models. Computationally inexpensive and easily trainable with the BPTT algorithm. 
+
+There is a justified concern that advances in hardware will struggle to keep up, and the benefits derived from modern deep learning may soon saturate.
+
+A floating-point version of the weights is stored, and a quantized version of the weights is used during the forward pass to calculate the loss at the output. During error backpropagation, the gradient is computed with respect to each layer’s activations and binary weights. The gradients are used to update the highprecision weights during the update step. This process is repeated for all time steps.
+
+Network structure of this work: conv5 > avg. pool2 > conv5 > avg. pool2 > fully connected.
+
+---
+
+## Attention Spiking Neural Networks - <3
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://arxiv.org/abs/2209.13929)
+:::
+
+We first present our idea of attention in SNNs with a plug-and-play combined module kit, termed the Multi-dimensional Attention (MA) module. Then, a new attention SNN architecture with end-to-end training called ”MA-SNN” is proposed, which infers attention weights along the temporal dimension, channel dimension, as well as spatial dimension separately or simultaneously. Based on the existing neuroscience theories, we exploit the attention weights to optimize membrane potentials, which in turn regulate the spiking response in a data-dependent way. At the cost of negligible additional parameters, MA facilitates vanilla SNNs to achieve sparser spiking activity, better performance, and energy efficiency concurrently.
+
+To our best knowledge, this is for the first time, that the SNN community achieves comparable or even better performance compared with its ANN counterpart in the large-scale dataset. Compared with counterpart Res-ANN-104, the performance gap becomes -0.95/+0.21 percent and has 31.8×/7.4× better energy efficiency.
+
+Design philosophy is clear, exploiting attention to regulate membrane potentials, i.e., focusing on important features and suppressing unnecessary ones, which in turn affects the spiking activity.
+
+---
+
+## Revisiting Batch Normalization for Training Low-Latency Deep Spiking Neural Networks From Scratch - <3
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://www.frontiersin.org/articles/10.3389/fnins.2021.773954/full)
+[Github](https://github.com/Intelligent-Computing-Lab-Yale/BNTT-Batch-Normalization-Through-Time)
+:::
+
+SNNs convey temporally-varying spike activation through time that is likely to induce a large variation of forward activation and backward gradients, resulting in unstable training.
+To address this training issue in SNNs, we revisit Batch Normalization (BN) and propose a temporal Batch Normalization Through Time (BNTT) technique.
+Different from previous BN techniques with SNNs, we find that varying the BN parameters at every time-step allows the model to learn the time-varying input distribution better. Specifically, our proposed BNTT decouples the parameters in a BNTT layer along the time axis to capture the temporal dynamics of spikes.
+
+---
+
+## Neuromorphic deep spiking neural networks for seizure detection
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} To Read
+[Paper](https://iopscience.iop.org/article/10.1088/2634-4386/acbab8/meta)
+:::
+
+EEG public datasets.
+Vast majority of model are on cloud computing resources. But, edge devices can securely analyze sensitive medical data in a real-time and personalised manner, for seizure detection etc. Novel spiking ConvLSTM unit for a surrogate gradient-based deep spiking neural network (SNN). Computational overhead and energy consumption are significantly reduced. Hardware-friendly, low-power neuromorphic system. First feasibility study using a deep SNN for seizure detection on several reliable public datasets.
+
+Three problems stand with the deep SNN (dSNN) conversion approach: (a) SNN conversion has not yet been optimized for sequential neural networks, and thus, temporal data is represented as an image. Forecasting models become prone to the future data leakage problem; (b) the SNN is an approximation of the deep neural network (DNN), and thus, the non-spiking network sets an upper-bound on performance, and (c) as the initial DNN is trained using error backpropagation, online learning for patient adaptation is no longer an option on resource-constrained hardware.
+
+Converting raw EEG signals to the frequency domain enables better performance seizure for seizure identification.
+
+---
+
+>  Embedded Machine Learning and breast cancer - a wide range of low-power devices, including wearables, smartphones, and other IoT devices - future?
