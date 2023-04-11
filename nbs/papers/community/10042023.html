@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2. Sentiment Analysis from EEG Signal Data" href="../independent/chapter1.html" />
+    <link rel="next" title="1. Sentiment Analysis from EEG Signal Data" href="../independent/chapter1.html" />
     <link rel="prev" title="2. Cognitive Neuroscience: The Biology of the Mind" href="../../books/cognitive-neuroscience.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -132,7 +132,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  PAPERS
+  COMMUNITY READING
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -141,24 +141,31 @@ const thebe_selector_output = ".output, .cell_output"
    1. Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  INDEPENDENT READING
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../independent/chapter1.html">
-   2. Sentiment Analysis from EEG Signal Data
+   1. Sentiment Analysis from EEG Signal Data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../independent/chapter2.html">
-   3. GANs in Medical Image Synthesis
+   2. GANs in Medical Image Synthesis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../independent/chapter3.html">
-   4. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
+   3. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../independent/chapter4.html">
-   5. Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation
+   4. Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation
   </a>
  </li>
 </ul>
@@ -371,7 +378,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="program-of-thoughts-prompting-disentangling-computation-from-reasoning-for-numerical-reasoning-tasks">
 <h1><span class="section-number">1. </span>Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks<a class="headerlink" href="#program-of-thoughts-prompting-disentangling-computation-from-reasoning-for-numerical-reasoning-tasks" title="Permalink to this headline">#</a></h1>
-<p>Recently, there has been significant progress in teaching language models to perform step-by-step reasoning to solve complex numerical reasoning tasks. Chain-of-thoughts prompting (CoT) is by far the state-of-art method for these tasks. CoT uses language models to perform both reasoning and computation in the multi-step <code class="docutils literal notranslate"><span class="pre">thought'</span> <span class="pre">process.</span> <span class="pre">To</span> <span class="pre">disentangle</span> <span class="pre">computation</span> <span class="pre">from</span> <span class="pre">reasoning,</span> <span class="pre">we</span> <span class="pre">propose</span> </code>Program of Thoughts’ (PoT), which uses language models (mainly Codex) to express the reasoning process as a program. The computation is relegated to an external computer, which executes the generated programs to derive the answer. We evaluate PoT on five math word problem datasets (GSM, AQuA, SVAMP, TabMWP, MultiArith) and three financial-QA datasets (FinQA, ConvFinQA, TATQA) for both few-shot and zero-shot setups. Under both few-shot and zero-shot settings, PoT can show an average performance gain over CoT by around 12% across all the evaluated datasets. By combining PoT with self-consistency decoding, we can achieve SoTA performance on all math problem datasets and near-SoTA performance on financial datasets. All of our data and code are released in Github\footnote{\url{this https URL}}.</p>
+<p>Chain of Thoughts Prompting = CoT and Program of Thougts = PoT. CoT models are language models that are used to produce text describing reasoning and computation, so that answering a question. On the other hand, PoT is used to generate text and programming language, so that an answer to a question. PoT is evaluated on 5 math word and financial-QA dataset problems in both few-shot and zero-shot setting. Concluded that PoT has 12% performance gain overall. <a class="reference external" href="https://github.com/wenhuchen/Program-of-Thoughts">Github</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -411,7 +418,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="../independent/chapter1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Sentiment Analysis from EEG Signal Data</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Sentiment Analysis from EEG Signal Data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
