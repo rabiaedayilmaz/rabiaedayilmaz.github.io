@@ -1,4 +1,4 @@
-# Sentiment Analysis from EEG Sginal Data
+# Sentiment Analysis from EEG Signal Data
 
 ## Prediction of advertisement preference by fusing EEG response and sentiment analysis
 
