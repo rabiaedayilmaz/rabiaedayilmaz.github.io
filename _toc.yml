@@ -15,12 +15,9 @@ parts:
       - file: nbs/books/book-list
       - file: nbs/books/cognitive-neuroscience
 
-  - caption: COMMUNITY READING
+  - caption: READING PAPERS
     chapters:
-      - file: nbs/papers/community/10042023
-
-  - caption: INDEPENDENT READING
-    chapters:
+      - file: nbs/papers/community/cohere
       - file: nbs/papers/independent/chapter1
       - file: nbs/papers/independent/chapter2
       - file: nbs/papers/independent/chapter3

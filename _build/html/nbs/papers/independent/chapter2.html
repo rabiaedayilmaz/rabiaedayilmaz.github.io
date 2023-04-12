@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. GANs in Medical Image Synthesis &#8212; Rabia Eda Yılmaz</title>
+    <title>3. GANs in Medical Image Synthesis &#8212; Rabia Eda Yılmaz</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers" href="chapter3.html" />
-    <link rel="prev" title="1. Sentiment Analysis from EEG Signal Data" href="chapter1.html" />
+    <link rel="next" title="4. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers" href="chapter3.html" />
+    <link rel="prev" title="2. Sentiment Analysis from EEG Signal Data" href="chapter1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -132,40 +132,33 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  COMMUNITY READING
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../community/10042023.html">
-   1. Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  INDEPENDENT READING
+  READING PAPERS
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../community/cohere.html">
+   1. COMMUNITY PAPER READING SESSIONS - COHERE AI
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="chapter1.html">
-   1. Sentiment Analysis from EEG Signal Data
+   2. Sentiment Analysis from EEG Signal Data
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. GANs in Medical Image Synthesis
+   3. GANs in Medical Image Synthesis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="chapter3.html">
-   3. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
+   4. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="chapter4.html">
-   4. Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation
+   5. Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation
   </a>
  </li>
 </ul>
@@ -376,37 +369,37 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generative-adversarial-networks-in-medical-image-augmentation-a-review">
-   2.1. Generative Adversarial Networks in Medical Image augmentation: A review
+   3.1. Generative Adversarial Networks in Medical Image augmentation: A review
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gans-in-medical-field-brain">
-   2.2. GANs in Medical Field: Brain
+   3.2. GANs in Medical Field: Brain
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gans-in-medical-field-breast">
-   2.3. GANs in Medical Field: Breast
+   3.3. GANs in Medical Field: Breast
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-augmentation-using-generative-adversarial-networks-cyclegan-to-improve-generalizability-in-ct-segmentation-tasks">
-   2.4. Data augmentation using generative adversarial networks (CycleGAN) to improve generalizability in CT segmentation tasks
+   3.4. Data augmentation using generative adversarial networks (CycleGAN) to improve generalizability in CT segmentation tasks
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#medical-image-synthetic-data-augmentation-using-gan">
-   2.5. Medical Image Synthetic Data Augmentation Using GAN
+   3.5. Medical Image Synthetic Data Augmentation Using GAN
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-data-augmentation-strategy-combining-a-modified-pix2pix-model-and-the-copy-paste-operator-for-solid-waste-detection-with-remote-sensing-images">
-   2.6. A Data Augmentation Strategy Combining a Modified pix2pix Model and the Copy-Paste Operator for Solid Waste Detection With Remote Sensing Images
+   3.6. A Data Augmentation Strategy Combining a Modified pix2pix Model and the Copy-Paste Operator for Solid Waste Detection With Remote Sensing Images
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#automated-scoring-of-cerbb2-her2-receptors-using-histogram-based-analysis-of-immunohistochemistry-breast-cancer-tissue-images">
-   2.7. Automated scoring of CerbB2/HER2 receptors using histogram based analysis of immunohistochemistry breast cancer tissue images
+   3.7. Automated scoring of CerbB2/HER2 receptors using histogram based analysis of immunohistochemistry breast cancer tissue images
   </a>
  </li>
 </ul>
@@ -430,37 +423,37 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generative-adversarial-networks-in-medical-image-augmentation-a-review">
-   2.1. Generative Adversarial Networks in Medical Image augmentation: A review
+   3.1. Generative Adversarial Networks in Medical Image augmentation: A review
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gans-in-medical-field-brain">
-   2.2. GANs in Medical Field: Brain
+   3.2. GANs in Medical Field: Brain
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gans-in-medical-field-breast">
-   2.3. GANs in Medical Field: Breast
+   3.3. GANs in Medical Field: Breast
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-augmentation-using-generative-adversarial-networks-cyclegan-to-improve-generalizability-in-ct-segmentation-tasks">
-   2.4. Data augmentation using generative adversarial networks (CycleGAN) to improve generalizability in CT segmentation tasks
+   3.4. Data augmentation using generative adversarial networks (CycleGAN) to improve generalizability in CT segmentation tasks
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#medical-image-synthetic-data-augmentation-using-gan">
-   2.5. Medical Image Synthetic Data Augmentation Using GAN
+   3.5. Medical Image Synthetic Data Augmentation Using GAN
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-data-augmentation-strategy-combining-a-modified-pix2pix-model-and-the-copy-paste-operator-for-solid-waste-detection-with-remote-sensing-images">
-   2.6. A Data Augmentation Strategy Combining a Modified pix2pix Model and the Copy-Paste Operator for Solid Waste Detection With Remote Sensing Images
+   3.6. A Data Augmentation Strategy Combining a Modified pix2pix Model and the Copy-Paste Operator for Solid Waste Detection With Remote Sensing Images
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#automated-scoring-of-cerbb2-her2-receptors-using-histogram-based-analysis-of-immunohistochemistry-breast-cancer-tissue-images">
-   2.7. Automated scoring of CerbB2/HER2 receptors using histogram based analysis of immunohistochemistry breast cancer tissue images
+   3.7. Automated scoring of CerbB2/HER2 receptors using histogram based analysis of immunohistochemistry breast cancer tissue images
   </a>
  </li>
 </ul>
@@ -474,9 +467,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="gans-in-medical-image-synthesis">
-<h1><span class="section-number">2. </span>GANs in Medical Image Synthesis<a class="headerlink" href="#gans-in-medical-image-synthesis" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3. </span>GANs in Medical Image Synthesis<a class="headerlink" href="#gans-in-medical-image-synthesis" title="Permalink to this headline">#</a></h1>
 <section id="generative-adversarial-networks-in-medical-image-augmentation-a-review">
-<h2><span class="section-number">2.1. </span>Generative Adversarial Networks in Medical Image augmentation: A review<a class="headerlink" href="#generative-adversarial-networks-in-medical-image-augmentation-a-review" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.1. </span>Generative Adversarial Networks in Medical Image augmentation: A review<a class="headerlink" href="#generative-adversarial-networks-in-medical-image-augmentation-a-review" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -517,16 +510,16 @@ To Read</div>
 </div>
 </section>
 <section id="gans-in-medical-field-brain">
-<h2><span class="section-number">2.2. </span>GANs in Medical Field: Brain<a class="headerlink" href="#gans-in-medical-field-brain" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.2. </span>GANs in Medical Field: Brain<a class="headerlink" href="#gans-in-medical-field-brain" title="Permalink to this headline">#</a></h2>
 <p>Tumor contour segmentation/registration /classifcaiton - cGAN.</p>
 </section>
 <section id="gans-in-medical-field-breast">
-<h2><span class="section-number">2.3. </span>GANs in Medical Field: Breast<a class="headerlink" href="#gans-in-medical-field-breast" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.3. </span>GANs in Medical Field: Breast<a class="headerlink" href="#gans-in-medical-field-breast" title="Permalink to this headline">#</a></h2>
 <p>For classification NcGAN, cGAN, and local-cGAN.</p>
 <hr class="docutils" />
 </section>
 <section id="data-augmentation-using-generative-adversarial-networks-cyclegan-to-improve-generalizability-in-ct-segmentation-tasks">
-<h2><span class="section-number">2.4. </span>Data augmentation using generative adversarial networks (CycleGAN) to improve generalizability in CT segmentation tasks<a class="headerlink" href="#data-augmentation-using-generative-adversarial-networks-cyclegan-to-improve-generalizability-in-ct-segmentation-tasks" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4. </span>Data augmentation using generative adversarial networks (CycleGAN) to improve generalizability in CT segmentation tasks<a class="headerlink" href="#data-augmentation-using-generative-adversarial-networks-cyclegan-to-improve-generalizability-in-ct-segmentation-tasks" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -544,7 +537,7 @@ To Read</div>
 </div>
 </section>
 <section id="medical-image-synthetic-data-augmentation-using-gan">
-<h2><span class="section-number">2.5. </span>Medical Image Synthetic Data Augmentation Using GAN<a class="headerlink" href="#medical-image-synthetic-data-augmentation-using-gan" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.5. </span>Medical Image Synthetic Data Augmentation Using GAN<a class="headerlink" href="#medical-image-synthetic-data-augmentation-using-gan" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -562,7 +555,7 @@ To Read</div>
 </div>
 </section>
 <section id="a-data-augmentation-strategy-combining-a-modified-pix2pix-model-and-the-copy-paste-operator-for-solid-waste-detection-with-remote-sensing-images">
-<h2><span class="section-number">2.6. </span>A Data Augmentation Strategy Combining a Modified pix2pix Model and the Copy-Paste Operator for Solid Waste Detection With Remote Sensing Images<a class="headerlink" href="#a-data-augmentation-strategy-combining-a-modified-pix2pix-model-and-the-copy-paste-operator-for-solid-waste-detection-with-remote-sensing-images" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.6. </span>A Data Augmentation Strategy Combining a Modified pix2pix Model and the Copy-Paste Operator for Solid Waste Detection With Remote Sensing Images<a class="headerlink" href="#a-data-augmentation-strategy-combining-a-modified-pix2pix-model-and-the-copy-paste-operator-for-solid-waste-detection-with-remote-sensing-images" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -580,7 +573,7 @@ To Read</div>
 </div>
 </section>
 <section id="automated-scoring-of-cerbb2-her2-receptors-using-histogram-based-analysis-of-immunohistochemistry-breast-cancer-tissue-images">
-<h2><span class="section-number">2.7. </span>Automated scoring of CerbB2/HER2 receptors using histogram based analysis of immunohistochemistry breast cancer tissue images<a class="headerlink" href="#automated-scoring-of-cerbb2-her2-receptors-using-histogram-based-analysis-of-immunohistochemistry-breast-cancer-tissue-images" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.7. </span>Automated scoring of CerbB2/HER2 receptors using histogram based analysis of immunohistochemistry breast cancer tissue images<a class="headerlink" href="#automated-scoring-of-cerbb2-her2-receptors-using-histogram-based-analysis-of-immunohistochemistry-breast-cancer-tissue-images" title="Permalink to this headline">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -631,13 +624,13 @@ To Read</div>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Sentiment Analysis from EEG Signal Data</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Sentiment Analysis from EEG Signal Data</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="chapter3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
