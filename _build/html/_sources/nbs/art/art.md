@@ -111,3 +111,11 @@ name: directive-fig
 ---
 Manner of Speaking is Honey
 ```
+
+```{figure} ../../assets/birbgirl.png
+---
+height: 512px
+name: directive-fig
+---
+Come and Fly Away With Me
+```

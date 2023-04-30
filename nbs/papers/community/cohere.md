@@ -1,4 +1,4 @@
-# COMMUNITY PAPER READING SESSIONS - COHERE AI
+# COMMUNITY PAPER READING SESSIONS - COHERE AI & MedARC
 
 ## Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks
 
@@ -23,3 +23,14 @@ Chain of Thoughts Prompting = CoT and Program of Thougts = PoT. CoT models are l
 :::
 
 One of the used techniques for learning from few labeled examples while making best use of a large amount of unlabeled data is **unsupervised pretraining** *followed by supervised finetuning*. This paradigm uses unlabeled data in a task-agnostic way. In contrast to common approaches of semi-supervised learning for computer vision, they showed that it is surprisingly effective for semi-supervised learning on ImageNet. Key ingredient is the use of big (deep and wide) networks during pretraining and fine-tuning. Semi-supervised learning algorithm can be summarized in three steps: unsupervised pretraining of a big ResNet model using SimCLRv2, supervised fine-tuning on a few labeled examples, and distillation with unlabeled examples for refining and transferring the task-specific knowledge. In medical applications where acquiring high-quality labels requires careful annotation by clinicians, better semi-supervised learning approaches can potentially help save lives.
+
+## Brain-Diffuser: Natural scene reconstruction from fMRI signals using generative latent diffusion
+
+::::{grid}
+:gutter: 1
+
+:::{grid-item-card} Paper
+
+[Read](https://arxiv.org/abs/2303.05334)
+:::
+
