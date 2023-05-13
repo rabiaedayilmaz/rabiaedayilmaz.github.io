@@ -22,6 +22,8 @@ parts:
       - file: nbs/papers/independent/chapter2
       - file: nbs/papers/independent/chapter3
       - file: nbs/papers/independent/chapter4
+      - file: nbs/papers/independent/chapter5
+      - file: nbs/papers/independent/chapter6
 
   - caption: DEEP LEARNING
     chapters:
