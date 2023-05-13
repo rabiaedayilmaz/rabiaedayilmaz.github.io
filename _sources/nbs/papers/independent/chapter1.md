@@ -1,4 +1,4 @@
-# Sentiment Analysis from EEG Signal Data
+# EEG Signal Data for Affective Computing
 
 ## Prediction of advertisement preference by fusing EEG response and sentiment analysis
 
