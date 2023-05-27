@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1.1. Transformers United 2023 Notes &#8212; REY&#39;S WORLD</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1. Let’s Talk About Books" href="../books/intro.html" />
+    <link rel="prev" title="1. Natural Language Processing Notes" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/cover_mitsuri.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">REY'S WORLD</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to rey’s world
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Natural Language Processing
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   1. Natural Language Processing Notes
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.1. Transformers United 2023 Notes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Books &lt;3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../books/intro.html">
+   1. Let’s Talk About Books
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/book-list.html">
+     1.1. Books I’ve Read
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../books/cognitive-neuroscience.html">
+     1.2. Cognitive Neuroscience: The Biology of the Mind
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Notes on Papers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../papers/independent/intro.html">
+   1. Deep Learning (Mix)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../papers/independent/breast_cancer.html">
+     1.1. Image Generation/GANs/Instance Segmentation - Breast Cancer(mostly) - Papers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../papers/independent/eeg_affective_comp.html">
+     1.2. EEG Signal Data for Affective Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../papers/independent/gan_medical.html">
+     1.3. GANs in Medical Image Synthesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../papers/independent/neuroscience.html">
+     1.4. Neuroscience
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../papers/independent/snns.html">
+     1.5. Spiking Neural Networks - SNNs &amp;&amp; Forward-Forward Network &amp;&amp; Learning Without Backpropagation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tryin' to Build Stuff
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Projects/intro.html">
+   1. Toy Projects/Blog Posts
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Projects/projects.html">
+     1.1. Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Projects/blogs.html">
+     1.2. My Medium Blog Posts
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Art
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../art/art.html">
+   1. rey’s Art
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/rabiaedayilmaz/rabiaedayilmaz.github.io"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/rabiaedayilmaz/rabiaedayilmaz.github.io/issues/new?title=Issue%20on%20page%20%2Fnbs/nlp/transformers.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/nbs/nlp/transformers.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-transformers-by-andrej-karpathy">
+   1.1.1. Introduction to Transformers by Andrej Karpathy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lecture">
+     1.1.1.1. Lecture
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recommended-readings">
+     1.1.1.2. Recommended Readings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#language-and-human-alignment-by-jan-leike-openai">
+   1.1.2. Language and Human Alignment by Jan Leike (OpenAI)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#emergent-abilities-and-scaling-in-llms-by-jason-wei-google-brain">
+   1.1.3. Emergent Abilities and Scaling in LLMs by Jason Wei (Google Brain)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strategic-games-by-noam-brown-fair">
+   1.1.4. Strategic Games by Noam Brown (FAIR)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#robotics-and-imitation-learning-by-ted-xiao-google-brain">
+   1.1.5. Robotics and Imitation Learning by Ted Xiao (Google Brain)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#common-sense-reasoning-by-yejin-choi-u-washington-allen-institute-for-ai">
+   1.1.6. Common Sense Reasoning by Yejin Choi (U. Washington / Allen Institute for AI)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#biomedical-transformers-by-vivek-natarajan-google-health-ai">
+   1.1.7. Biomedical Transformers by Vivek Natarajan (Google Health AI)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-context-learning-faithful-reasoning-by-stephanie-chan-deepmind-antonia-creswell-deepmind">
+   1.1.8. In-Context Learning &amp; Faithful Reasoning by Stephanie Chan (DeepMind) &amp; Antonia Creswell (DeepMind)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#neuroscience-inspired-artificial-intelligence-by-trenton-bricken-harvard-redwood-center-for-theoretical-neuroscience-anthropic-will-dorrell-ucl-gatsby-computational-neuroscience-unit-stanford">
+   1.1.9. Neuroscience-Inspired Artificial Intelligence by Trenton Bricken (Harvard/Redwood Center for Theoretical Neuroscience/Anthropic) &amp; Will Dorrell (UCL Gatsby Computational Neuroscience Unit/Stanford)
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Transformers United 2023 Notes</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-transformers-by-andrej-karpathy">
+   1.1.1. Introduction to Transformers by Andrej Karpathy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lecture">
+     1.1.1.1. Lecture
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recommended-readings">
+     1.1.1.2. Recommended Readings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#language-and-human-alignment-by-jan-leike-openai">
+   1.1.2. Language and Human Alignment by Jan Leike (OpenAI)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#emergent-abilities-and-scaling-in-llms-by-jason-wei-google-brain">
+   1.1.3. Emergent Abilities and Scaling in LLMs by Jason Wei (Google Brain)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strategic-games-by-noam-brown-fair">
+   1.1.4. Strategic Games by Noam Brown (FAIR)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#robotics-and-imitation-learning-by-ted-xiao-google-brain">
+   1.1.5. Robotics and Imitation Learning by Ted Xiao (Google Brain)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#common-sense-reasoning-by-yejin-choi-u-washington-allen-institute-for-ai">
+   1.1.6. Common Sense Reasoning by Yejin Choi (U. Washington / Allen Institute for AI)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#biomedical-transformers-by-vivek-natarajan-google-health-ai">
+   1.1.7. Biomedical Transformers by Vivek Natarajan (Google Health AI)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-context-learning-faithful-reasoning-by-stephanie-chan-deepmind-antonia-creswell-deepmind">
+   1.1.8. In-Context Learning &amp; Faithful Reasoning by Stephanie Chan (DeepMind) &amp; Antonia Creswell (DeepMind)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#neuroscience-inspired-artificial-intelligence-by-trenton-bricken-harvard-redwood-center-for-theoretical-neuroscience-anthropic-will-dorrell-ucl-gatsby-computational-neuroscience-unit-stanford">
+   1.1.9. Neuroscience-Inspired Artificial Intelligence by Trenton Bricken (Harvard/Redwood Center for Theoretical Neuroscience/Anthropic) &amp; Will Dorrell (UCL Gatsby Computational Neuroscience Unit/Stanford)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="transformers-united-2023-notes">
+<h1><span class="section-number">1.1. </span>Transformers United 2023 Notes<a class="headerlink" href="#transformers-united-2023-notes" title="Permalink to this headline">#</a></h1>
+<section id="introduction-to-transformers-by-andrej-karpathy">
+<h2><span class="section-number">1.1.1. </span>Introduction to Transformers by Andrej Karpathy<a class="headerlink" href="#introduction-to-transformers-by-andrej-karpathy" title="Permalink to this headline">#</a></h2>
+<section id="lecture">
+<h3><span class="section-number">1.1.1.1. </span>Lecture<a class="headerlink" href="#lecture" title="Permalink to this headline">#</a></h3>
+<p>Attention Timeline:</p>
+<ul class="simple">
+<li><p>1990s : Prehistoric Era (RNNs, LSTMs)</p></li>
+<li><p>2014 : Simple Attention Mechanism</p></li>
+<li><p>2017 : Beginning of Transformer (Attention is all you need)</p></li>
+<li><p>2018 : Explosion of Transformers in NLP (BERT, GPT-3)</p></li>
+<li><p>2018 - 2020 : Explosion into other fields (ViTs, Alphafold-2)</p></li>
+<li><p>2021 : Start of Generative Era (Codex, Decision Transformer, GPT-x, DALL-E)</p></li>
+<li><p>2022 : Present (ChatGPT, Whisper, Robotics Transformer, Stable Diffusion)</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Past, Present, and Future</p>
+<p>Prehistoric Era -&gt; Seq2Seq, LSTMs, GRUs } RNNs; good: encoding history; bad: long sequences, context.</p>
+<p>Present -&gt; unique apps: audio, art, music, storytelling; reasoning capabilities: common sense, logical, mathemetical; human alignment and interaction: reinforcement learning and human feedback; controlling toxicity, bias, and ethics.</p>
+<p>Future -&gt; video understanding and generation, GPT authors, generalist agents, domain specific foundation models: DoctorGPT, LawyerGPT.</p>
+<p>Missing Ingredients -&gt; external memory like Neural Turing Machines, finance and business; reducing computational complexity; enhanced human controllability; alignment with language models of human brain.</p>
+</div>
+<p>Attention = “communication phase”</p>
+<ul class="simple">
+<li><p>soft, data-dependent message passing on directed graphs</p></li>
+<li><p>each node stores a vector</p></li>
+<li><p>there is a communication phase (attention) and then a compute phase (MLP)</p></li>
+<li><p>key -&gt; what do i have?</p></li>
+<li><p>value -&gt; what do i publicly reveal/broadcast to others?</p></li>
+<li><p>query -&gt; what am i looking for?</p></li>
+</ul>
+<hr class="docutils" />
+<div class="tip admonition">
+<p class="admonition-title">Past, Present, and Future</p>
+<p>in <em>communication phase</em> of the transformer: i) every head applies this, in parallel and ii) then every layer, in series</p>
+<p>in encoder-decoder models: i) encoder is fully-connected cluster and ii) decoder is fully-connected to encoder positions, and left-to-right connected in decoder positions.</p>
+</div>
+<ul class="simple">
+<li><p>multi-head self-attention - heads copy&amp;paste in parallel</p></li>
+<li><p>self-attention - layers copy&amp;paste in serial</p></li>
+<li><p>cross-attention - queries are from the same node but keys and value are from external source, like encoder.</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Transformer -&gt; flexible: chop everything up into pieces, add them into the mix, self-attend over everthing. it frees neural net computation from the burden of Euclidean space.</p></li>
+<li><p>Language Models a re Few-Shot Learners =&gt; Transformers are capable of in-context learning or meta learning.</p></li>
+<li><p>if previous NNs are special-purpose computers designed for a specific task, GPT is a general-purpose computer reconfigurable at run time to run natural language programs. Programs are given in prompts (a kind of inception). GPT runs the program by completing the doc. - Andrej Karpathy</p></li>
+</ul>
+</section>
+<section id="recommended-readings">
+<h3><span class="section-number">1.1.1.2. </span>Recommended Readings<a class="headerlink" href="#recommended-readings" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://arxiv.org/abs/1706.03762">Attention is All You Need</a></p></li>
+<li><p><a class="reference external" href="https://jalammar.github.io/illustrated-transformer/">Illustrated Transformer</a></p></li>
+<li><p><a class="reference external" href="http://nlp.seas.harvard.edu/annotated-transformer/">Annotated Transformer</a></p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="language-and-human-alignment-by-jan-leike-openai">
+<h2><span class="section-number">1.1.2. </span>Language and Human Alignment by Jan Leike (OpenAI)<a class="headerlink" href="#language-and-human-alignment-by-jan-leike-openai" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="emergent-abilities-and-scaling-in-llms-by-jason-wei-google-brain">
+<h2><span class="section-number">1.1.3. </span>Emergent Abilities and Scaling in LLMs by Jason Wei (Google Brain)<a class="headerlink" href="#emergent-abilities-and-scaling-in-llms-by-jason-wei-google-brain" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="strategic-games-by-noam-brown-fair">
+<h2><span class="section-number">1.1.4. </span>Strategic Games by Noam Brown (FAIR)<a class="headerlink" href="#strategic-games-by-noam-brown-fair" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="robotics-and-imitation-learning-by-ted-xiao-google-brain">
+<h2><span class="section-number">1.1.5. </span>Robotics and Imitation Learning by Ted Xiao (Google Brain)<a class="headerlink" href="#robotics-and-imitation-learning-by-ted-xiao-google-brain" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="common-sense-reasoning-by-yejin-choi-u-washington-allen-institute-for-ai">
+<h2><span class="section-number">1.1.6. </span>Common Sense Reasoning by Yejin Choi (U. Washington / Allen Institute for AI)<a class="headerlink" href="#common-sense-reasoning-by-yejin-choi-u-washington-allen-institute-for-ai" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="biomedical-transformers-by-vivek-natarajan-google-health-ai">
+<h2><span class="section-number">1.1.7. </span>Biomedical Transformers by Vivek Natarajan (Google Health AI)<a class="headerlink" href="#biomedical-transformers-by-vivek-natarajan-google-health-ai" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="in-context-learning-faithful-reasoning-by-stephanie-chan-deepmind-antonia-creswell-deepmind">
+<h2><span class="section-number">1.1.8. </span>In-Context Learning &amp; Faithful Reasoning by Stephanie Chan (DeepMind) &amp; Antonia Creswell (DeepMind)<a class="headerlink" href="#in-context-learning-faithful-reasoning-by-stephanie-chan-deepmind-antonia-creswell-deepmind" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="neuroscience-inspired-artificial-intelligence-by-trenton-bricken-harvard-redwood-center-for-theoretical-neuroscience-anthropic-will-dorrell-ucl-gatsby-computational-neuroscience-unit-stanford">
+<h2><span class="section-number">1.1.9. </span>Neuroscience-Inspired Artificial Intelligence by Trenton Bricken (Harvard/Redwood Center for Theoretical Neuroscience/Anthropic) &amp; Will Dorrell (UCL Gatsby Computational Neuroscience Unit/Stanford)<a class="headerlink" href="#neuroscience-inspired-artificial-intelligence-by-trenton-bricken-harvard-redwood-center-for-theoretical-neuroscience-anthropic-will-dorrell-ucl-gatsby-computational-neuroscience-unit-stanford" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./nbs\nlp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Natural Language Processing Notes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../books/intro.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Let’s Talk About Books</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Rabia Eda Yilmaz<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

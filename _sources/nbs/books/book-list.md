@@ -1,6 +1,6 @@
 # Books I've Read
 
-## 2023
+## 2023 - 8 Books
 
 ### January
 
@@ -19,9 +19,14 @@
 
 ### April
 
+None
+
 ### May
 
 * Life Ascending: The Ten Great Inventions of Evolution | Nick Lane
+* The Art of Doing Science and Engineering: Learning to Learn | Richard Hamming
+
+### June
 
 > To be Continued...
 
@@ -147,6 +152,8 @@
 
 ### July
 
+None
+
 ### August
 
 * Yerdeniz Büyücüsü | Ursula K. Le Guin
@@ -167,6 +174,8 @@
 * Su Adamı | Aleksandr Belayev
 
 ### October
+
+None
 
 ### November
 
