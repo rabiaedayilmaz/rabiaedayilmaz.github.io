@@ -3,41 +3,46 @@
 
 root: intro
 format: jb-book
-defaults: 
-  titlesonly: True
-  numbered: True
+
 options:
   numbered: true
 
 parts:
-  - caption: BOOKS <3
+  - caption: Natural Language Processing
+    numbered: True
     chapters:
-      - file: nbs/books/book-list
-      - file: nbs/books/cognitive-neuroscience
+      - file: nbs/nlp/intro
+        sections:
+        - file: nbs/nlp/transformers
 
-  - caption: READING PAPERS
+  - caption: Books <3
+    numbered: True
     chapters:
-      - file: nbs/papers/community/cohere
-      - file: nbs/papers/independent/chapter1
-      - file: nbs/papers/independent/chapter2
-      - file: nbs/papers/independent/chapter3
-      - file: nbs/papers/independent/chapter4
-      - file: nbs/papers/independent/chapter5
-      - file: nbs/papers/independent/chapter6
+      - file: nbs/books/intro
+        sections:
+        - file: nbs/books/book-list
+        - file: nbs/books/cognitive-neuroscience
 
-  - caption: DEEP LEARNING
+  - caption: Notes on Papers
+    numbered: True
     chapters:
-      - file: nbs/deep_learning/blogs
+      - file: nbs/papers/independent/intro
+        sections:
+        - file: nbs/papers/independent/breast_cancer
+        - file: nbs/papers/independent/eeg_affective_comp
+        - file: nbs/papers/independent/gan_medical
+        - file: nbs/papers/independent/neuroscience
+        - file: nbs/papers/independent/snns
     
-  - caption: BUILDING STUFF
+  - caption: Tryin' to Build Stuff
+    numbered: True
     chapters:
-      - file: nbs/Projects/projects
-      - file: nbs/Projects/blogs
+      - file: nbs/Projects/intro
+        sections:
+        - file: nbs/Projects/projects
+        - file: nbs/Projects/blogs
 
-  - caption: ART
+  - caption: Art
+    numbered: True
     chapters:
       - file: nbs/art/art
-
-#- caption: LOG
-#  chapters:
-#    - file: nbs/diary/diary

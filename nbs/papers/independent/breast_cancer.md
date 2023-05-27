@@ -179,12 +179,7 @@ There are several GANs: DCGAN, Markovian GAN, conditional GAN, CycleGAN, auxilia
 It adresses instability of GAN architecture and increases the resolution. In this model, both generator and discriminator follow a deep convolutional network by exploiting spatial kernels and hierarchical features. Batch-normalization and leaky-ReLU are included. But mode-collapse issue could not resolved completely.
 ### cGAN
 In the original GAN paper, there was no explicitcontrol on the actual data. To address this issue, conditional GANs are proposed, thus they will incorporate additional information like class labels. In the cGAN, the generator is presented with random noise z jointly with some prior information c.
-```{figure} ../../assets/papers/medganrev-1.png
----
-name: directive-fig
----
-cGAN Framework
-```
+
 Another conditional GAN framework is Markovian GAN (MGAN). It is proposed for fast and high-quality style transfer in images. Highly takes advantage of VGG19 for feature extraction.
 
 Another successful variation of conditional GAN is pix2pix. The generator utilizes U-Net while discriminator uses a fully convolutional neural network similar to MGAN. It is showed that in the U-Net, the *skip connections* are beneficial for global coherence. Unlike original GAN, it requires image pairs. This allows the usage of L1 loss to stabilize training.

@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Rabia Eda Yılmaz
+title: REY'S WORLD
 author: Rabia Eda Yilmaz
-logo: assets/cover.jpg
+logo: assets/cover_mitsuri.jpeg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
