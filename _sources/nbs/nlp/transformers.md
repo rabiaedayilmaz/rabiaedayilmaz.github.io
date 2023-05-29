@@ -1,4 +1,4 @@
-# Transformers United 2023 Notes
+# Notes About Transformers United 2023 by Stanford University
 
 ## Introduction to Transformers by Andrej Karpathy
 
@@ -34,7 +34,7 @@ Attention = "communication phase"
 * query -> what am i looking for?
 ---
 
-`````{admonition} Past, Present, and Future
+`````{admonition} Attention!
 :class: tip
 
 in *communication phase* of the transformer: i) every head applies this, in parallel and ii) then every layer, in series
@@ -58,6 +58,32 @@ in encoder-decoder models: i) encoder is fully-connected cluster and ii) decoder
 * [Annotated Transformer](http://nlp.seas.harvard.edu/annotated-transformer/)
 ---
 ## Language and Human Alignment by Jan Leike (OpenAI)
+
+### Lecture
+
+* Team AI -> incredibly strong players
+* Team Human -> can pick which AI players join
+
+Objectives of Team Human (TH): i) recruit AI players to TH (**Alignment**), and ii) write rules so TH doesn't lose (**Governance**).
+
+How do we build AI systems that follow human intent? 1. Explicit intent (follow instructions, be an assistant), 2. Implicit intent (do what i mean, dont make stuff up, dont be mean etc)
+
+Main technique: RLHF. 1. Train a reward model from comparisons, 2. Fine-tune a pretrained model with RL.
+
+Proximal Policit Optimization (PPO) > Shrink and Finetune (SFT) > GPT
+
+ChatGPT -> dialog is the universal interface, better at refusing harmful tasks, still halucinates, sensitive prompting, silly mistakes, free for now.
+
+Training Cost: GPT-3 > InstructGPT RL > InstructGPT SFT.
+
+Evaluation is easier than generation.
+Scaling human supervision (main RLHF problem) -> what humans can evaluate is limited to a specific task difficulty. so you can not evaluate properly anymore.
+
+### Recommended Readings
+
+* [ChatGPT](https://openai.com/blog/chatgpt/)
+* [InstructGPT](https://openai.com/blog/instruction-following/)
+* [Language Models are Few-Shot Learners (GPT-3)](https://arxiv.org/abs/2005.14165)
 
 ## Emergent Abilities and Scaling in LLMs by Jason Wei (Google Brain)
 
