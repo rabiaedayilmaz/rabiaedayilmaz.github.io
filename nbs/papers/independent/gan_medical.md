@@ -40,17 +40,10 @@ Commonly used evaluation metrics:
 * Edoc = radiologist ratings eval. | quantification of physicist
 
 * Edown = indirect eval. of downstream task performance
-...
-(Skipping other organ parts)
-...
 
-## GANs in Medical Field: Brain
+* GANs in Medical Field: Brain -> Tumor contour segmentation/registration /classifcaiton - cGAN.
 
-Tumor contour segmentation/registration /classifcaiton - cGAN.
-
-## GANs in Medical Field: Breast
-
-For classification NcGAN, cGAN, and local-cGAN.
+* GANs in Medical Field: Breast -> For classification NcGAN, cGAN, and local-cGAN.
 
 ---
 

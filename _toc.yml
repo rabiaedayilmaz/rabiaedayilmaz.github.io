@@ -15,6 +15,10 @@ parts:
         sections:
         - file: nbs/nlp/transformers
 
+  - caption: Implementing Papers
+    chapters:
+      - file: nbs/implement_paper/FlashAttentionn.ipynb
+
   - caption: Books <3
     numbered: True
     chapters:

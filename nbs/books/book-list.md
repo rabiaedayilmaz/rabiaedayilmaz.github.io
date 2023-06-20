@@ -1,6 +1,6 @@
 # Books I've Read
 
-## 2023 - 8 Books
+## 2023 - 10 Books
 
 ### January
 
@@ -27,6 +27,9 @@ None
 * The Art of Doing Science and Engineering: Learning to Learn | Richard Hamming
 
 ### June
+
+* We Are Electric: Inside the 200-Year Hunt for Our Body's Bioelectric Code, and What the Future Holds |Sally Adee
+* Genius Makers: The Mavericks Who Brought AI to Google, Facebook, and the World_Cade Metz
 
 > To be Continued...
 
