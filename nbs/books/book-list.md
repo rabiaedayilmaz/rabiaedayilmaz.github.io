@@ -1,6 +1,6 @@
 # Books I've Read
 
-## 2023 - 10 Books
+## 2023 - 12 Books
 
 ### January
 
@@ -31,7 +31,15 @@ None
 * We Are Electric: Inside the 200-Year Hunt for Our Body's Bioelectric Code, and What the Future Holds |Sally Adee
 * Genius Makers: The Mavericks Who Brought AI to Google, Facebook, and the World_Cade Metz
 
-> To be Continued...
+### July
+* None
+
+### August
+
+* The Hidden Spring_Mark Solms
+* Beyinde Ararken Bağırsakta Buldum_Dr. Serkan Karaismailoğlu
+
+> To be continued...
 
 ## 2022 - 33 Books
 
