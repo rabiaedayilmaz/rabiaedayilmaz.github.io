@@ -36,8 +36,9 @@ None
 
 ### August
 
-* The Hidden Spring_Mark Solms
-* Beyinde Ararken Bağırsakta Buldum_Dr. Serkan Karaismailoğlu
+* The Hidden Spring |Mark Solms
+* Beyinde Ararken Bağırsakta Buldum |Dr. Serkan Karaismailoğlu
+* Zero to One: Notes on Startups, or How to Build the Future |Peter Thiel
 
 > To be continued...
 
